@@ -24,7 +24,6 @@ const team = () => {
             <Profile insta='https://www.instagram.com/bits.mhsg/' linkin='https://www.linkedin.com/authwall?trk=qf&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2F'/>
             <Profile insta='https://www.instagram.com/bits.mhsg/' linkin='https://www.linkedin.com/authwall?trk=qf&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2F'/>
             <Profile insta='https://www.instagram.com/bits.mhsg/' linkin='https://www.linkedin.com/authwall?trk=qf&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2F'/>
-            <Profile insta='https://www.instagram.com/bits.mhsg/' linkin='https://www.linkedin.com/authwall?trk=qf&original_referer=https://www.google.com/&sessionRedirect=https%3A%2F%2Fin.linkedin.com%2F'/>
         </div>
     </div>
   )

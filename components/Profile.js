@@ -26,10 +26,18 @@ const Profile = (props) => {
           font-size:17px;
         }
         .profile{
-          border:3px solid #d2d5da
+          border:3px solid #d2d5da;
+          transition: all .5s ease-out
+        }
+        .profile:hover{
+          border:3px solid #3a3a3a
+        }
+        .profile:hover .profimg{
+          border:3px solid #3a3a3a
         }
         .profimg{
-          border:3px solid #d2d5da
+          border:3px solid #d2d5da;
+          transition: all .5s ease-out
         }
         
       `}</style>
