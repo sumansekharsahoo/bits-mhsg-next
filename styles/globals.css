@@ -25,3 +25,9 @@
     )
     rgb(var(--background-start-rgb));
 }  */
+
+body{
+  /* font-family: 'Barlow', sans-serif; */
+  background-color: rgb(235, 235, 235);
+  margin-top: 10px;
+}

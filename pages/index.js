@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import NavBar from '@/components/NavBar'
+import Carousel from '@/components/Carousel'
 const inter = Inter({ subsets: ['latin'] })
 
 const posts=[
@@ -13,19 +13,21 @@ const posts=[
 export default function Home() {
   return (
     <div className="Home">
-      <NavBar/>
       <Head>
         <title>BITS MHSG</title>
       </Head>
-      {/* <div className={styles.postcontainer}>
+      <Carousel/>
+      <div className={styles.postcontainer}>
         {posts.map((post,index)=>(
           <div>
             {post.title}
             {post.excerpt}
           </div>
         ))}
-      </div> */}
-
+      </div>
+      
+      
+      
     </div>
   )
 }

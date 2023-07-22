@@ -5,8 +5,8 @@ import { useState } from 'react';
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div>
-      <nav className="w-full bg-[#f4f4f4]/80 fixed top-0 left-0 right-0 z-10 backdrop-blur-md	">
+    <div className='sticky'>
+      <nav className="w-full bg-[#fff]/50 fixed top-0 left-0 right-0 z-10 backdrop-blur-lg	">
         <div className="justify-around px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 ">
           <div>
             <div className="flex items-center justify-between py-0.5 md:py-1 md:block">
@@ -41,33 +41,33 @@ function NavBar() {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className=" text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-gray-200  border-gray-400  md:hover:text-blue-600 md:hover:bg-gray-200 md:hover:rounded-md transition-all">
+                <li className=" text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black-600 md:hover:bg-[#dae3b2]  md:hover:rounded-md transition-all">
                   <Link href="/" onClick={() => setNavbar(!navbar)}>
                     Home
                   </Link>
                 </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-200  border-gray-400  md:hover:text-black-600 md:hover:bg-gray-300  md:hover:rounded-md transition-all">
+                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black-600 md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
                   <Link href="/articles" onClick={() => setNavbar(!navbar)}>
                     Articles
                   </Link>
                 </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-200  border-gray-400  md:hover:text-blue-600 md:hover:bg-gray-200 md:hover:rounded-md transition-all">
+                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-blue-600 md:hover:bg-[#dddddd] md:hover:rounded-md transition-all">
                   <Link href="/events" onClick={() => setNavbar(!navbar)}>
                     Events
                   </Link>
                 </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-200  border-gray-400  md:hover:text-blue-600 md:hover:bg-gray-200 md:hover:rounded-md transition-all">
+                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-blue-600 md:hover:bg-[#dddddd] md:hover:rounded-md transition-all">
                   <Link href="/resources" onClick={() => setNavbar(!navbar)}>
                     Resources
                   </Link>
                 </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-200  border-gray-400  md:hover:text-blue-600 md:hover:bg-gray-200  md:hover:rounded-md transition-all">
+                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-blue-600 md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
                   <Link href="/team" onClick={() => setNavbar(!navbar)}>
                     Team
                   </Link>
                 </li>
-                <li className="text-xl text-black py-2 px-12 text-center   border-b-2 md:border-b-0  hover:gray-200  border-gray-400  md:hover:text-blue-600 md:hover:bg-transparent">
-                  <div className='flex'>
+                <li className="text-xl text-black py-2 px-12 text-center    md:border-b-0  hover:gray-200  border-gray-400  md:hover:text-blue-600 md:hover:bg-transparent">
+                  <div className='flex justify-center'>
                     
                     <a href="https://www.instagram.com/bits.mhsg/" target='_blank' className='mr-3'> <Image src="/icons/logo-facebook.svg" width={28} height={28} alt="logo" /></a>
                     <a href="https://www.instagram.com/bits.mhsg/" target='_blank' className='mr-3'> <Image src="/icons/logo-instagram.svg" width={28} height={28} alt="logo" /></a>
