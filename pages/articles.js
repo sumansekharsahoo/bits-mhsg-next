@@ -1,9 +1,10 @@
 import React from 'react'
 import Artstyle from '../styles/Articles.module.css'
+import Categories from '@/components/Categories'
 const articles = () => {
   return (
-    <div className={Artstyle.heading}>
-        Articles
+    <div>
+        <Categories/>
     </div>
   )
 }

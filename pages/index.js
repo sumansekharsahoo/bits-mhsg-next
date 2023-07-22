@@ -3,26 +3,23 @@ import { Inter } from 'next/font/google'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Carousel from '@/components/Carousel'
+import PostCard from '@/components/PostCard'
+import PostWidget from '@/components/PostWidget'
+import { getPosts } from '@/services'
 const inter = Inter({ subsets: ['latin'] })
 
-const posts=[
-  {title: 'Why Mental Health Matters', excerpt:'Article highlights the importance of ones mental health'},
-  {title: 'World mental heath day', excerpt:'The importance of World mental heath day'}
-]; 
-
-export default function Home() {
+export default function Home({posts}) {
   return (
     <div className="Home">
       <Head>
         <title>BITS MHSG</title>
       </Head>
-      <Carousel/>
+      <div className='bg-[#daf3e8]'>
+        <Carousel/>
+      </div>
       <div className={styles.postcontainer}>
         {posts.map((post,index)=>(
-          <div>
-            {post.title}
-            {post.excerpt}
-          </div>
+          <PostCard post={post.node} key={post.title}/>
         ))}
       </div>
       
@@ -30,4 +27,11 @@ export default function Home() {
       
     </div>
   )
+}
+
+export async function getStaticProps(){
+  const posts=(await getPosts()) || [];
+  return {
+    props:{posts}
+  }
 }
