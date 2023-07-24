@@ -9,9 +9,9 @@ function NavBar() {
       <nav className="w-full bg-[#fff]/50 fixed top-0 left-0 right-0 z-10 backdrop-blur-lg	">
         <div className="justify-around px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 ">
           <div>
-            <div className="flex items-center justify-between py-0.5 md:py-1 md:block">
-              <Link href="/">
-                <img src="/official/MHSG_Short.png" width={55} height={55} alt="logo" />
+            <div className="flex items-center  py-0.5 md:py-1 md:block justify-between">
+              <Link href="/" >
+                <img src="/official/MHSG_Short.png" width={55} height={55} alt="logo" className='' />
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">
@@ -46,12 +46,12 @@ function NavBar() {
                     Home
                   </Link>
                 </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#c7d6d3]  md:hover:rounded-md transition-all">
+                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
                   <Link href="/articles" onClick={() => setNavbar(!navbar)}>
                     Articles
                   </Link>
                 </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#c7d6d3] md:hover:rounded-md transition-all">
+                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd] md:hover:rounded-md transition-all">
                   <Link href="/events" onClick={() => setNavbar(!navbar)}>
                     Events
                   </Link>

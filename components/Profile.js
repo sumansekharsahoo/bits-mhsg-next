@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const Profile = (props) => {
   return (
-    <div className='w-72 h-96 bg-[#d6e7a8] rounded-2xl profile flex flex-col align-middle profile mx-10 my-10'>
+    <div className='w-72 h-96 bg-[#d6e7a8] rounded-2xl profile flex flex-col align-middle profile mx-10 sm:my-8 my-6'>
       <div className='py-5'>
         <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=740&t=st=1689966412~exp=1689967012~hmac=587709328adb58f443667b6923c536e3cd1080ea73808ed1f495a69b32298191" alt="" className='mx-12  object-cover rounded-full h-48 profimg'/>
       </div>
