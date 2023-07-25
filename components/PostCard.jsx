@@ -6,11 +6,12 @@ const PostCard = ({post}) => {
   const bgcolor="#d9f3ce";
   const bgcolor2="#cbecf9";
   const bgcolor3="#f5e8d0";
-  const bgcolor4="#f5e8d0";
+  const bgcolor5="#FAF3E6";
+  const bgcolor4="#F6EDDB";
   const tcolor="#16250d";
   const tcolor2="#001d51";
   const tcolor3="#4a3102";
-  const tcolor4="#44006d";
+  const tcolor4="#4F3500";
   return (
     <div className='postcard flex flex-col'>
         {/* <img src='https://img.freepik.com/free-vector/high-self-esteem-illustration-with-woman-leaves_23-2148723709.jpg?w=740&t=st=1690047410~exp=1690048010~hmac=effb7c17dc55d36ad45e6d7c20707c3d60a05b84092f6c153916fa0c3e752f60' alt='sdc' className='postPic' /> */}
@@ -39,27 +40,26 @@ const PostCard = ({post}) => {
         <style jsx>
           {`
             .postcard{
-            background-color: ${bgcolor3};
+            background-color: ${bgcolor4};
             border:2px solid #b0b0b0;
             width:360px;
             height:530px;
             padding:11px;
             border-radius:18px;
-            margin:20px;
-            color:${tcolor3};
+            // margin:20px;
+            color:#7e4c01;
             //font-family: 'Roboto', sans-serif;
             transition: all .3s ease-out;
             cursor:pointer;
           }
           .postcard:hover{
+            color:${tcolor4};
             border:2px solid #905700;
             background-color:#f5e1bb;
-            // box-shadow: 1px 1px 10px 2px #905700 ;
+            background-color:#F4E4C4;
+            box-shadow: 1px 1px 10px 2px #aaaaaa ;
           }
           
-          .postcard:hover .postHead{
-            color:#7e4c01
-          }
           .postcard:hover .postPic{
             border:2px solid #905700;
           }
@@ -124,7 +124,7 @@ const PostCard = ({post}) => {
             .postcard{
               display:flex;
               flex-direction: row;
-              width:80vw;
+              width:auto;
               height:260px;
               margin:25px
             }
