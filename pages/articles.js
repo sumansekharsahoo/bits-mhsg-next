@@ -1,9 +1,14 @@
 import React from 'react'
+import Head from 'next/head'
 import Categories from '@/components/Categories'
 import PostCard from '@/components/PostCard'
-const articles = () => {
+import { getPosts } from '@/services'
+const articles = ({posts}) => {
   return (
     <div className='flex flex-col mainDiv '>
+      <Head>
+        <title>Articles</title>
+      </Head>
       
       <div className='articles lg:flex-row flex flex-col'>
           <div className='categoriesBox'>
@@ -12,10 +17,9 @@ const articles = () => {
           <div className='ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-9 lg:mr-9 bg-white rounded-xl artSec'>
             <div className='text-5xl text-center my-2'>Articles</div>
             <div className='postcardBox'>
-              <PostCard/>
-              <PostCard/>
-              <PostCard/>
-              <PostCard/>
+              {posts.map((post,index)=>(
+                <PostCard post={post.node} key={post.title}/>
+              ))}
             </div>
           </div>
       </div>
@@ -23,6 +27,7 @@ const articles = () => {
         {`
           .mainDiv{
             align-items:center;
+            padding-top:10px;
           }
           .categoriesBox{
             align-items:center;
@@ -45,7 +50,7 @@ const articles = () => {
             .postcardBox{
               grid-template-columns: 1fr;
               padding:10px;
-              gap:10px 40px;
+              gap:40px 40px;
             }
           }
           @media only screen and (min-width:  475px) and (max-width:645px){
@@ -68,5 +73,11 @@ const articles = () => {
     </div>
   )
 }
-
 export default articles
+
+export async function getStaticProps(){
+  const posts=(await getPosts()) || [];
+  return {
+    props:{posts}
+  }
+}

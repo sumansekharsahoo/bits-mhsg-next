@@ -14,7 +14,7 @@ const resources = () => {
     },
     {
       Desc:"iCALL Helpline (Tata Institute of Social Sciences)",
-      Phone:"Call: 9152987821 (10AM-8PM, Mon-Sat)",
+      Phone:"9152987821 (10AM-8PM,Mon-Sat)",
       Link: "https://icallhelpline.org/"
     },
     {
@@ -26,9 +26,9 @@ const resources = () => {
   return (
     <div className='resources'>
       <div className='mainCont'>
-        <div className='Head text-5xl my-2'>Resources</div>
+        <div className='text-5xl my-2 Header'>Resources</div>
         <div className='emergencyCont flex flex-col'>
-          <div className='emergencyHead'>Emergency Helpline</div>
+          <div className='emergencyHead Head'>Emergency Helpline</div>
           <div className='contactsCont'>
             <HelplineCard helpObj={helpline[0]} imgObj="/helpline/HealthMinistry.png"/>
             <HelplineCard helpObj={helpline[1]} imgObj="/helpline/Mpower.png"/>
@@ -37,7 +37,7 @@ const resources = () => {
           </div>
         </div>
         <div className='mentalHealthConditions'>
-          <div className='mHCondHead'>Learn about mental health conditions</div>
+          <div className='mHCondHead Head'>Learn about mental health conditions</div>
           <div className='mHCondGrid'>
             <a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank">
               <div className='mHCondItems'>Depression</div>
@@ -56,12 +56,12 @@ const resources = () => {
         </div>
         <div className='testMusicCont flex'>
           <a href="https://www.clinical-partners.co.uk/online-tests" target="_blank">
-            <div className='MHTest'>
+            <div className='MHTest commonMT'>
               Mental Health Assessment
             </div>
           </a>
           <a href="https://open.spotify.com/playlist/3dP0ps6fqkutNUe2D5ODu4?si=ZywqwLMCRbaqqd6GEGwQtw&nd=1" target="_blank">
-            <div className='Music'>
+            <div className='Music commonMT'>
               Music & Podcasts
             </div>
           </a>
@@ -74,14 +74,16 @@ const resources = () => {
             display:flex;
             flex-direction:column;
             align-items:center;
+            margin-top:10px;
           }
           .mainCont{
             display:flex;
             flex-direction:column;
             align-items:center;
             background-color:white;
-            margin: 0px 60px 60px 60px;
-            padding: 0px 40px 40px 40px;
+            // margin: 0px 60px 60px 60px;
+            margin: 0px 0px 60px 0px;
+            padding: 0px 60px 40px 60px;
             border-radius: 12px;
           }
           .mentalHealthConditions{
@@ -96,9 +98,6 @@ const resources = () => {
             border:2px solid #b0b0b0;
           }
           .mHCondHead{
-            font-size:32px;
-            font-weight:700;
-            // color:#6e0298;  
             color:#3579a3;  
           }
           .mHCondGrid{
@@ -110,7 +109,7 @@ const resources = () => {
           .mHCondItems{
             font-size:18px;
             color:white;
-            padding:15px 15px;
+            padding:13px 10px;
             background-color:#A076F9;
             // background-color:#9384D1;
             background-color:#3579a3;
@@ -128,8 +127,6 @@ const resources = () => {
             margin:10px 0px 20px 0px;
           }
           .emergencyHead{
-            font-size:32px;
-            font-weight:700;
             color:#ca5040;
           
           }
@@ -146,19 +143,118 @@ const resources = () => {
           }
           .MHTest{
             background-color:#fcf1db;
-            padding:10px 20px;
-            border-radius:12px;
             margin-right:20px;
             color:#f08b13;
-            border:2px solid #b0b0b0;
           }
           .Music{
             background-color:#f6ebf7;
+            color:#c741b4;
+          }
+          .commonMT{
             padding:10px 20px;
             border-radius:12px;
-            color:#c741b4;
             border:2px solid #b0b0b0;
           }
+          .Head{
+            font-size:36px;
+            font-weight:700;
+          }
+           @media screen and (max-width:1220px){
+            .mHCondGrid{
+              grid-template-columns:1fr 1fr 1fr;
+            }
+            .contactsCont{
+              gap:18px 18px;
+            }
+            .emergencyCont{
+              padding:10px 20px 25px 20px;
+            }
+            .contactsCont{
+              margin-top:5px;
+            }
+
+            .Head{
+            font-size:32px;
+            font-weight:700;
+            }
+           }
+           @media screen and (max-width:1024px){
+            .mentalHealthConditions{
+              padding:10px 20px 25px 20px;
+            }
+            .mainCont{
+              padding: 0px 20px 30px 20px;
+            }
+            .mHCondGrid{
+              margin-top:5px;
+              gap:15px 15px;
+            }
+           }
+            @media screen and (max-width:810px){
+              .contactsCont{
+                gap:12px 12px;
+              }
+              .mHCondItems{
+                font-size:15px;
+              }
+              .testMusicCont{
+                font-size:25px;
+              }
+              .commonMT{
+                padding:8px 15px;
+              }
+            }
+            @media screen and (max-width:715px){
+              .resources{
+                margin-top:5px;
+              }
+              .mHCondGrid{
+                grid-template-columns:1fr 1fr;
+                gap:10px 8px;
+                margin-top:8px;
+              }
+              .contactsCont{
+                grid-template-columns: 1fr;
+                margin-top:10px;
+                gap:10px 5px;
+              }
+              .Head{
+                line-height: 1.2;
+                font-size:25px;
+              }
+              .mHCondItems{
+                padding:10px 8px;
+                font-size:12px;
+                border-radius:8px;
+              }
+              .testMusicCont{
+                flex-direction:column;
+                align-items:center;
+                font-size:23px;
+              }
+              .MHTest{
+                margin-bottom:15px;
+                margin-right:0px;
+              }
+              .commonMT{
+                padding:5px 12px; 
+              }
+              .mainCont{
+                margin:0px 5px 60px 5px;
+                padding:0px 8px 30px 8px;
+              }
+              .mentalHealthConditions{
+                padding:10px 15px 25px 15px;
+                margin:20px 0px 10px 0px;
+              }
+              .emergencyCont{
+                padding:10px 15px 25px 15px;
+                margin:10px 0px 10px 0px;
+              }
+              .Header{
+                font-size:40px;
+              }
+            }
         `}
       </style>
     </div>

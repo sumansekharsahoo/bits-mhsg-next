@@ -41,42 +41,37 @@ function NavBar() {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className=" text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black-600 md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
-                  <Link href="/" onClick={() => setNavbar(!navbar)}>
-                    Home
-                  </Link>
-                </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
-                  <Link href="/articles" onClick={() => setNavbar(!navbar)}>
-                    Articles
-                  </Link>
-                </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd] md:hover:rounded-md transition-all">
-                  <Link href="/events" onClick={() => setNavbar(!navbar)}>
-                    Events
-                  </Link>
-                </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd] md:hover:rounded-md transition-all">
-                  <Link href="/resources" onClick={() => setNavbar(!navbar)}>
-                    Resources
-                  </Link>
-                </li>
-                <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
-                  <Link href="/team" onClick={() => setNavbar(!navbar)}>
-                    Team
-                  </Link>
-                </li>
+                <Link href="/" onClick={() => setNavbar(!navbar)}>
+                  <li className=" text-xl text-black py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black-600 md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
+                      Home
+                  </li>
+                </Link>
+                <Link href="/articles" onClick={() => setNavbar(!navbar)}>
+                  <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
+                      Articles
+                  </li>
+                 </Link>
+                <Link href="/events" onClick={() => setNavbar(!navbar)}>
+                  <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd] md:hover:rounded-md transition-all">
+                      Events
+                  </li>
+                </Link>
+                <Link href="/resources" onClick={() => setNavbar(!navbar)}>
+                  <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd] md:hover:rounded-md transition-all">
+                      Resources
+                  </li>
+                </Link>
+                <Link href="/team" onClick={() => setNavbar(!navbar)}>
+                  <li className=" text-xl text-black py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-[#EBF1FF]  border-gray-400  md:hover:text-black md:hover:bg-[#dddddd]  md:hover:rounded-md transition-all">
+                      Team
+                  </li>
+                </Link>
                 <li className="text-xl text-black py-2 lg:px-12 md:px-2 md:py-0 text-center    md:border-b-0  hover:gray-200  border-gray-400  md:hover:text-black md:hover:bg-transparent">
                   <div className='flex justify-center'>
                     
                     <a href="https://www.instagram.com/bits.mhsg/" target='_blank' className='mr-3'> <Image src="/icons/logo-facebook.svg" width={28} height={28} alt="logo" /></a>
                     <a href="https://www.instagram.com/bits.mhsg/" target='_blank' className='mr-3'> <Image src="/icons/logo-instagram.svg" width={28} height={28} alt="logo" /></a>
                     <a href="https://www.instagram.com/bits.mhsg/" target='_blank'> <Image src="/icons/logo-linkedin.svg" width={28} height={28} alt="logo" /></a>
-                        
-                    
-                    <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                        
-                    </Link>
                   </div>
                 </li>
               </ul>

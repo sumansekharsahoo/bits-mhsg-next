@@ -1,11 +1,24 @@
 import React from 'react'
 import {NavBar} from './index'
+import {Footer} from './index'
 const Layout = ({children}) => {
   return (
     <>
     <NavBar/>
-    <div className='m-full h-16 bg-transparent'></div>
+    <div className='navMargin'></div>
     {children}
+    <Footer/>
+    <style jsx>
+      {`
+        .navMargin{
+          width:98vw;
+          height:59px;
+        }
+
+      `}
+      
+      
+    </style>
     </>
   )
 }

@@ -1,8 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
-
+import { useState,useEffect } from 'react'
+import { getCategories } from '@/services'
 const Categories = () => {
-    const catg=[{name:'Mental Health day asd', slug:'self-love'},{name:'React Test', slug:'web-dev'},{name:'Next Test', slug:'web-dev'}]
+  const [catg, setCatg]=useState([]);
+  useEffect(()=>{
+    getCategories()
+      .then((newCatg)=>setCatg(newCatg))
+  },[]);
   return (
     <div className='categories flex flex-col'>
       <span className='text-white text-center text-2xl mb-1'>Categories</span>

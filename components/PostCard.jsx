@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import moment from 'moment/moment';
 const PostCard = ({post}) => {
   // console.log(post)
   
@@ -13,26 +14,26 @@ const PostCard = ({post}) => {
   const tcolor3="#4a3102";
   const tcolor4="#4F3500";
   return (
-    <div className='postcard flex flex-col'>
+    <a href={`/post/${post.slug}`} className='postcard flex flex-col'>
         {/* <img src='https://img.freepik.com/free-vector/high-self-esteem-illustration-with-woman-leaves_23-2148723709.jpg?w=740&t=st=1690047410~exp=1690048010~hmac=effb7c17dc55d36ad45e6d7c20707c3d60a05b84092f6c153916fa0c3e752f60' alt='sdc' className='postPic' /> */}
-        <img src='https://img.freepik.com/free-photo/white-pink-tulips-bouquets-table_23-2148409582.jpg?w=996&t=st=1690131464~exp=1690132064~hmac=f43e361352a4426f96a0793c445fe173c20dff6180841c179ffc432ea8ee62c8' alt='sdc' className='postPic' />
+        <img src={post.featuredImage.url} alt={post.title} className='postPic' />
         <div className='expectPic'>
 
           <div className='fixedCont'>
             <div className='postHead'>
-              What Self-Love Truly Means and Ways to Cultivate It
+              {post.title}
             </div>
             <div className='postDesc'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor assumenda rem minima ratione iure dolore.Self-love is important because it motivates much of our positive behavior while reducing harmful behavior. It’s a key component of building self-compassion.
+              {post.excerpt}
             </div>
           </div>
           <div className='authDate'>
             <div className='author'>
-                <img src="https://img.freepik.com/free-vector/high-self-esteem-illustration-with-woman-leaves_23-2148723709.jpg?w=740&t=st=1690047410~exp=1690048010~hmac=effb7c17dc55d36ad45e6d7c20707c3d60a05b84092f6c153916fa0c3e752f60" alt="" height="40px" width="40px" className='rounded-full authPic'/>
-                <p className='authName'>Suman Sekhar</p>
+                <img src={post.author.photo.url} alt="MHSG" height="40px" width="40px" className='rounded-full authPic'/>
+                <p className='authName'>{post.author.name}</p>
             </div>
             <div className='date'>
-                <p>May 16,2023</p>
+                <p>{moment(post.createdAt).format('MMM DD, YYYY')}</p>
             </div>
           </div>
         </div>
@@ -57,7 +58,7 @@ const PostCard = ({post}) => {
             border:2px solid #905700;
             background-color:#f5e1bb;
             background-color:#F4E4C4;
-            box-shadow: 1px 1px 10px 2px #aaaaaa ;
+            // box-shadow: 1px 1px 10px 2px #aaaaaa ;
           }
           
           .postcard:hover .postPic{
@@ -111,12 +112,12 @@ const PostCard = ({post}) => {
           }
           @media only screen and (max-width: 600px){
             .postcard{
-              margin:20px 10px; 
+              margin:0px 10px; 
             }
           }
           @media only screen and (max-width: 396px){
             .postcard{
-              margin:20px 5px; 
+              margin:0px 5px; 
               width:344px;
             }
           }
@@ -126,7 +127,7 @@ const PostCard = ({post}) => {
               flex-direction: row;
               width:auto;
               height:260px;
-              margin:25px
+              margin:0px 25px
             }
             .postPic{
               width:236px;
@@ -152,7 +153,7 @@ const PostCard = ({post}) => {
           `}
           
         </style>
-    </div>
+    </a>
   )
 }
 

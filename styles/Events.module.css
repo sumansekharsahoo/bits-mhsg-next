@@ -2,7 +2,7 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    margin: 0px 60px 60px 60px;
+    margin: 10px 60px 60px 60px;
     padding: 0px 40px 40px 40px;
     border-radius: 12px;
     align-items: center;
@@ -19,13 +19,13 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 50px 80px;
-        padding: 20px 0px
+        padding: 10px 0px
     }
     .events {
         background-color: white;
         display: flex;
         flex-direction: column;
-        margin: 0px 30px 40px 30px;
+        margin: 5px 30px 40px 30px;
         padding: 0px 20px 20px 20px;
         border-radius: 12px;
         align-items: center;
@@ -42,7 +42,16 @@
 }
 @media screen and (max-width:500px){
     .events{
-        margin: 0px 5px 40px 5px;
+        margin: 5px 13px 40px 13px;
+        padding: 0px 5px 20px 5px;
+    }
+    .eventCards{
+        gap: 40px 60px;
+    }
+}
+@media screen and (max-width:400px){
+    .events{
+        margin: 5px 5px 40px 5px;
         padding: 0px 5px 20px 5px;
     }
 }

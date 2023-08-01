@@ -40,43 +40,102 @@ export default function ResourceCard(props){
                     margin-top: 2px;
                     font-size: 17px;
                 }
-
-                @media screen and (max-width:400px) {
+                @media screen and (min-width:1024px) and (max-width:1220px){
+                    .helpImg{
+                        height:80px
+                    }
+                    .helplineCard{
+                        width: 400px;
+                    }
+                }
+                @media screen and (max-width:1024px){
+                    .helpImg{
+                        height:70px
+                    }
                     .helplineCard{
                         width: 350px;
                     }
-                    .helpDesc {
-                        font-size: 15px;
+
+                    .helpDesc{
+                        font-size: 17px;
                     }
-                    .helpPh {
-                        font-size: 14px;
-                    }
-                    .helpLink{
-                        font-size: 14px;
+
+                    .helpPh{
+                        font-size: 13px;
                     }
                 }
 
-                @media screen and (min-width:600px) and (max-width:1300px){
-                    .helplineCard {
-                        width: 540px;
+                @media screen and (max-width:810px){
+                    .helplineCard{
+                        width: 300px;
+                        padding: 12px 15px;
                     }
-                    .helpImg {
-                        width: 180px;
+                    .helpImg{
+                        height:60px
                     }
-                    .helpDesc {
-                        font-size: 25px;
-                    }
-                    .helpDetails {
-                        margin-left: 24px;
-                    }
-                    .helpPh {
-                        font-size: 24px;
+                    .helpDesc{
+                        font-size: 14px;
                     }
 
-                    .helpLink {
-                        font-size: 24px;
+                    .helpPh{
+                        font-size: 10px;
                     }
                 }
+                @media screen and (max-width:715px){
+                    .helpImg{
+                        height:62px
+                    }
+                    .helplineCard{
+                        width: 300px;
+                    }
+
+                    .helpDesc{
+                        font-size: 16px;
+                        line-height: 1.2;
+                    }
+
+                    .helpPh{
+                        font-size: 12px;
+                        
+                    }
+                }
+                // @media screen and (max-width:400px) {
+                //     .helplineCard{
+                //         width: 350px;
+                //     }
+                //     .helpDesc {
+                //         font-size: 15px;
+                //     }
+                //     .helpPh {
+                //         font-size: 14px;
+                //     }
+                //     .helpLink{
+                //         font-size: 14px;
+                //     }
+                
+                // }
+
+                // @media screen and (min-width:600px) and (max-width:1220px){
+                //     .helplineCard {
+                //         width: 540px;
+                //     }
+                //     .helpImg {
+                //         width: 180px;
+                //     }
+                //     .helpDesc {
+                //         font-size: 25px;
+                //     }
+                //     .helpDetails {
+                //         margin-left: 24px;
+                //     }
+                //     .helpPh {
+                //         font-size: 24px;
+                //     }
+
+                //     .helpLink {
+                //         font-size: 24px;
+                //     }
+                // }
             `}
         </style>
         </a>
