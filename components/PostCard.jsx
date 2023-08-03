@@ -6,8 +6,8 @@ const PostCard = ({post}) => {
   
   const bgcolor="#d9f3ce";
   const bgcolor2="#cbecf9";
-  const bgcolor3="#f5e8d0";
-  const bgcolor5="#FAF3E6";
+  const bgcolor3="#fff7d9";
+  const bgcolor5="#fcf6e1";
   const bgcolor4="#F6EDDB";
   const tcolor="#16250d";
   const tcolor2="#001d51";
@@ -33,7 +33,7 @@ const PostCard = ({post}) => {
                 <p className='authName'>{post.author.name}</p>
             </div>
             <div className='date'>
-                <p>{moment(post.createdAt).format('MMM DD, YYYY')}</p>
+                <p>{moment(post.date).format('MMM DD, YYYY')}</p>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@ const PostCard = ({post}) => {
         <style jsx>
           {`
             .postcard{
-            background-color: ${bgcolor4};
+            background-color: ${bgcolor3};
             border:2px solid #b0b0b0;
             width:360px;
             height:530px;
@@ -58,6 +58,7 @@ const PostCard = ({post}) => {
             border:2px solid #905700;
             background-color:#f5e1bb;
             background-color:#F4E4C4;
+            background-color:#ffefba;
             // box-shadow: 1px 1px 10px 2px #aaaaaa ;
           }
           

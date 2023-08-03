@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import HelplineCard from '@/components/HelplineCard'
 const resources = () => {
    const helpline=[
@@ -25,10 +26,13 @@ const resources = () => {
   ]
   return (
     <div className='resources'>
+      <Head>
+        <title>Resources</title>
+      </Head>
       <div className='mainCont'>
         <div className='text-5xl my-2 Header'>Resources</div>
         <div className='emergencyCont flex flex-col'>
-          <div className='emergencyHead Head'>Emergency Helpline</div>
+          <div className='emergencyHead Head'>#AskForHelp</div>
           <div className='contactsCont'>
             <HelplineCard helpObj={helpline[0]} imgObj="/helpline/HealthMinistry.png"/>
             <HelplineCard helpObj={helpline[1]} imgObj="/helpline/Mpower.png"/>
@@ -42,16 +46,36 @@ const resources = () => {
             <a href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank">
               <div className='mHCondItems'>Depression</div>
             </a>
-            <div className='mHCondItems'>Postpartum Depression</div>
-            <div className='mHCondItems'>Anxiety</div>
-            <div className='mHCondItems'>ADHD</div>
-            <div className='mHCondItems'>Bipolar Disorder</div>
-            <div className='mHCondItems'>Addiction</div>
-            <div className='mHCondItems'>Eating Disorders</div>
-            <div className='mHCondItems'>Psychosis & Schizophrenia</div>
-            <div className='mHCondItems'>Self Harm</div>
-            <div className='mHCondItems'>Suicidal Thoughts</div>
-            <div className='mHCondItems'>Trauma & PTSD</div>
+            <a href="https://www.mayoclinic.org/diseases-conditions/postpartum-depression/symptoms-causes/syc-20376617" target="_blank">
+              <div className='mHCondItems'>Postpartum Depression</div>
+            </a>
+            <a href="https://www.mayoclinic.org/diseases-conditions/anxiety/symptoms-causes/syc-20350961" target="_blank">
+              <div className='mHCondItems'>Anxiety</div>
+            </a>
+            <a href="https://www.healthline.com/health/adhd" target="_blank">
+              <div className='mHCondItems'>ADHD</div>
+            </a>
+            <a href="https://www.mayoclinic.org/diseases-conditions/bipolar-disorder/symptoms-causes/syc-20355955" target="_blank">
+              <div className='mHCondItems'>Bipolar Disorder</div>
+            </a>
+            <a href="https://my.clevelandclinic.org/health/diseases/6407-addiction" target="_blank">
+              <div className='mHCondItems'>Addiction</div>
+            </a>
+            <a href="https://www.mayoclinic.org/diseases-conditions/eating-disorders/symptoms-causes/syc-20353603" target="_blank">
+              <div className='mHCondItems'>Eating Disorders</div>
+            </a>
+            <a href="https://www.healthline.com/health/schizophrenia/psychosis-vs-schizophrenia#:~:text=Psychosis%20is%20a%20condition%20in,that%20includes%20periods%20of%20psychosis." target="_blank">
+              <div className='mHCondItems'>Psychosis & Schizophrenia</div>
+            </a>
+            <a href="https://my.clevelandclinic.org/health/diseases/12201-self-harm" target="_blank">
+              <div className='mHCondItems'>Self Harm</div>
+            </a>
+            <a href="https://www.mayoclinic.org/diseases-conditions/suicide/symptoms-causes/syc-20378048" target="_blank">
+              <div className='mHCondItems'>Suicidal Thoughts</div>
+            </a>
+            <a href="https://www.mayoclinic.org/diseases-conditions/post-traumatic-stress-disorder/symptoms-causes/syc-20355967" target="_blank">
+              <div className='mHCondItems'>Trauma & PTSD</div>
+            </a>
           </div>
         </div>
         <div className='testMusicCont flex'>
@@ -60,7 +84,7 @@ const resources = () => {
               Mental Health Assessment
             </div>
           </a>
-          <a href="https://open.spotify.com/playlist/3dP0ps6fqkutNUe2D5ODu4?si=ZywqwLMCRbaqqd6GEGwQtw&nd=1" target="_blank">
+          <a href="/music">
             <div className='Music commonMT'>
               Music & Podcasts
             </div>
@@ -146,9 +170,15 @@ const resources = () => {
             margin-right:20px;
             color:#f08b13;
           }
+          .MHTest:hover{
+            background-color:#fceac5;
+          }
           .Music{
             background-color:#f6ebf7;
             color:#c741b4;
+          }
+          .Music:hover{
+            background-color:#f7e1fc;
           }
           .commonMT{
             padding:10px 20px;

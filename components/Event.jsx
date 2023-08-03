@@ -1,22 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
-const Event = (props) => {
+import moment from 'moment'
+
+const Event = ({event}) => {
   return (
-    <a href="https://www.instagram.com/bits.mhsg/" target="_blank">
-
-
+    <a href={event.link} target="_blank">
     <div className='event'>
-        <img src="https://res.cloudinary.com/dwzmsvp7f/image/fetch/q_75,f_auto/https%3A%2F%2Fmedia.insider.in%2Fimage%2Fupload%2Fw_800%2Fv1680114825%2Foctzymzrrz68ez7qvk4i.jpg" alt="eventImg" className='eventImg' />
+        <img src={event.eventImg.url} alt="eventImg" className='eventImg' />
         <div className='eventInfo'>
-            <div className='eventHead'>{props.Head}</div>
+            <div className='eventHead'>{event.eventName}</div>
             <div className='eventDTV '>
-                <span className='eventDate'>Oct 23,2023</span>
+                <span className='eventDate'>{event.date}</span>
                 <span className='sep sep1'>|</span>
-                <span className='eventTime'>16:00 PM</span>
+                <span className='eventTime'>{event.time}</span>
                 <span className='sep sep2'>|</span>
-                <span className='eventVenue'>F102</span>
+                <span className='eventVenue'>{event.venue}</span>
             </div>
-            <div className='eventDesc'>{props.Desc}</div>
+            <div className='eventDesc'>{event.eventDesc}</div>
         </div>
         <style jsx>
             {`

@@ -5,7 +5,7 @@ const team = () => {
   return (
     <div className='flex flex-col align-middle'>
         <Head>
-            <title>Meet our team</title>
+            <title>Team</title>
         </Head>
         <style jsx>{`
         

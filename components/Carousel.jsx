@@ -11,29 +11,29 @@ const Carousel = () => {
       url:'/'
     },
     {
-      img_url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80',
+      img_url: '/carousel/calendar.png',
       head:'Our Headliner Events',
       desc: 'Checkout our events page for more details',
-      url:'www.instagram.com'
+      url:'/events'
     },
     {
-        img_url: 'https://images.unsplash.com/photo-1689267305146-155a1459752c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80',
-        head:'Art Therapy',
-        desc: 'BITS MHSG is an organization that helps students to overcome Their mental health problems',
-        url:'www.instagram.com'
+        img_url: '/carousel/articles.png',
+        head:'Articles',
+        desc: 'Explore our insightful articles on mental health for a brighter mind and a healthier you!',
+        url:'/articles'
     },
 
     {
-      img_url: 'https://images.unsplash.com/photo-1512756290469-ec264b7fbf87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2253&q=80',
-      head:'Peaceful Music',
-      desc: 'BITS MHSG is an organization that helps students to overcome Their mental health problems',
-      url:'www.instagram.com'
+      img_url: '/carousel/music.png',
+      head:'Music and Podcasts',
+      desc: 'Unlock a cascade of positivity with our handpicked playlist, elevating your mood one beat at a time!',
+      url:'/music'
     },
     {
-      img_url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
-      head:'Emergency Contacts',
-      desc: 'BITS MHSG is an organization that helps students to overcome Their mental health problems',
-      url:'https://www.instagram.com'
+      img_url: '/carousel/askhelp.png',
+      head:'#AskForHelp',
+      desc: 'Feeling low or in need of mental health support? Click here for help!',
+      url:'/resources'
     },
   ];
 
@@ -47,7 +47,7 @@ const Carousel = () => {
 
   const nextSlide = () => {
     const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    const newIndex = (currentIndex+1)%(slides.length);
     setCurrentIndex(newIndex);
   };
 
@@ -55,6 +55,16 @@ const Carousel = () => {
     setCurrentIndex(slideIndex);
   };
 
+  // const autoPlay = () => {
+  //   const intervalId = setInterval(() => {
+  //     nextSlide();
+  //   }, 2000); 
+  //   return () => clearInterval(intervalId);
+  // };
+  
+  // useEffect(() => {
+  //   autoPlay();
+  // }, [currentIndex]);
 
   return (
     <div className='pb-8 px-4 pt-4 group flex flex-col mainCont'>
@@ -100,6 +110,7 @@ const Carousel = () => {
           .carouselImg{
             height:70vh;
             object-fit:cover;
+            border-radius:15px;
           }
           .HeadTxt{
             font-size:28px;
@@ -122,7 +133,7 @@ const Carousel = () => {
           }
           @media screen and (max-width:600px){
             .carouselImg{
-              height:40vh;
+              height:36vh;
             }
             .HeadTxt{
               font-size:22px;
@@ -138,3 +149,4 @@ const Carousel = () => {
 }
 
 export default Carousel
+
