@@ -2,13 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 const Profile = (props) => {
   return (
-    <div className='w-72 h-96 bg-[#d6e7a8] rounded-2xl profile flex flex-col align-middle profile text-[#20400d]'>
-      <div className='py-5'>
-        <img src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436188.jpg?w=740&t=st=1689966412~exp=1689967012~hmac=587709328adb58f443667b6923c536e3cd1080ea73808ed1f495a69b32298191" alt="" className='mx-12  object-cover rounded-full h-48 profimg'/>
-      </div>
+    <div className='w-72 h-96  rounded-2xl profile flex flex-col align-middle profile '>
+      <img src={props.img} alt="" className='mx-12  object-cover rounded-full h-48 profimg mt-7 mb-2'/>
       <div className='flex flex-col align-middle'>
-        <div className='profname text-center'>Suman Sekhar Sahoo</div>
-        <div className='profdesc text-center '>Webdev team head</div>
+        <div className='profname text-center'>{props.profName}</div>
+        <div className='profdesc text-center '>{props.pos}</div>
       </div>
       <div className='profsocial flex  align-middle justify-center mt-5'>
         <div className='mr-4'>
@@ -27,17 +25,19 @@ const Profile = (props) => {
         }
         .profile{
           border:3px solid #b0b0b0;
-          transition: all .5s ease-out
+          transition: all .2s ease-out;
+          background-color:${props.bcol};
+          color:${props.tcol};
         }
         .profile:hover{
-          border:3px solid #20400d
+          border:3px solid ${props.tcol}
         }
         .profile:hover .profimg{
-          border:3px solid #20400d
+          border:3px solid ${props.tcol};
         }
         .profimg{
           border:3px solid #b0b0b0;
-          transition: all .5s ease-out
+          transition: all .2s ease-out
         }
         
       `}</style>

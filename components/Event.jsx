@@ -27,13 +27,16 @@ const Event = ({event}) => {
                     display:flex;
                     flex-direction:column; 
                     background-color:#eaeef4;
+                    background-color:#e8f5fc;
                     width:350px;
                     color:#245491;
                     transition: all .3s ease-out;
                 }
                 .event:hover{
+                    color:#015687;
                     color:#001d51;
                     background-color:#d2dae8;
+                    background-color:#cfe5fa;
                     border:2px solid #001d51;
                     border:2px solid #1C468E;
                 }
@@ -50,7 +53,7 @@ const Event = ({event}) => {
                 }
                 .eventInfo{
                     padding:4px 8px 0px 8px;
-                    // max-height:310px;
+                    height:205px;
 
                 }
                 .eventDTV{

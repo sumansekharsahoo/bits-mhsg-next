@@ -12,6 +12,9 @@ const Categories = () => {
     <div className='categories flex flex-col'>
       <span className='text-white text-center text-2xl mb-1'>Categories</span>
       <div className='catgCont'>
+        <Link href="/articles"><div className='catgBox'>
+              <span className='text-center'>All Categories</span>
+            </div></Link>
         {catg.map((category)=>(
           <Link key={category.slug} href={`/category/${category.slug}`}>
             <div className='catgBox'>

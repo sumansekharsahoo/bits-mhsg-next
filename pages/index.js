@@ -17,12 +17,7 @@ export default function Home({posts}) {
       <div className='bg-[#daf3e8]'>
         <Carousel/>
       </div>
-      <div className={styles.postcontainer}>
-        {/* {posts.map((post,index)=>(
-          <PostCard post={post.node} key={post.title}/>
-        ))} */}
-        
-      </div>
+  
       
       
       
@@ -30,9 +25,4 @@ export default function Home({posts}) {
   )
 }
 
-// export async function getStaticProps(){
-//   const posts=(await getPosts()) || [];
-//   return {
-//     props:{posts}
-//   }
-// }
+

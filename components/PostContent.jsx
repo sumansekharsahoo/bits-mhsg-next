@@ -56,7 +56,7 @@ const PostContent = ({post}) => {
         <img src={post.featuredImage.url} alt="" className="artImg object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         
         <div className=" px-1 md:px-4 lg:px-0 my-5">
-          <div className="flex items-center w-full mb-8 justify-center">
+          <div className="flex items-center w-full mb-6 justify-center">
             <div className=" flex items-center justify-center lg:mb-0 lg:w-auto md:mr-24 mr-12">
               <img
                 alt={post.author.name}
@@ -74,6 +74,9 @@ const PostContent = ({post}) => {
               <span className="align-middle text-lg md:text-xl">{moment(post.date).format('MMM DD, YYYY')}</span>
             </div>
           </div>
+          <div className='catg text-lg md:text-xl text-center mb-8 font-semibold	'><span className='text-[#c97d02]'>Categories: </span>{post.categories.map((catg)=>(
+                <a href={`/category/${catg.slug}`} key={catg.name}> #{catg.name}&nbsp;</a>
+              ))}  </div>
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
 

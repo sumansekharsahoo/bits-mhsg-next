@@ -45,11 +45,17 @@ const Carousel = () => {
     setCurrentIndex(newIndex);
   };
 
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = (currentIndex+1)%(slides.length);
-    setCurrentIndex(newIndex);
-  };
+  // const nextSlide = () => {
+  //   const isLastSlide = currentIndex === slides.length - 1;
+  //   const newIndex = isLastSlide? 0 : currentIndex+1;
+  //   setCurrentIndex(newIndex);
+  // };
+
+  const nextSlide=()=>{
+    setCurrentIndex((prevIndex)=>{
+      return (prevIndex+1)%slides.length;
+    })
+  }
 
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
