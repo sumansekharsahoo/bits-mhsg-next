@@ -174,3 +174,49 @@ export const getCategoryPost = async (slug) => {
 
   return result.postsConnection.edges;
 };
+
+export const getRecentPosts=async()=>{
+    const query = gql`
+        query GetPostDetails(){
+            posts(
+                orderBy: date_ASC
+                last: 3
+            ){
+                title
+                featuredImage{
+                    url
+                }
+                date
+                slug
+                author{
+                    name
+                }
+            }
+        }
+    `
+    
+    const result= await request(graphqlAPI, query);
+    return result.posts;
+}
+
+export const getRecentEvents=async()=>{
+    const query = gql`
+        query GetEventDetails(){
+            events(
+                orderBy: createdAt_DESC
+                last: 3
+            ){
+                eventImg {
+                    url
+                }
+                eventName
+                date
+                venue
+                link
+            }
+        }
+    `
+    
+    const result= await request(graphqlAPI, query);
+    return result.events;
+}

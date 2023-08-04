@@ -8,7 +8,7 @@ const MusicCard = (props) => {
         <style jsx>
             {`
             .musicCardCont{
-                width:250px;
+                width:280px;
                 border-radius:8px;
                 background-color: ${props.bgcol};
                 color:${props.fcol};
@@ -17,7 +17,7 @@ const MusicCard = (props) => {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 padding:12px 12px 10px 12px;
-                transition: all 0.15s ease-out;
+                transition: all 0.15s ease-out;  
             }
             .musicCardCont:hover{
                 box-shadow:0px 1px 10px 2px #c2c2c2; 
@@ -26,16 +26,16 @@ const MusicCard = (props) => {
                 object-fit:cover;
             }
             .title{
-                font-size:18px;  
+                font-size:20px;  
             }
-            @media screen and (max-width:1050px){
-                .musicCardCont{
-                    width:280px;
-                }
-                .title{
-                    font-size:20px;  
-                }
-            }
+            // @media screen and (max-width:1050px){
+            //     .musicCardCont{
+            //         width:280px;
+            //     }
+            //     .title{
+            //         font-size:20px;  
+            //     }
+            // }
             `}
         </style>
     </a>

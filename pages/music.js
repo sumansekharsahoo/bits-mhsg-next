@@ -85,7 +85,7 @@ const music = ({musics}) => {
               background-color:#d8d7fd
             }
 
-            @media screen and (max-width:1400px){
+            @media screen and (max-width:1480px){
                .content{
                   grid-template-columns: 1fr 1fr 1fr;
                } 

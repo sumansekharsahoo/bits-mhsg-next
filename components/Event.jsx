@@ -30,7 +30,7 @@ const Event = ({event}) => {
                     background-color:#e8f5fc;
                     width:350px;
                     color:#245491;
-                    transition: all .3s ease-out;
+                    transition: all .2s ease-out;
                 }
                 .event:hover{
                     color:#015687;
@@ -49,7 +49,7 @@ const Event = ({event}) => {
                     width:330px;
                     object-fit:cover;
                     border-radius:18px;
-                    transition: all .3s ease-out;
+                    transition: all .2s ease-out;
                 }
                 .eventInfo{
                     padding:4px 8px 0px 8px;

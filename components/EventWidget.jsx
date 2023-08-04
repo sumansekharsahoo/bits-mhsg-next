@@ -1,29 +1,29 @@
 import React from 'react'
 
-const PostWidget = (props) => {
+const EventWidget = (props) => {
   return (
-    <a href={`/post/${props.link}`} className='flex flex-col mainCont'>
+    <a href={props.link} className='flex flex-col mainCont'>
       <img src={props.img} alt="imgNotRendered" className='img' />
       <div className='ptitle'>
         {props.title}
       </div>
       <div className='det flex justify-between'>
-        <span className='author'>{props.auth}</span>
         <span className='date'>{props.date}</span>
+        <span className='date'>{props.loc}</span>
       </div>
       <style jsx>
         { `
           .mainCont{
             width:300px;
-            background-color:#fff7d9;
+            background-color:#e8f5fc;
             border-radius:10px; 
             padding:12px;
             border:2px solid #b0b0b0;
             transition: all .2s ease-out;
-            color:#7e4c01;
+            color:#245491;
           }
           .img{
-            height:205px;
+            height:240px;
             object-fit:cover;
             border-radius:10px;
             border:2px solid #b0b0b0;
@@ -32,25 +32,19 @@ const PostWidget = (props) => {
           .ptitle{
             font-size:20px; 
             font-weight:500;
-            height:60px;
-            overflow:hidden;
-            text-overflow: ellipsis;
+            text-align:center;
           }
           .mainCont:hover{
-            background-color:#ffefba;
-            border:2px solid #905700;
+            color:#001d51;
+            background-color:#cfe5fa;
+            border:2px solid #001d51;
           }
           .mainCont:hover .img{
-            border:2px solid #905700;
+            border:2px solid #001d51;
           }
 
           .det{
             margin-top:5px;
-          }
-          @media only screen and (max-width: 685px){
-            .ptitle{
-              height:auto;
-            }
           }
 
         `}
@@ -59,4 +53,4 @@ const PostWidget = (props) => {
   )
 }
 
-export default PostWidget
+export default EventWidget
