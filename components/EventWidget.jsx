@@ -30,6 +30,10 @@ const EventWidget = (props) => {
             transition: all .2s ease-out;
           }
           .ptitle{
+            // height:30px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             font-size:20px; 
             font-weight:500;
             text-align:center;

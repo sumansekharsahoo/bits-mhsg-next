@@ -2,10 +2,14 @@ import React from 'react'
 import { getPosts,getPostDetails } from '@/services'
 import PostContent from '@/components/PostContent'
 import Author from '@/components/Author'
+import Head from 'next/head'
 
 const PostDetails = ({post}) => {
   return (
     <div className='container mx-auto px-1.5 md:px-4 lg:px-16 my-2 md:my-6'>
+        <Head>
+          <title>Articles/Post</title>
+        </Head>
         <PostContent post={post}/>
         <Author author={post.author}/>
     </div>

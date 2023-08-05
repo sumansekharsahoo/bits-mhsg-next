@@ -13,7 +13,7 @@ const events = ({events}) => {
       </Head>
       <span className='text-5xl mt-2 Header'>Events</span>
       <div className={styles.eventCards}>
-        {events.map((event)=><Event event={event.node} key={event.eventName}/>)}
+        {events.map((event)=><Event event={event} key={event.eventName}/>)}
       </div>
       <style jsx>
         {`

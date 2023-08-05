@@ -27,6 +27,9 @@ const MusicCard = (props) => {
             }
             .title{
                 font-size:20px;  
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             // @media screen and (max-width:1050px){
             //     .musicCardCont{

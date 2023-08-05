@@ -56,6 +56,8 @@ export default function Home({posts}) {
     <div className="Home">
       <Head>
         <title>BITS MHSG</title>
+        <meta name="keywords" content="BITS MHSG, Mental Heath, Mental Heath Support Group, BITS, BITS Hyderabad, BITS Pilani"></meta>
+        <meta name="description" content="BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health"></meta>
       </Head>
       <div className='bg-[#daf3e8]'>
         <Carousel/>

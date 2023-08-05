@@ -86,30 +86,53 @@ export const getPostDetails = async (slug)=>{
     return result.post;
 };
 
+// export const getEvents = async()=>{
+//     const query=gql`
+//         query GetEvents {
+//             eventsConnection {
+//                 edges {
+//                     node {
+//                         date
+//                         time
+//                         eventDesc
+//                         eventImg {
+//                             url
+//                         }
+//                         eventName
+//                         featuredEvent
+//                         venue
+//                         link
+//                     }
+//                 }
+//             }
+//         }
+//     `
+//     const result = await request(graphqlAPI,query);
+//     return result.eventsConnection.edges;
+// }
+
 export const getEvents = async()=>{
     const query=gql`
         query GetEvents {
-            eventsConnection {
-                edges {
-                    node {
-                        date
-                        time
-                        eventDesc
-                        eventImg {
-                            url
-                        }
-                        eventName
-                        featuredEvent
-                        venue
-                        link
-                    }
+            events(orderBy: createdAt_DESC) {
+                eventName
+                eventDesc
+                featuredEvent
+                venue
+                time
+                date
+                eventImg {
+                url
                 }
+                link
             }
         }
     `
     const result = await request(graphqlAPI,query);
-    return result.eventsConnection.edges;
+    return result.events;
 }
+
+
 
 export const getMusic = async()=>{
     const query=gql`
