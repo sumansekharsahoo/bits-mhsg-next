@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Profile = (props) => {
   return (
     <div className='w-72 h-96  rounded-2xl profile flex flex-col align-middle profile '>
-      <img src={props.img} alt="" className='mx-12  object-cover rounded-full h-48 profimg mt-7 mb-2'/>
+      <img src={props.img} alt="" className='mx-12  object-cover rounded-full h-48 profimg mb-2'/>
       <div className='flex flex-col align-middle'>
         <div className='profname text-center'>{props.profName}</div>
         <div className='profdesc text-center '>{props.pos}</div>
@@ -37,7 +37,8 @@ const Profile = (props) => {
         }
         .profimg{
           border:3px solid #b0b0b0;
-          transition: all .2s ease-out
+          transition: all .2s ease-out;
+          margin-top:35px;
         }
         
       `}</style>

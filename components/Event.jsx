@@ -97,6 +97,9 @@ const Event = ({event}) => {
                     .eventImg{
                         width:312px;
                     }
+                    .eventInfo{
+                        height:230px;
+                    }
                 }
                 
             `}

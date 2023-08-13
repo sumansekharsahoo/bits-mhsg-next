@@ -79,13 +79,15 @@ const resources = () => {
           </div>
         </div>
         <div className='testMusicCont flex'>
-          <a href="https://www.clinical-partners.co.uk/online-tests" target="_blank">
-            <div className='MHTest commonMT'>
+          <a href="https://www.clinical-partners.co.uk/online-tests" target="_blank"  className='MHTest commonMT'>
+            <img src="/helpline/MHTest.png" alt="MHTest" className='MHTImg' />
+            <div>
               Mental Health Assessment
             </div>
           </a>
-          <a href="/music">
-            <div className='Music commonMT'>
+          <a href="/music" className='Music commonMT'>
+            <img src="/carousel/music.png" alt="Music" className='MusicImg' />
+            <div>
               Music & Podcasts
             </div>
           </a>
@@ -105,8 +107,7 @@ const resources = () => {
             flex-direction:column;
             align-items:center;
             background-color:white;
-            // margin: 0px 60px 60px 60px;
-            margin: 0px 0px 60px 0px;
+            margin: 0px 0px 20px 0px;
             padding: 0px 60px 40px 60px;
             border-radius: 12px;
           }
@@ -161,27 +162,43 @@ const resources = () => {
             margin-top:15px;
           }
           .testMusicCont{
+            text-align:center;
             font-size:30px;
             font-weight:700;
             margin:20px 0px
           }
           .MHTest{
             background-color:#fcf1db;
-            margin-right:20px;
+            margin-right:40px;
             color:#f08b13;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:space-between;
           }
           .MHTest:hover{
             background-color:#fceac5;
+            // background-color:#fce49f;
+          }
+          .MHTImg{
+            width:350px;
           }
           .Music{
-            background-color:#f6ebf7;
-            color:#c741b4;
+            background-color:#dcfeec;
+            color:#02b571;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:space-between;
           }
           .Music:hover{
-            background-color:#f7e1fc;
+            background-color:#b0f5da;
+          }
+          .MusicImg{
+            width:370px;
           }
           .commonMT{
-            padding:10px 20px;
+            padding:13px;
             border-radius:12px;
             border:2px solid #b0b0b0;
           }
@@ -219,6 +236,15 @@ const resources = () => {
               margin-top:5px;
               gap:15px 15px;
             }
+            .MHTImg{
+              width:300px;
+            }
+            .MusicImg{
+              width:320px;
+            }
+            .testMusicCont{
+              font-size:27px;
+            }
            }
             @media screen and (max-width:810px){
               .contactsCont{
@@ -232,6 +258,9 @@ const resources = () => {
               }
               .commonMT{
                 padding:8px 15px;
+              }
+              .MHTest{
+                margin-right:20px;
               }
             }
             @media screen and (max-width:715px){
@@ -263,7 +292,7 @@ const resources = () => {
                 font-size:23px;
               }
               .MHTest{
-                margin-bottom:15px;
+                margin-bottom:25px;
                 margin-right:0px;
               }
               .commonMT{
@@ -283,6 +312,12 @@ const resources = () => {
               }
               .Header{
                 font-size:40px;
+              }
+              .MHTImg{
+                width:305px;
+              }
+              .MusicImg{
+                width:305px;
               }
             }
         `}

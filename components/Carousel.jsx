@@ -53,7 +53,7 @@ const Carousel = () => {
 
   const nextSlide=()=>{
     setCurrentIndex((prevIndex)=>{
-      return (prevIndex+1)%slides.length;
+      return (prevIndex+1)%(slides.length);
     })
   }
 
@@ -61,16 +61,10 @@ const Carousel = () => {
     setCurrentIndex(slideIndex);
   };
 
-  // const autoPlay = () => {
-  //   const intervalId = setInterval(() => {
-  //     nextSlide();
-  //   }, 2000); 
-  //   return () => clearInterval(intervalId);
-  // };
-  
-  // useEffect(() => {
-  //   autoPlay();
-  // }, [currentIndex]);
+useEffect(()=>{
+  const slideInterval =setInterval(nextSlide,3500)
+  return ()=>clearInterval(slideInterval)
+},[])
 
   return (
     <div className='pb-8 px-4 pt-4 group flex flex-col mainCont'>

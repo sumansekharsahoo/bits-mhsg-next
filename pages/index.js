@@ -9,8 +9,6 @@ import { useState,useEffect } from 'react'
 import { getRecentPosts, getRecentEvents } from '@/services'
 import moment from 'moment'
 
-
-
 const inter = Inter({ subsets: ['latin'] })
 
 const playlists=[

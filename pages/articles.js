@@ -58,7 +58,7 @@ const articles = ({posts}) => {
               padding:10vw;
             }
           }
-          @media only screen and (max-width: 398px){
+          @media only screen and (max-width: 380px){
             .artSec{
               margin:0px 3px;
             }
