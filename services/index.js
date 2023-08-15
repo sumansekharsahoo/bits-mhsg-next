@@ -132,6 +132,27 @@ export const getEvents = async()=>{
     return result.events;
 }
 
+export const getUpcomingEvents = async()=>{
+    const query=gql`
+        query GetUpcomingEvents{
+            events(where:{featuredEvent:true}){
+                eventName
+                eventDesc
+                featuredEvent
+                venue
+                time
+                date
+                eventImg {
+                url
+                }
+                link
+            }
+        }
+    `
+    const result= await request(graphqlAPI,query);
+    return result.events;
+}
+
 
 
 export const getMusic = async()=>{

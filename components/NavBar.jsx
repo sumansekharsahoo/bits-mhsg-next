@@ -5,7 +5,7 @@ import { useState } from 'react';
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className='sticky'>
+    <div className='sticky z-50'>
       <nav className="w-full bg-[#fff]/50 fixed top-0 left-0 right-0 z-10 backdrop-blur-lg	">
         <div className="justify-around px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 ">
           <div>

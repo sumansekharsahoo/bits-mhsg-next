@@ -74,7 +74,7 @@ export default function Home({posts}) {
             <a href='/articles' className='moreArt'>More Articles</a>
           </div>
         </div>
-        <div className='latestEvent pinCards bg-white mt-4'>
+        <div className='latestEvent pinCards bg-white mt-[24px]'>
           <div className='Head'>Latest Events</div>
           <div className='eventCont  gridCont'>
             {recentEvent.map((event)=>(
@@ -84,7 +84,7 @@ export default function Home({posts}) {
           </div>
         </div>
 
-        <div className='pinnedMusic pinCards bg-white mt-4'>
+        <div className='pinnedMusic pinCards bg-white mt-[24px]'>
           <div className='Head'>Pinned Playlists</div>
           <div className='musicCont gridCont'>
             <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title} bgcol={playlists[1].bgcol} fcol={playlists[1].fcol} />
