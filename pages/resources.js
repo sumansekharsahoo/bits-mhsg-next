@@ -10,7 +10,7 @@ const resources = () => {
     },
     {
       Desc:"Mpower",
-      Phone:"Mental Health Consulting Services",
+      Phone:"Call: +91 70757 74107 (Campus Helpdesk)",
       Link: "https://mpowerminds.com/seekhelp"
     },
     {
@@ -163,7 +163,7 @@ const resources = () => {
           }
           .testMusicCont{
             text-align:center;
-            font-size:30px;
+            font-size:26px;
             font-weight:700;
             margin:20px 0px
           }
@@ -181,7 +181,8 @@ const resources = () => {
             // background-color:#fce49f;
           }
           .MHTImg{
-            width:350px;
+            width:300px;
+            margin-top:10px;
           }
           .Music{
             background-color:#dcfeec;
@@ -192,10 +193,10 @@ const resources = () => {
             justify-content:space-between;
           }
           .Music:hover{
-            background-color:#b0f5da;
+            background-color:#d4fae9;
           }
           .MusicImg{
-            width:370px;
+            width:320px;
           }
           .commonMT{
             padding:13px;
@@ -237,13 +238,13 @@ const resources = () => {
               gap:15px 15px;
             }
             .MHTImg{
-              width:300px;
+              width:280px;
             }
             .MusicImg{
-              width:320px;
+              width:300px;
             }
             .testMusicCont{
-              font-size:27px;
+              font-size:25px;
             }
            }
             @media screen and (max-width:810px){
@@ -254,7 +255,7 @@ const resources = () => {
                 font-size:15px;
               }
               .testMusicCont{
-                font-size:25px;
+                font-size:24px;
               }
               .commonMT{
                 padding:8px 15px;

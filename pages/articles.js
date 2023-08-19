@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import Categories from '@/components/Categories'
 import CatgMenu from '@/components/CatgMenu'
 import PostCard from '@/components/PostCard'
 import { getPosts } from '@/services'
@@ -21,7 +20,7 @@ const articles = ({posts}) => {
             <div className='text-5xl text-center my-2'>Articles</div>
             <div className='postcardBox'>
               {posts.map((post,index)=>(
-                <PostCard post={post.node} key={post.title}/>
+                <PostCard post={post} key={post.title}/>
               ))}
             </div>
           </div>

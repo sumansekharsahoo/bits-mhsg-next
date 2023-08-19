@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import Categories from '@/components/Categories'
+import CatgMenu from '@/components/CatgMenu'
 import PostCard from '@/components/PostCard'
 import Loader from '@/components/Loader'
 import { getCategories, getCategoryPost } from '@/services'
@@ -22,7 +22,7 @@ const CategoryPost = ({posts}) => {
       
       <div className='articles lg:flex-row flex flex-col'>
           <div className='categoriesBox'>
-            <Categories/>
+            <CatgMenu/>
           </div>
           <div className='ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-9 lg:mr-9 bg-white rounded-xl artSec'>
             <div className='text-5xl text-center my-2'>Articles</div>

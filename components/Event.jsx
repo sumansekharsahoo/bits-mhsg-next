@@ -1,13 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
-import moment from 'moment'
-
+import moment from 'moment';
 const colors=[
     {
-        bgcol:"#f6f4ed",
-        hbgcol:"#e4e4dd",
-        tcol:"#313131",
-        htcol:"#00000",
+        bgcol:"#f6f0fc",
+        hbgcol:"#f2e3ff",
+        tcol:"#551497",
+        htcol:"#37017a",
         brcol:"#313131",
         tagf:"#ba2416",
         tagb:"#ffe5e0",
@@ -26,7 +24,7 @@ const colors=[
 ]
 
 const Event = ({event}) => {
-    const tr=event.featuredEvent?1:0;
+    const tr=event.upcomingEvent?1:0;
   return (
     <a href={event.link} target="_blank">
     <div className='event relative'>
@@ -98,7 +96,7 @@ const Event = ({event}) => {
                     font-weight:500;
                 }
                 .eventDesc{
-                    max-height:216px;
+                    max-height:120px;
                     overflow: hidden;
                     text-overflow: ellipsis; 
                 }
@@ -145,7 +143,7 @@ const Event = ({event}) => {
                         height:230px;
                     }
                 }
-                
+
             `}
         </style>
     </div>

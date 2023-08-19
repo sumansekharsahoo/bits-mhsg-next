@@ -74,8 +74,8 @@ const PostContent = ({post}) => {
               <span className="align-middle text-lg md:text-xl">{moment(post.date).format('MMM DD, YYYY')}</span>
             </div>
           </div>
-            <div className='catg text-lg md:text-xl text-center mb-8 font-semibold	'><span className='text-[#c97d02]'>Categories: </span>{post.categories.map((catg)=>(
-                  <a href={`/category/${catg.slug}`} key={catg.name} className='catgBox'> {catg.name}</a>
+            <div className='catg text-lg md:text-xl text-center mb-8 font-semibold	'><span >Categories: </span>{post.categories.map((catg)=>(
+                  <a href={`/category/${catg.slug}`} key={catg.name} className='catgBox'>#{catg.name}</a>
                 ))}  </div>
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
@@ -87,11 +87,12 @@ const PostContent = ({post}) => {
       <style jsx>
         {`
           .catgBox{
-            padding:3px 6px;
-            background-color:#f1f9f2;
+            padding:2px 3px;
+            background-color:#f0f5ec;
             border-radius:5px;
-            margin-right:3px;
-            color:#50c878
+            border:2px solid #ccddbe;
+            margin-right:5px;
+            color:#689e46
           }
           .catgBox:hover{
             background-color:#dfe8e1;

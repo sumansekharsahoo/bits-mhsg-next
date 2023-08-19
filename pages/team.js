@@ -3,15 +3,15 @@ import Profile from '@/components/Profile'
 import Head from 'next/head'
 
 const profiles=[
-  {id:"1", profName:"Abhinav Srivastava", pos:"President", img:"/profile/Abhinav.png", iglink:"https://www.instagram.com/_abhinavsrivastavaaa/",linkedlink:"https://in.linkedin.com/in/abhinav-srivastava-496524191"},
+  {id:"1", profName:"Abhinav Srivastava", pos:"President", img:"/profile/Abhinav.png", iglink:"https://instagram.com/_abhinavsrivastavaaa?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://in.linkedin.com/in/abhinav-srivastava-496524191"},
   {id:"2", profName:"Tanmay Agarwal", pos:"Secretary", img:"/profile/Tanmay.jpg", iglink:"https://instagram.com/tanmay_ag_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",linkedlink:"https://www.linkedin.com/in/tanmay-ag"},
   {id:"3", profName:"Shreya Singh", pos:"Treasurer", img:"/profile/Shreya2.png", iglink:"https://instagram.com/shreya.singh31?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",linkedlink:"www.linkedin.com/in/ shreya-singh-ss"},
-  {id:"4", profName:"Sruthi Manikonda", pos:"Design Lead", img:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", iglink:"https://www.instagram.com/bits.mhsg/",linkedlink:"https://www.instagram.com/bits.mhsg/"},
-  {id:"5", profName:"Akhil Mohammad", pos:"Event Lead", img:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", iglink:"https://www.instagram.com/bits.mhsg/",linkedlink:"https://www.instagram.com/bits.mhsg/"},
-  {id:"6", profName:"Simran Singh", pos:"Content Lead", img:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", iglink:"https://www.instagram.com/bits.mhsg/",linkedlink:"https://www.instagram.com/bits.mhsg/"},
-  {id:"7", profName:"Suman Sekhar Sahoo", pos:"Webdev Lead", img:"/profile/Suman.png",linkedlink:"https://www.linkedin.com/in/suman-sekhar-sahoo-82621623b/", iglink:"https://www.instagram.com/sumansekhar.sahoo/"},
-  {id:"8", profName:"Nakshatra Dhavale", pos:"Social Lead", img:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png", iglink:"https://www.instagram.com/bits.mhsg/",linkedlink:"https://www.instagram.com/bits.mhsg/"},
-  {id:"9", profName:"Umang Lal", pos:"Ex-Officio", img:"/profile/Umang.png", iglink:"https://www.instagram.com/_umang_lal/",linkedlink:"https://www.linkedin.com/in/umang-lal-528374215"},
+  {id:"4", profName:"Sruthi Manikonda", pos:"Design Lead", img:"/profile/Sruthi.jpg", iglink:"https://instagram.com/taking.the.hobbits.to.isengard?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://in.linkedin.com/in/bala-gayatri-sruthi-manikonda-5a2819259"},
+  {id:"5", profName:"Akhil Mohammad", pos:"Event Lead", img:"/profile/Akhil.png", iglink:"https://instagram.com/akhil_.125?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",linkedlink:"https://www.linkedin.com/company/bits-mental-health-support-group/"},
+  {id:"6", profName:"Simran Singh", pos:"Content Lead", img:"/profile/Simran.jpg", iglink:"https://instagram.com/simran_singh7047_?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://www.linkedin.com/in/simran-singh-2b8b93288/"},
+  {id:"7", profName:"Suman Sekhar Sahoo", pos:"Webdev Lead", img:"/profile/Suman.png",linkedlink:"https://www.linkedin.com/in/suman-sekhar-sahoo-82621623b/", iglink:"https://instagram.com/sumansekhar.sahoo?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"},
+  {id:"8", profName:"Nakshatra Dhavale", pos:"Social Lead", img:"/profile/Nakshatra.jpg", iglink:"https://instagram.com/nakshatra189?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",linkedlink:"https://www.linkedin.com/in/nakshatra-dhavale-890118258"},
+  {id:"9", profName:"Umang Lal", pos:"Ex-Officio", img:"/profile/Umang.png", iglink:"https://instagram.com/_umang_lal?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://www.linkedin.com/in/umang-lal-528374215"},
 ]
 
 const cols=[
@@ -19,9 +19,9 @@ const cols=[
   {bcol:"#a6c0fa", tcol:"#ef8f00"},
   {bcol:"#f6c8e1", tcol:"#d29a00"},
   {bcol:"#f9d8b3", tcol:"#f08b13"},
-  {bcol:"#fc8781", tcol:"#594df6"},
+  {bcol:"#fa8a7f", tcol:"#594df6"},
   {bcol:"#fce881", tcol:"#594df6"},
-  {bcol:"#d4c8fb", tcol:"#594df6"},
+  {bcol:"#d1c5fa", tcol:"#594df6"},
   {bcol:"#99fc92", tcol:"#594df6"},
   {bcol:"#a7d7fb", tcol:"#594df6"},
 ]

@@ -14,7 +14,7 @@ const Profile = (props) => {
           <a href={props.insta} target='_blank'><Image src="/icons/logo-instagram.svg" width={24} height={24} alt="logo" /></a>
         </div>
         <div>
-          <a href={props.linkin} target='_blank'><Image src="/icons/logo-linkedin.svg" width={24} height={24} alt="logo" /></a>
+          {props.linkin && <a href={props.linkin} target='_blank'><Image src="/icons/logo-linkedin.svg" width={24} height={24} alt="logo" /></a>}
         </div>
       </div>
       <style jsx>{`

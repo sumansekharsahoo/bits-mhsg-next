@@ -5,37 +5,33 @@ const graphqlAPI= process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT;
 export const getPosts = async ()=>{
 
     const query= gql`
-        query MyQuery {
-            postsConnection {
-                edges {
-                    node {
-                        author {
-                        bio
-                        name
-                        id
-                        photo {
-                            url
-                        }
-                        }
-                        createdAt
-                        slug
-                        date
-                        title
-                        excerpt
-                        featuredImage {
-                        url
-                        }
-                        categories {
-                        name
-                        slug
-                        }
-                    }
+        query GetPosts {
+            posts(orderBy: date_DESC) {
+                createdAt
+                date
+                slug
+                title
+                excerpt
+                author {
+                bio
+                name
+                id
+                photo {
+                    url
+                }
+                }
+                featuredImage {
+                url
+                }
+                categories {
+                name
+                slug
                 }
             }
             }
     `
     const result= await request(graphqlAPI, query);
-    return result.postsConnection.edges;
+    return result.posts;
 };
 
 export const getCategories=async()=>{
@@ -114,10 +110,11 @@ export const getPostDetails = async (slug)=>{
 export const getEvents = async()=>{
     const query=gql`
         query GetEvents {
-            events(orderBy: createdAt_DESC) {
+            events(orderBy: endDate_DESC) {
                 eventName
                 eventDesc
-                featuredEvent
+                upcomingEvent
+                endDate
                 venue
                 time
                 date
@@ -135,10 +132,32 @@ export const getEvents = async()=>{
 export const getUpcomingEvents = async()=>{
     const query=gql`
         query GetUpcomingEvents{
-            events(where:{featuredEvent:true}){
+            events(where:{upcomingEvent:true}){
                 eventName
                 eventDesc
-                featuredEvent
+                upcomingEvent
+                endDate
+                venue
+                time
+                date
+                eventImg {
+                url
+                }
+                link
+            }
+        }
+    `
+    const result= await request(graphqlAPI,query);
+    return result.events;
+}
+export const getPastEvents = async()=>{
+    const query=gql`
+        query GetPastEvents{
+            events(where:{upcomingEvent:false}){
+                eventName
+                eventDesc
+                upcomingEvent
+                endDate
                 venue
                 time
                 date
@@ -247,8 +266,8 @@ export const getRecentEvents=async()=>{
     const query = gql`
         query GetEventDetails(){
             events(
-                orderBy: createdAt_DESC
-                last: 3
+                orderBy: endDate_DESC
+                first: 3
             ){
                 eventImg {
                     url
