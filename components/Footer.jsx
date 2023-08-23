@@ -168,7 +168,10 @@ const Footer = () => {
             font-size:23px;
           }
           .credits{
-            left:36%
+            left:36%;
+          }
+          .logoCont{
+            margin-bottom:10px;
           }
         }
       `}</style>

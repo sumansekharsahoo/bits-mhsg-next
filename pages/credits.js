@@ -10,7 +10,7 @@ const credits = () => {
             <img src="/official/MHSG_Short.png" alt="MHSGshort" className='image'/>
             <div className='text-5xl heading text-[#51b39c] font-semibold'>Credits & Attributions</div>
         </div>
-        <div className='px-[40px] text-xl mt-5 mb-10'>
+        <div className='px-[40px] text-xl mt-5 mb-10 fontSz'>
             <p className='mb-1'>At BITS MHSG, we strive to maintain good ethics and best practices even when it comes to giving credits or attributions.</p>
             <ul className='list-disc ml-5'>
                 <li className=''>
@@ -37,6 +37,9 @@ const credits = () => {
                 }
                 .hero{
                     height:150px;
+                }
+                .fontSz{
+                    font-size:16px;
                 }
             }
         `}</style>
