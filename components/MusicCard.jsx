@@ -3,7 +3,7 @@ import React from 'react'
 const MusicCard = (props) => {
   return (
     <a href={props.url} target="_blank" className='musicCardCont flex flex-col items-center'>
-        <img src={props.img} alt="playlistImg" className='musicImg'/>
+        <img src={props.img} alt="playlistImg" className='musicImg' loading='lazy'/>
         <div className='title'>
             {props.title}
         </div>

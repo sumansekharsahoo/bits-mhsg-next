@@ -39,7 +39,7 @@ const Footer = () => {
             <div className='social'>
               <a href="mailto:mhsg@hyderabad.bits-pilani.ac.in" target="_blank"><img src="/icons/email.png" alt="Email" className='socIcons mail'/></a>
               <a href="https://www.facebook.com/groups/BITS.MHSG" target="_blank"><img src="/icons/facebook.png" alt="Facebook" className='socIcons'/></a>
-              <a href="https://www.instagram.com/bits.mhsg/" target="_blank"><img src="/icons/instagram.png" alt="Instagram" className='socIcons'/></a>
+              <a href="https://instagram.com/bits.mhsg?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><img src="/icons/instagram.png" alt="Instagram" className='socIcons'/></a>
               <a href="https://www.linkedin.com/company/bits-mental-health-support-group/" target="_blank"><img src="/icons/linkedin.png" alt="Linkedin" className='socIcons'/></a>
             </div>
         </div>

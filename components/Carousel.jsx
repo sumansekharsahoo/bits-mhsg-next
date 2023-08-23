@@ -74,7 +74,7 @@ useEffect(()=>{
       >  
       </div> */}
       <a href={slides[currentIndex].url} className='flex flex-col innerCont'>
-        <img src={slides[currentIndex].img_url} alt="img not rendered" className='carouselImg'/>
+        <img src={slides[currentIndex].img_url} alt="img not rendered" className='carouselImg' loading='lazy'/>
         <div className=' text-[#1ba19c] text-center HeadTxt'>{slides[currentIndex].head}</div>
         <div className='text-black text-center italic DescTxt'>
             {slides[currentIndex].desc}

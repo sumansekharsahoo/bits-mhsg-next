@@ -80,13 +80,13 @@ const resources = () => {
         </div>
         <div className='testMusicCont flex'>
           <a href="https://www.clinical-partners.co.uk/online-tests" target="_blank"  className='MHTest commonMT'>
-            <img src="/helpline/MHTest.png" alt="MHTest" className='MHTImg' />
+            <img src="/helpline/MHTest.png" loading='lazy' alt="MHTest" className='MHTImg' />
             <div>
               Mental Health Assessment
             </div>
           </a>
           <a href="/music" className='Music commonMT'>
-            <img src="/carousel/music.png" alt="Music" className='MusicImg' />
+            <img src="/carousel/music.png" loading='lazy' alt="Music" className='MusicImg' />
             <div>
               Music & Podcasts
             </div>

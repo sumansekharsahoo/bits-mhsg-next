@@ -2,7 +2,7 @@ export default function ResourceCard(props){
     return(
         <a href={props.helpObj.Link} target="_blank" className="helpLink">
         <div className="helplineCard">
-            <img src={props.imgObj} alt="Unable" className='helpImg' />
+            <img src={props.imgObj} loading="lazy" alt="Unable" className='helpImg' />
             <div className="helpDetails">
                 <div className="helpDesc">{props.helpObj.Desc}</div>
                 <div className="helpPh">{props.helpObj.Phone}</div>

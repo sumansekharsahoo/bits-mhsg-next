@@ -180,6 +180,9 @@ const music = ({musics}) => {
                .music{
                 padding:10px;
                }
+               .Head{
+                font-size:36px;
+               }
             }
           `}
         </style>

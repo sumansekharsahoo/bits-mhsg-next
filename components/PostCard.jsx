@@ -16,7 +16,7 @@ const PostCard = ({post}) => {
   return (
     <a href={`/post/${post.slug}`} className='postcard flex flex-col'>
         {/* <img src='https://img.freepik.com/free-vector/high-self-esteem-illustration-with-woman-leaves_23-2148723709.jpg?w=740&t=st=1690047410~exp=1690048010~hmac=effb7c17dc55d36ad45e6d7c20707c3d60a05b84092f6c153916fa0c3e752f60' alt='sdc' className='postPic' /> */}
-        <img src={post.featuredImage.url} alt={post.title} className='postPic' />
+        <img src={post.featuredImage.url} loading='lazy' alt={post.title} className='postPic' />
         <div className='expectPic'>
 
           <div className='fixedCont'>

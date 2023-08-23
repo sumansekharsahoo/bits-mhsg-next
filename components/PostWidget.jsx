@@ -3,7 +3,7 @@ import React from 'react'
 const PostWidget = (props) => {
   return (
     <a href={`/post/${props.link}`} className='flex flex-col mainCont'>
-      <img src={props.img} alt="imgNotRendered" className='img' />
+      <img src={props.img} alt="imgNotRendered" className='img' loading='lazy'/>
       <div className='ptitle px-[5px]'>
         {props.title}
       </div>
