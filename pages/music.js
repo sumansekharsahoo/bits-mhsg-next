@@ -7,30 +7,96 @@ import { getMusic } from '@/services'
 const music = ({musics}) => {
   const playlists=[
     {
-      url:"https://music.youtube.com/playlist?list=PLBhHHAmnlwetWD0kKW072Vl8MZiXA4kBw&feature=share",
-      img:"https://yt3.googleusercontent.com/L9sFfCYXxjsEd1esLa7ytlD_p8jOrr_TOPpjPhXcRm58bwLhVPYIEwVspyUvp52HTMtV7eI_KTE=s576",
-      title:"Sanjay Leela",
-      bgcol:"#d42626",
-      fcol:"#ffff"
+      url:"https://open.spotify.com/show/6qCGowS3fs0qFYMlxczxC5",
+      img:"/music/mentally-yours.png",
+      title:"Mentally Yours",
+      musicPlayer:'0'
     },
     {
       url:"https://open.spotify.com/show/3i5TCKhc6GY42pOWkpWveG?si=858d6a7812d643a1",
       img:"https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/96c5c41e-0bc8-4661-b184-ae32006cd726/d623ef0b-3fee-4c26-b815-ae32006cd739/image.jpg?t=1643956581&size=Large",
       title:"The Happiness Lab",
-      bgcol:"#69dc72",
-      fcol:"#00000"
+      musicPlayer:'0'
     },
     {
-      url:"https://open.spotify.com/playlist/7eqXTqVEvJ5g5kS45s13gp?si=c854242f32ad48e9",
-      img:"/misc/shreya-ghoshal.png",
-      title:"Shreya Ghoshal",
-      bgcol:"#69dc72",
-      fcol:"#00000"
+      url:"https://open.spotify.com/playlist/0NuENKeHb4HvGmKkwmVi8N",
+      img:"/music/radiant-bliss.png",
+      title:"Radiant Bollywood Bliss",
+      musicPlayer:'0'
+    },
+    {
+      url:"https://open.spotify.com/playlist/514SZcgMQVFSlvFDOXUq3v",
+      img:"/music/midnight-melody-spotify.jpg",
+      title:"Midnight Melodies",
+      musicPlayer:'0'
+    },
+    {
+      url:"https://open.spotify.com/playlist/40sXWmiGMSrbO8ExACXsoL",
+      img:"/music/cheerful-vibes.jpg",
+      title:"Cheerful Vibes",
+      musicPlayer:'0'
     },
 //69dc72, 00000 ->spotify
 //#d42626, ffff ->YT Music
 //
 
+  ]
+
+  const mcolors=[
+    {
+      id:'0',
+      bgcol:"#69dc72",
+      fcol:"#00000",
+      tag:"/music/spotify.png"
+    },
+    {
+      id:'1',
+      bgcol:"#d42626",
+      fcol:"#ffff",
+      tag:"/music/ytmusic.png"
+    },
+    {
+      id:'2',
+      bgcol:"#85c6b9",
+      fcol:"#242a30",
+      tag:"/music/jiosavan.png"
+    },
+    {
+      id:'3',
+      bgcol:"#440ff5",
+      fcol:"#ffff",
+      tag:"/music/amazon.png"
+    },
+    {
+      id:'4',
+      bgcol:"#d7473b",
+      fcol:"#ffff",
+      tag:"/music/gaana.png"
+    },
+    {
+      id:'5',
+      bgcol:"#252526",
+      fcol:"#ffff",
+      tag:"/music/apple.png"
+    },
+    {
+      id:'6',
+      bgcol:"#ee7635",
+      fcol:"#f7f4f4",
+      tag:"/music/soundcloud.png"
+    },
+    {
+      id:'7',
+      bgcol:"#dc4442",
+      fcol:"#f7f4f4",
+      tag:"/music/wink.png"
+    },
+    {
+      id:'8',
+      bgcol:"#171717",
+      fcol:"#ffff",
+      tag:"/music/others.png"
+    },
   ]
   return (
     <div className='music'>
@@ -40,12 +106,14 @@ const music = ({musics}) => {
         <div className='mainCont'>
             <div className='Head text-4xl pt-2'>Music & Podcasts</div>
             <div className='content'>
-              <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title} bgcol={playlists[1].bgcol} fcol={playlists[1].fcol} />
-              <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title} bgcol={playlists[2].bgcol} fcol={playlists[2].fcol} />
-              <MusicCard url={playlists[0].url} img={playlists[0].img} title={playlists[0].title} bgcol={playlists[0].bgcol} fcol={playlists[0].fcol} />
-              {musics.map((music)=><MusicCard url={music.node.link} key={music.playlistTitle} title={music.node.playlistTitle} img={music.node.image.url} bgcol={music.node.backgroundColor.hex.toString()} fcol={music.node.fontColor.hex.toString()}/>)}
+              <MusicCard url={playlists[0].url} img={playlists[0].img} title={playlists[0].title}  bgcol={mcolors[playlists[0].musicPlayer].bgcol} fcol={mcolors[playlists[0].musicPlayer].fcol} tag={mcolors[playlists[0].musicPlayer].tag}/>
+              <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title}  bgcol={mcolors[playlists[1].musicPlayer].bgcol} fcol={mcolors[playlists[1].musicPlayer].fcol} tag={mcolors[playlists[1].musicPlayer].tag}/>
+              <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title}  bgcol={mcolors[playlists[2].musicPlayer].bgcol} fcol={mcolors[playlists[2].musicPlayer].fcol} tag={mcolors[playlists[2].musicPlayer].tag}/>
+              <MusicCard url={playlists[3].url} img={playlists[3].img} title={playlists[3].title}  bgcol={mcolors[playlists[3].musicPlayer].bgcol} fcol={mcolors[playlists[3].musicPlayer].fcol} tag={mcolors[playlists[3].musicPlayer].tag}/>
+              <MusicCard url={playlists[4].url} img={playlists[4].img} title={playlists[4].title}  bgcol={mcolors[playlists[4].musicPlayer].bgcol} fcol={mcolors[playlists[4].musicPlayer].fcol} tag={mcolors[playlists[4].musicPlayer].tag}/>
+              {musics.map((music)=><MusicCard url={music.link} key={music.playlistTitle} title={music.playlistTitle} img={music.image.url} bgcol={mcolors[music.musicPlayer].bgcol} fcol={mcolors[music.musicPlayer].fcol} tag={mcolors[music.musicPlayer].tag}/>)}
             </div>
-            <a href="https://docs.google.com/forms" target="_blank" className='addYours'>Add your playlists</a>
+            <a href="https://forms.gle/pu2NrARyP9ocb1577" target="_blank" className='addYours'>Add your playlists</a>
         </div>
         <style jsx>
           {`

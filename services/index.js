@@ -176,28 +176,20 @@ export const getPastEvents = async()=>{
 
 export const getMusic = async()=>{
     const query=gql`
-        query GetMusic {
-            musicsConnection {
-                edges {
-                node {
-                    backgroundColor {
-                        hex
-                    }
-                    fontColor {
-                        hex
-                    }
+        query MyQuery {
+            musics(orderBy: musicPlayer_ASC) {
                     image {
                         url
                     }
                     link
+                    musicPlayer
                     playlistTitle
                 }
-                }
             }
-        }
+
     `
     const result = await request(graphqlAPI,query);
-    return result.musicsConnection.edges;
+    return result.musics;
 }
 
 export const getCategoryPost = async (slug) => {
@@ -273,6 +265,7 @@ export const getRecentEvents=async()=>{
                     url
                 }
                 eventName
+                upcomingEvent
                 date
                 venue
                 link

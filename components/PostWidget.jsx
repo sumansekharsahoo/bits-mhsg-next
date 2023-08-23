@@ -4,10 +4,10 @@ const PostWidget = (props) => {
   return (
     <a href={`/post/${props.link}`} className='flex flex-col mainCont'>
       <img src={props.img} alt="imgNotRendered" className='img' />
-      <div className='ptitle'>
+      <div className='ptitle px-[5px]'>
         {props.title}
       </div>
-      <div className='det flex justify-between'>
+      <div className='det flex justify-between px-[5px]'>
         <span className='author'>{props.auth}</span>
         <span className='date'>{props.date}</span>
       </div>
@@ -17,13 +17,13 @@ const PostWidget = (props) => {
             width:300px;
             background-color:#fff7d9;
             border-radius:10px; 
-            padding:12px;
+            padding:8px;
             border:2px solid #b0b0b0;
             transition: all .2s ease-out;
             color:#7e4c01;
           }
           .img{
-            height:205px;
+            height:215px;
             object-fit:cover;
             border-radius:10px;
             border:2px solid #b0b0b0;

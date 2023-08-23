@@ -10,7 +10,7 @@
 .eventCards{
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
-    gap: 50px 80px;
+    gap: 80px 460px;
     padding:20px 0px
 }
 
@@ -18,40 +18,74 @@
     .eventCards {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 50px 80px;
+        gap: 70px 80px;
         padding: 10px 0px
     }
     .events {
         background-color: white;
         display: flex;
         flex-direction: column;
-        margin: 5px 30px 40px 30px;
+        margin: 5px 15px 40px 15px;
         padding: 0px 20px 20px 20px;
         border-radius: 12px;
         align-items: center;
     }
 }
 
-@media screen and (min-width:920px) and (max-width:1340px) {
+@media screen and (max-width:1430px) {
     .eventCards {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 70px 400px;
         padding: 20px 0px
+    }
+}
+@media screen and (max-width:1320px) {
+    .eventCards {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 70px 380px;
+    }
+}
+@media screen and (max-width:1270px) {
+    .eventCards {
+        grid-template-columns: 1fr 1fr;
+        gap: 70px 450px;
+    }
+}
+@media screen and (max-width:980px) {
+    .eventCards {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px 380px;
+    }
+}
+@media screen and (max-width:760px){
+    .eventCards {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px 350px;
+    }
+}
+@media screen and (max-width:720px){
+    .eventCards {
+        grid-template-columns: 1fr;
+        gap: 70px 350px;
+        margin-top: 8px;
     }
 }
 @media screen and (max-width:500px){
     .events{
-        margin: 5px 13px 40px 13px;
+        margin: 5px 10px 40px 10px;
         padding: 0px 5px 20px 5px;
     }
     .eventCards{
-        gap: 40px 60px;
+        gap: 60px 60px;
     }
 }
 @media screen and (max-width:400px){
     .events{
         margin: 5px 5px 40px 5px;
         padding: 0px 5px 20px 5px;
+    }
+    .eventCards {
+        gap: 60px 60px;
     }
 }

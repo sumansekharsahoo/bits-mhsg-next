@@ -27,6 +27,9 @@ const articles = ({posts}) => {
       </div>
       <style jsx>
         {`
+          .artSec{
+            margin-bottom: 15px;
+          }
           .mainDiv{
             align-items:center;
             padding-top:10px;
@@ -35,7 +38,7 @@ const articles = ({posts}) => {
             align-items:center;
           }
           .postcardBox{
-            padding:10px 20px 20px 20px;
+            padding:10px 20px 40px 20px;
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap:50px 40px;

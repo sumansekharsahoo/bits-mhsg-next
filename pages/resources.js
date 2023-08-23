@@ -168,7 +168,7 @@ const resources = () => {
             margin:20px 0px
           }
           .MHTest{
-            background-color:#fcf1db;
+            background-color:#fcf4e1;
             margin-right:40px;
             color:#f08b13;
             display:flex;
@@ -178,7 +178,6 @@ const resources = () => {
           }
           .MHTest:hover{
             background-color:#fceac5;
-            // background-color:#fce49f;
           }
           .MHTImg{
             width:300px;
@@ -193,7 +192,7 @@ const resources = () => {
             justify-content:space-between;
           }
           .Music:hover{
-            background-color:#d4fae9;
+            background-color:#cdfae3;
           }
           .MusicImg{
             width:320px;

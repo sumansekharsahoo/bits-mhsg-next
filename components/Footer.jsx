@@ -23,7 +23,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className='footer bg-[#141414] text-white mt-8'>
+    <div className='footer relative bg-[#141414] text-white mt-8'>
       <div className='quoteMainCont'>
         <div className='quoteHead Head'>Quote of the Day</div>
         <div className='quoteCont'>
@@ -37,7 +37,7 @@ const Footer = () => {
         <div className='contactMainCont'>
             <div className='contactHead Head'>Connect</div>
             <div className='social'>
-              <a href="mailto:mhsg@hyderabad.bits-pilani.ac.in" target="_blank"><img src="/icons/email.png" alt="Email" className='socIcons'/></a>
+              <a href="mailto:mhsg@hyderabad.bits-pilani.ac.in" target="_blank"><img src="/icons/email.png" alt="Email" className='socIcons mail'/></a>
               <a href="https://www.facebook.com/groups/BITS.MHSG" target="_blank"><img src="/icons/facebook.png" alt="Facebook" className='socIcons'/></a>
               <a href="https://www.instagram.com/bits.mhsg/" target="_blank"><img src="/icons/instagram.png" alt="Instagram" className='socIcons'/></a>
               <a href="https://www.linkedin.com/company/bits-mental-health-support-group/" target="_blank"><img src="/icons/linkedin.png" alt="Linkedin" className='socIcons'/></a>
@@ -48,6 +48,7 @@ const Footer = () => {
           <a href="https://www.bits-pilani.ac.in/hyderabad/" target="_blank"><img src="/official/BITS_Pilani.png" alt="BITS" className='BITSIcon'/></a>
         </div>
       </div>
+      <a href="/credits" className='credits'>Credits & Attributions</a>
 
       <style jsx>{`
         .footer{
@@ -59,6 +60,9 @@ const Footer = () => {
         }
         .socIcons{
           height:30px;
+        }
+        .mail{
+          height:36px;
         }
         .BITSIcon{
           height:100px
@@ -105,7 +109,7 @@ const Footer = () => {
           margin-left:auto;
         }
         .social{
-          width:150px;
+          width:156px;
           justify-content:space-between;
           display:flex;
           align-items:center;
@@ -115,6 +119,16 @@ const Footer = () => {
           display:flex;
           align-items:center;
           width:fit-content;
+        }
+        .credits{
+          position:absolute;
+          bottom:10px;
+          left:1%;
+          color:white;
+          font-size:12px;
+        }
+        .credits:hover{
+          color:#caf095;
         }
         @media screen and (max-width:1200px){
           .footer{
@@ -152,6 +166,9 @@ const Footer = () => {
           }
           .Head{
             font-size:23px;
+          }
+          .credits{
+            left:36%
           }
         }
       `}</style>

@@ -3,8 +3,16 @@ import { getPosts,getPostDetails } from '@/services'
 import PostContent from '@/components/PostContent'
 import Author from '@/components/Author'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+import Loader from '@/components/Loader'
 
 const PostDetails = ({post}) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
+
   return (
     <div className='container mx-auto px-1.5 md:px-4 lg:px-16 my-2 md:my-6'>
         <Head>

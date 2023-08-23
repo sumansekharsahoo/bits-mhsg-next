@@ -1,15 +1,27 @@
 import React from 'react'
 
+const tag=[
+  {
+    tagf:"#ba2416",
+    tagb:"#ffe5e0",
+  },
+  {
+    tagf:"#0f7029",
+    tagb:"#def6e8",
+  }
+]
+
 const EventWidget = (props) => {
+  const tr= props.isUpcoming?1:0;
   return (
     <a href={props.link} className='flex flex-col mainCont'>
       <img src={props.img} alt="imgNotRendered" className='img' />
-      <div className='ptitle'>
+      <div className='ptitle  px-[4px]'>
         {props.title}
       </div>
-      <div className='det flex justify-between'>
+      <div className='det flex items-center justify-between px-[4px]'>
         <span className='date'>{props.date}</span>
-        <span className='date'>{props.loc}</span>
+        {tr?<span className='catBox catBox1'>Upcoming</span>:<span className='catBox catBox1'>Past</span> }
       </div>
       <style jsx>
         { `
@@ -17,13 +29,13 @@ const EventWidget = (props) => {
             width:300px;
             background-color:#e8f5fc;
             border-radius:10px; 
-            padding:12px;
+            padding:7px;
             border:2px solid #b0b0b0;
             transition: all .2s ease-out;
             color:#245491;
           }
           .img{
-            height:240px;
+            height:250px;
             object-fit:cover;
             border-radius:10px;
             border:2px solid #b0b0b0;
@@ -49,6 +61,14 @@ const EventWidget = (props) => {
 
           .det{
             margin-top:5px;
+          }
+          .catBox{
+              color:${tag[tr].tagf};
+              background-color:${tag[tr].tagb};
+              padding:1px 6px;
+              border-radius:6px;
+              border:1px solid #b0b0b0;
+              font-size:15px;
           }
 
         `}

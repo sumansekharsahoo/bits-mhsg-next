@@ -75,7 +75,7 @@ const PostContent = ({post}) => {
             </div>
           </div>
             <div className='catg text-lg md:text-xl text-center mb-8 font-semibold	'><span >Categories: </span>{post.categories.map((catg)=>(
-                  <a href={`/category/${catg.slug}`} key={catg.name} className='catgBox'>#{catg.name}</a>
+                  <a href={`/category/${catg.slug}`} key={catg.name} className={`catgBox ${catg.name.length%2===1?'bg-[#edf4fe] text-[#4d51b8]':'bg-[#fceff4] text-[#e35b83]'}`}>#{catg.name}</a>
                 ))}  </div>
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
@@ -88,14 +88,11 @@ const PostContent = ({post}) => {
         {`
           .catgBox{
             padding:2px 3px;
-            background-color:#f0f5ec;
+            // background-color:#f0f5ec;
             border-radius:5px;
-            border:2px solid #ccddbe;
+            border:1px solid #b0b0b0;
             margin-right:5px;
-            color:#689e46
-          }
-          .catgBox:hover{
-            background-color:#dfe8e1;
+            // color:#689e46
           }
           .artImg{
             height:450px;
