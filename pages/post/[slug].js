@@ -38,6 +38,6 @@ export async function getStaticPaths(){
 
     return{
         paths: posts.map(({slug})=>({params: {slug}})),
-        fallback: false
+        fallback: true
     }
 }
