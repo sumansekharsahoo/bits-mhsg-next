@@ -2,9 +2,14 @@ import React from 'react'
 import MusicCard from '@/components/MusicCard'
 import Head from 'next/head'
 import { getMusic } from '@/services'
-
+import { useState, useEffect } from 'react'
 
 const music = ({musics}) => {
+  const [music, setMusic]=useState([])
+  useEffect(()=>{
+    getMusic()
+      .then((result)=>setMusic(result));
+  },[])
   const playlists=[
     {
       url:"https://open.spotify.com/show/6qCGowS3fs0qFYMlxczxC5",
@@ -111,7 +116,7 @@ const music = ({musics}) => {
               <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title}  bgcol={mcolors[playlists[2].musicPlayer].bgcol} fcol={mcolors[playlists[2].musicPlayer].fcol} tag={mcolors[playlists[2].musicPlayer].tag}/>
               <MusicCard url={playlists[3].url} img={playlists[3].img} title={playlists[3].title}  bgcol={mcolors[playlists[3].musicPlayer].bgcol} fcol={mcolors[playlists[3].musicPlayer].fcol} tag={mcolors[playlists[3].musicPlayer].tag}/>
               <MusicCard url={playlists[4].url} img={playlists[4].img} title={playlists[4].title}  bgcol={mcolors[playlists[4].musicPlayer].bgcol} fcol={mcolors[playlists[4].musicPlayer].fcol} tag={mcolors[playlists[4].musicPlayer].tag}/>
-              {musics.map((music)=><MusicCard url={music.link} key={music.playlistTitle} title={music.playlistTitle} img={music.image.url} bgcol={mcolors[music.musicPlayer].bgcol} fcol={mcolors[music.musicPlayer].fcol} tag={mcolors[music.musicPlayer].tag}/>)}
+              {music.map((music)=><MusicCard url={music.link} key={music.playlistTitle} title={music.playlistTitle} img={music.image.url} bgcol={mcolors[music.musicPlayer].bgcol} fcol={mcolors[music.musicPlayer].fcol} tag={mcolors[music.musicPlayer].tag}/>)}
             </div>
             <a href="https://forms.gle/pu2NrARyP9ocb1577" target="_blank" className='addYours'>Add your playlists</a>
         </div>

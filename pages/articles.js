@@ -2,9 +2,15 @@ import React from 'react'
 import Head from 'next/head'
 import CatgMenu from '@/components/CatgMenu'
 import PostCard from '@/components/PostCard'
+import { useState, useEffect } from 'react'
 import { getPosts } from '@/services'
 
 const articles = ({posts}) => {
+  const [post, setPost]=useState([])
+  useEffect(()=>{
+    getPosts()
+      .then((result)=>setPost(result));
+  },[])
   return (
     <div className='flex flex-col mainDiv '>
       <Head>
@@ -19,7 +25,7 @@ const articles = ({posts}) => {
           <div className='ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8 bg-white rounded-xl artSec'>
             <div className='text-5xl text-center my-2'>Articles</div>
             <div className='postcardBox'>
-              {posts.map((post,index)=>(
+              {post.map((post,index)=>(
                 <PostCard post={post} key={post.title}/>
               ))}
             </div>
