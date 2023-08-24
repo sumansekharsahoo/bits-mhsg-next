@@ -12,6 +12,7 @@ const profiles=[
   {id:"7", profName:"Suman Sekhar Sahoo", pos:"Webdev Lead", img:"/profile/Suman.png",linkedlink:"https://www.linkedin.com/in/suman-sekhar-sahoo-82621623b/", iglink:"https://instagram.com/sumansekhar.sahoo?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D"},
   {id:"8", profName:"Nakshatra Dhavale", pos:"Social Lead", img:"/profile/Nakshatra.jpg", iglink:"https://instagram.com/nakshatra189?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",linkedlink:"https://www.linkedin.com/in/nakshatra-dhavale-890118258"},
   {id:"9", profName:"Umang Lal", pos:"Ex-Officio", img:"/profile/Umang.png", iglink:"https://instagram.com/_umang_lal?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://www.linkedin.com/in/umang-lal-528374215"},
+  {id:"10", profName:"Tarun Garg", pos:"Founder & Mentor", img:"/profile/Tarun.jpg", iglink:"https://instagram.com/bits.mhsg?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",linkedlink:"https://in.linkedin.com/in/tarungarg98"},
 ]
 
 const cols=[
@@ -24,6 +25,7 @@ const cols=[
   {bcol:"#d1c5fa", tcol:"#594df6"},
   {bcol:"#99fc92", tcol:"#594df6"},
   {bcol:"#a7d7fb", tcol:"#594df6"},
+  {bcol:"#c1e63e", tcol:"#594df6"},
 ]
 
 const team = () => {
@@ -72,6 +74,7 @@ const team = () => {
             <Profile profName={profiles[5].profName} pos={profiles[5].pos} img={profiles[5].img} insta={profiles[5].iglink} linkin={profiles[5].linkedlink} bcol={cols[6].bcol} tcol={cols[6].tcol}/>
             <Profile profName={profiles[7].profName} pos={profiles[7].pos} img={profiles[7].img} insta={profiles[7].iglink} linkin={profiles[7].linkedlink} bcol={cols[7].bcol} tcol={cols[7].tcol}/>
             <Profile profName={profiles[8].profName} pos={profiles[8].pos} img={profiles[8].img} insta={profiles[8].iglink} linkin={profiles[8].linkedlink} bcol={cols[8].bcol} tcol={cols[8].tcol}/>
+            <Profile profName={profiles[9].profName} pos={profiles[9].pos} img={profiles[9].img} insta={profiles[9].iglink} linkin={profiles[9].linkedlink} bcol={cols[9].bcol} tcol={cols[9].tcol}/>
         </div>
         
     </div>

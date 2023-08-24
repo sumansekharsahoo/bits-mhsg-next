@@ -74,7 +74,7 @@ const PostCard = ({post}) => {
             transition: all .3s ease-out
           }
           .postHead{
-            height:65px;
+            max-height:65px;
             margin:10px 0px;
             padding:0px 8px;
             font-size:23px;
@@ -83,6 +83,9 @@ const PostCard = ({post}) => {
             overflow: hidden;
             text-overflow: ellipsis; 
             transition: all .3s ease-out
+          }
+          .postcard:hover .postHead{
+            text-decoration:underline;
           }
           .postDesc{
             height:143px;

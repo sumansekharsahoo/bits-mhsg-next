@@ -46,7 +46,7 @@ const playlists=[
     },
     {
       id:'2',
-      bgcol:"#85c6b9",
+      bgcol:"#60c9b1",
       fcol:"#242a30",
       tag:"/music/jiosavan.png"
     },

@@ -43,6 +43,9 @@ const PostWidget = (props) => {
           .mainCont:hover .img{
             border:2px solid #905700;
           }
+          .mainCont:hover .ptitle{
+            text-decoration:underline;
+          }
 
           .det{
             margin-top:5px;
