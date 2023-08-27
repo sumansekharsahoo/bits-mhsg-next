@@ -47,8 +47,7 @@ const PostContent = ({post}) => {
             return modifiedText;
         }
     };
-
-
+    
   return (
     <>
         <div className="bg-white shadow-lg rounded-lg p-2.5 md:p-5 lg:p-12 lg:pt-10 pb-4 md:pb-12 mb-6 flex flex-col items-center">
