@@ -50,7 +50,7 @@ const CatgMenu = () => {
                 width:200px;
             }
         }
-        @media only screen and (max-width:1208px){
+        @media only screen and (max-width:1430px){
             .mainCatgCont{
                 display:flex;
                 flex-direction:column;

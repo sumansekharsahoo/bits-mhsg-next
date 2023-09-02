@@ -36,14 +36,17 @@
     .eventCards {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 70px 400px;
+        gap: 70px 420px;
         padding: 20px 0px
+    }
+    .events {
+        margin:10px 36px 60px 36px;
     }
 }
 @media screen and (max-width:1320px) {
     .eventCards {
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 70px 380px;
+        gap: 70px 420px;
     }
 }
 @media screen and (max-width:1270px) {
@@ -56,6 +59,8 @@
     .eventCards {
         grid-template-columns: 1fr 1fr;
         gap: 60px 380px;
+    }.events {
+        margin: 10px 20px 60px 20px;
     }
 }
 @media screen and (max-width:760px){
