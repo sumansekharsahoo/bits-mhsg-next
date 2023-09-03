@@ -43,17 +43,38 @@ const CategoryPost = ({posts}) => {
             align-items:center;
           }
           .postcardBox{
-            padding:10px 20px 20px 20px;
+            padding:10px 20px 40px 20px;
             display:grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap:50px 40px;
             justify-items:center;
             align-items:center;
           }
-          @media only screen and (min-width:1024px) and (max-width:1430px){
+          @media only screen and (max-width:1430px){
+            .articles{
+              flex-direction:column;
+              align-items:center;
+            }
+            .categoriesBox{
+              margin-bottom:10px;
+            }
+            .postcardBox{
+              gap:55px 66px;
+            }
+          }
+          @media only screen and (max-width:1290px){
+            .postcardBox{
+              gap:50px 40px;
+            }
+            .artsec{
+              margin:0px 15px;
+            }
+          }
+          @media only screen and (max-width:1230px){
             .postcardBox{
               grid-template-columns: 1fr 1fr;
-              padding:10px 6vw 20px 6vw;
+              gap:60px 70px;
+              padding:0px 50px;
             }
           }
           @media only screen and (max-width:1024px){
@@ -65,7 +86,7 @@ const CategoryPost = ({posts}) => {
           }
           @media only screen and (min-width:  475px) and (max-width:645px){
             .postcardBox{
-              padding:10vw;
+              padding:10px 10vw;
             }
           }
           @media only screen and (max-width: 398px){

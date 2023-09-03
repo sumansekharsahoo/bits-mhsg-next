@@ -23,7 +23,7 @@ const colors=[
         tagf:"#0f7029",
         tagb:"#def6e8",
         widp:"66%",
-        bwidp:"66%"
+        bwidp:"55%"
     },
     // {
     //     bgcol:"#f6f0fc",

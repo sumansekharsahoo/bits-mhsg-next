@@ -82,16 +82,6 @@ const articles = ({posts}) => {
             }
           }
 
-          // @media only screen and (max-width:1208px){
-          //   .articles{
-          //     flex-direction:column;
-          //     align-items:center;
-          //   }
-          //   .categoriesBox{
-          //     margin-bottom:10px;
-          //   }
-          // }
-
           @media only screen and (max-width:1024px){
             .postcardBox{
               grid-template-columns: 1fr;

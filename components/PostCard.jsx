@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import moment from 'moment/moment';
 const PostCard = ({post}) => {
   // console.log(post)
