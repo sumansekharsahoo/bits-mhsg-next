@@ -4,6 +4,7 @@ import CatgMenu from '@/components/CatgMenu'
 import PostCard from '@/components/PostCard'
 import { useState, useEffect } from 'react'
 import { getPosts } from '@/services'
+import ScrollToTop from '@/components/ScrollToTop'
 
 const articles = ({posts}) => {
   const [post, setPost]=useState([])
@@ -20,7 +21,6 @@ const articles = ({posts}) => {
       <div className='articles flex'>
           <div className='categoriesBox'>
             <CatgMenu/>
-            {/* <Categories/> */}
           </div>
           <div className='ml-2 mr-2 md:ml-4 md:mr-4 lg:ml-8 lg:mr-8 bg-white rounded-xl artSec'>
             <div className='text-5xl text-center my-2'>Articles</div>
@@ -31,6 +31,7 @@ const articles = ({posts}) => {
             </div>
           </div>
       </div>
+      <ScrollToTop/>
       <style jsx>
         {`
           .artSec{

@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react'
-
+import Image from 'next/image';
 
 
 const Footer = () => {
@@ -37,15 +37,15 @@ const Footer = () => {
         <div className='contactMainCont'>
             <div className='contactHead Head'>Connect</div>
             <div className='social'>
-              <a href="mailto:mhsg@hyderabad.bits-pilani.ac.in" target="_blank"><img src="/icons/email.png" alt="Email" className='socIcons mail'/></a>
-              <a href="https://www.facebook.com/groups/BITS.MHSG" target="_blank"><img src="/icons/facebook.png" alt="Facebook" className='socIcons'/></a>
-              <a href="https://instagram.com/bits.mhsg?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><img src="/icons/instagram.png" alt="Instagram" className='socIcons'/></a>
-              <a href="https://www.linkedin.com/company/bits-mental-health-support-group/" target="_blank"><img src="/icons/linkedin.png" alt="Linkedin" className='socIcons'/></a>
+              <a href="mailto:mhsg@hyderabad.bits-pilani.ac.in" target="_blank"><Image src="/icons/email.png" alt="Email" height={36} width={36} className='socIcons mail'/></a>
+              <a href="https://www.facebook.com/groups/BITS.MHSG" target="_blank"><Image src="/icons/facebook.png" alt="Facebook" height={30} width={30} className='socIcons'/></a>
+              <a href="https://instagram.com/bits.mhsg?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" target="_blank"><Image src="/icons/instagram.png" alt="Instagram" height={30} width={30}  className='socIcons'/></a>
+              <a href="https://www.linkedin.com/company/bits-mental-health-support-group/" target="_blank"><Image src="/icons/linkedin.png" alt="Linkedin"  height={30} width={30}  className='socIcons'/></a>
             </div>
         </div>
         <div className='logoCont'>
-          <a href="/" target="_blank"><img src="/official/MHSG_Long.png" alt="MHSG_Long" className='MHSGIcon'/></a>
-          <a href="https://www.bits-pilani.ac.in/hyderabad/" target="_blank"><img src="/official/BITS_Pilani.png" alt="BITS" className='BITSIcon'/></a>
+          <a href="/" target="_blank"><Image src="/official/MHSG_Long.png" alt="MHSG_Long" height={140} width={140} loading='lazy'/></a>
+          <a href="https://www.bits-pilani.ac.in/hyderabad/" target="_blank"><Image src="/official/BITS_Pilani.png" alt="BITS" height={100} width={100} loading='lazy'/></a>
         </div>
       </div>
       <a href="/credits" className='credits'>Credits & Attributions</a>
@@ -64,12 +64,7 @@ const Footer = () => {
         .mail{
           height:36px;
         }
-        .BITSIcon{
-          height:100px
-        }
-        .MHSGIcon{
-          height:140px;
-        }
+    
         .quoteMainCont{
           width:680px;
           display:flex;
@@ -171,7 +166,7 @@ const Footer = () => {
             left:36%;
           }
           .logoCont{
-            margin-bottom:10px;
+            margin-bottom:15px;
           }
         }
       `}</style>

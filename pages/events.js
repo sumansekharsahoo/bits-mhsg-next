@@ -4,7 +4,7 @@ import Event from '@/components/Event'
 import styles from '../styles/Events.module.css'
 import { getEvents } from '@/services'
 import { useState, useEffect } from 'react'
-
+import ScrollToTop from '@/components/ScrollToTop'
 
 
 const events = ({events}) => {
@@ -31,6 +31,7 @@ const events = ({events}) => {
         }
         `}
       </style>
+      <ScrollToTop/>
     </div>
   )
 }

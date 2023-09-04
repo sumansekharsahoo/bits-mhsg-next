@@ -117,9 +117,6 @@ export default function Home({posts}) {
         <div className='pinArticle pinCards bg-white'>
           <div className='Head'>Latest Posts</div>
           <div className='postCont gridCont'>
-            {/* <PostWidget/>
-            <PostWidget/>
-            <PostWidget/> */}
             {relatedPosts.map((post)=>(
               <PostWidget key={post.title} title={post.title} img={post.featuredImage.url} link={post.slug} auth={post.author.name} date={moment(post.date).format('MMM DD, YYYY')}/>
             ))}

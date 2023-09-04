@@ -3,6 +3,7 @@ import MusicCard from '@/components/MusicCard'
 import Head from 'next/head'
 import { getMusic } from '@/services'
 import { useState, useEffect } from 'react'
+import ScrollToTop from '@/components/ScrollToTop'
 
 const music = ({musics}) => {
   const [music, setMusic]=useState([])
@@ -191,6 +192,7 @@ const music = ({musics}) => {
             }
           `}
         </style>
+        <ScrollToTop/>
     </div>
   )
 }

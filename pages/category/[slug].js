@@ -5,7 +5,7 @@ import PostCard from '@/components/PostCard'
 import Loader from '@/components/Loader'
 import { getCategories, getCategoryPost } from '@/services'
 import { useRouter } from 'next/router'
-
+import ScrollToTop from '@/components/ScrollToTop'
 
 const CategoryPost = ({posts}) => {
    const router = useRouter();
@@ -101,6 +101,7 @@ const CategoryPost = ({posts}) => {
         }
 
       </style>
+      <ScrollToTop/>
     </div>
   )
 }

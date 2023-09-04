@@ -5,6 +5,7 @@ import Author from '@/components/Author'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Loader from '@/components/Loader'
+import ScrollToTop from '@/components/ScrollToTop'
 
 const PostDetails = ({post}) => {
   const router = useRouter();
@@ -20,6 +21,7 @@ const PostDetails = ({post}) => {
         </Head>
         <PostContent post={post}/>
         <Author author={post.author}/>
+        <ScrollToTop/>
     </div>
   )
 }
