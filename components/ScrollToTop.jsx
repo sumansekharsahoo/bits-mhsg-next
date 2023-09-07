@@ -38,10 +38,10 @@ const ScrollToTop = () => {
             }
             @media screen and (max-width:600px){
                .btt{
-                bottom: 12px;
-                right: 12px;
-                height:40px;
-                font-size:40px;
+                bottom: 13px;
+                right: 13px;
+                height:50px;
+                font-size:50px;
                } 
             }
         `}</style>

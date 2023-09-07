@@ -1,5 +1,4 @@
 import React from 'react'
-
 const MusicCard = (props) => {
   return (
     <a href={props.url} target="_blank" className='musicCardCont flex flex-col items-center'>
@@ -45,14 +44,6 @@ const MusicCard = (props) => {
                 right:15px;
                 border-radius:3px;
             }
-            // @media screen and (max-width:1050px){
-            //     .musicCardCont{
-            //         width:280px;
-            //     }
-            //     .title{
-            //         font-size:20px;  
-            //     }
-            // }
             `}
         </style>
     </a>

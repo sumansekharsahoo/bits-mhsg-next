@@ -40,3 +40,26 @@ body{
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+/* .spinner-wrapper{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255 , 255);
+  z-index: 10;
+}
+
+.spinner{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 120px;
+  width: 120px;
+  margin: 0px auto;
+  -webkit-animation: rotation .5s infinite linear;
+} */

@@ -287,13 +287,14 @@ const resources = () => {
                 border-radius:8px;
               }
               .testMusicCont{
-                flex-direction:column;
+                // flex-direction:column;
                 align-items:center;
-                font-size:23px;
+                font-size:20px;
               }
               .MHTest{
-                margin-bottom:25px;
-                margin-right:0px;
+                // margin-bottom:25px;
+                // margin-right:0px;
+                font-size:20px;
               }
               .commonMT{
                 padding:5px 12px; 
@@ -314,10 +315,10 @@ const resources = () => {
                 font-size:40px;
               }
               .MHTImg{
-                width:305px;
+                width:90px;
               }
               .MusicImg{
-                width:305px;
+                width:170px;
               }
             }
         `}
