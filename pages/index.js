@@ -110,6 +110,7 @@ export default function Home({posts}) {
         <title>BITS MHSG</title>
         <meta name="keywords" content="BITS MHSG, Mental Heath, Mental Heath Support Group, BITS, BITS Hyderabad, BITS Pilani"></meta>
         <meta name="description" content="BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health"></meta>
+        <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />
       </Head>
       <NextSeo 
         title='BITS MHSG' 
