@@ -33,6 +33,7 @@ const team = () => {
     <div className='flex flex-col align-middle'>
         <Head>
             <title>Team</title>
+            <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />
         </Head>
         <style jsx>{`
         

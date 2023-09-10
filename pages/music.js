@@ -108,6 +108,7 @@ const music = ({musics}) => {
     <div className='music'>
       <Head>
         <title>Music & Podcasts</title>
+        <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />
       </Head>
         <div className='mainCont'>
             <div className='Head text-4xl pt-2'>Music & Podcasts</div>

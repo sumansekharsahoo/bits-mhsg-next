@@ -31,6 +31,7 @@ const resources = () => {
     <div className='resources'>
       <Head>
         <title>Resources</title>
+        <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />
       </Head>
       <NextSeo 
         title='Resources' 
