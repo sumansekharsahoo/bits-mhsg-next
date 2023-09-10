@@ -7,6 +7,8 @@ import EventWidget from '@/components/EventWidget'
 import { useState,useEffect } from 'react'
 import { getRecentPosts, getRecentEvents } from '@/services'
 import moment from 'moment'
+import { NextSeo } from 'next-seo'
+import { SocialProfileJsonLd } from 'next-seo';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -109,6 +111,41 @@ export default function Home({posts}) {
         <meta name="keywords" content="BITS MHSG, Mental Heath, Mental Heath Support Group, BITS, BITS Hyderabad, BITS Pilani"></meta>
         <meta name="description" content="BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health"></meta>
       </Head>
+      <NextSeo 
+        title='BITS MHSG' 
+        description='BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health'
+        canonical='https://bitsmhsg.vercel.app/'
+         openGraph={{
+        type: 'website',
+        url: 'https://bitsmhsg.vercel.app/',
+        title: 'BITS Mental Health Support Group',
+        description: 'BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health',
+        images: [
+          {
+            url: '/official/MHSG_Short.png',
+            width: 1200,
+            height: 630,
+            alt: 'BITS MHSG',
+          },
+          {
+            url: '/official/MHSG_Long.png',
+            width: 1024,
+            height: 512,
+            alt: 'BITS MHSG',
+          },
+        ],
+      }}
+      />
+      <SocialProfileJsonLd
+      type="Organization"
+      name="BITS MHSG"
+      url="https://bitsmhsg.vercel.app/"
+      sameAs={[
+        'https://www.facebook.com/groups/BITS.MHSG/',
+        'https://www.instagram.com/bits.mhsg/',
+        'https://www.linkedin.com/company/bits-mental-health-support-group/',
+      ]}
+    />
       <div className='bg-[#daf3e8]'>
         <Carousel/>
       </div>

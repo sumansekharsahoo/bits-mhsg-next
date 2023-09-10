@@ -1,6 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 import HelplineCard from '@/components/HelplineCard'
+import { NextSeo } from 'next-seo'
+import { SocialProfileJsonLd } from 'next-seo';
+
 const resources = () => {
    const helpline=[
     {
@@ -29,6 +32,39 @@ const resources = () => {
       <Head>
         <title>Resources</title>
       </Head>
+      <NextSeo 
+        title='Resources' 
+         openGraph={{
+        type: 'website',
+        url: 'https://bitsmhsg.vercel.app/resources',
+        title: 'Resources',
+        description: 'Your mental health matters. Checkout our resources page!',
+        images: [
+          {
+            url: '/official/MHSG_Short.png',
+            width: 1200,
+            height: 630,
+            alt: 'BITS MHSG',
+          },
+          {
+            url: '/official/MHSG_Long.png',
+            width: 1024,
+            height: 512,
+            alt: 'BITS MHSG',
+          },
+        ],
+      }}
+      />
+      <SocialProfileJsonLd
+      type="Organization"
+      name="BITS MHSG"
+      url="https://bitsmhsg.vercel.app/resources"
+      sameAs={[
+        'https://www.facebook.com/groups/BITS.MHSG/',
+        'https://www.instagram.com/bits.mhsg/',
+        'https://www.linkedin.com/company/bits-mental-health-support-group/',
+      ]}
+    />
       <div className='mainCont'>
         <div className='text-5xl my-2 Header'>Resources</div>
         <div className='emergencyCont flex flex-col'>

@@ -5,6 +5,8 @@ import PostCard from '@/components/PostCard'
 import { useState, useEffect } from 'react'
 import { getPosts } from '@/services'
 import ScrollToTop from '@/components/ScrollToTop'
+import { NextSeo } from 'next-seo'
+import { SocialProfileJsonLd } from 'next-seo';
 
 const articles = ({posts}) => {
   const [post, setPost]=useState([])
@@ -17,6 +19,39 @@ const articles = ({posts}) => {
       <Head>
         <title>Articles</title>
       </Head>
+      <NextSeo 
+        title='Articles' 
+         openGraph={{
+        type: 'website',
+        url: 'https://bitsmhsg.vercel.app/articles',
+        title: 'BITS MHSG Articles',
+        description: 'Explore our insightful articles on mental health for a brighter mind and a healthier you!',
+        images: [
+          {
+            url: '/official/MHSG_Short.png',
+            width: 1200,
+            height: 630,
+            alt: 'BITS MHSG',
+          },
+          {
+            url: '/official/MHSG_Long.png',
+            width: 1024,
+            height: 512,
+            alt: 'BITS MHSG',
+          },
+        ],
+      }}
+      />
+      <SocialProfileJsonLd
+      type="Organization"
+      name="BITS MHSG"
+      url="https://bitsmhsg.vercel.app/articles"
+      sameAs={[
+        'https://www.facebook.com/groups/BITS.MHSG/',
+        'https://www.instagram.com/bits.mhsg/',
+        'https://www.linkedin.com/company/bits-mental-health-support-group/',
+      ]}
+    />
       
       <div className='articles flex'>
           <div className='categoriesBox'>
