@@ -108,6 +108,8 @@ export default function Home({posts}) {
     <div className="Home">
       <Head>
         <title>BITS MHSG</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="keywords" content="BITS MHSG, Mental Heath, Mental Heath Support Group, BITS, BITS Hyderabad, BITS Pilani"></meta>
         <meta name="description" content="BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health"></meta>
         <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />

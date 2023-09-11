@@ -33,6 +33,8 @@ const team = () => {
     <div className='flex flex-col align-middle'>
         <Head>
             <title>Team</title>
+            <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
             <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />
         </Head>
         <style jsx>{`

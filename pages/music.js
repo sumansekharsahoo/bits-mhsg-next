@@ -108,6 +108,8 @@ const music = ({musics}) => {
     <div className='music'>
       <Head>
         <title>Music & Podcasts</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />
       </Head>
         <div className='mainCont'>
