@@ -15,7 +15,7 @@ const EventWidget = (props) => {
   const tr= props.isUpcoming?1:0;
   return (
     <a href={props.link} className='flex flex-col mainCont'>
-      <img src={props.img} loading='lazy' alt="imgNotRendered" className='img' />
+      <img src={props.img} alt="imgNotRendered" className='img' />
       <div className='ptitle  px-[4px]'>
         {props.title}
       </div>
