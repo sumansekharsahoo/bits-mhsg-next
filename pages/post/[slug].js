@@ -17,7 +17,7 @@ const PostDetails = ({post}) => {
   return (
     <div className='container mx-auto px-1.5 md:px-4 lg:px-16 my-2 md:my-6'>
         <Head>
-          <title>Articles/Post</title>
+          <title>Post</title>
         </Head>
         <PostContent post={post}/>
         <Author author={post.author}/>

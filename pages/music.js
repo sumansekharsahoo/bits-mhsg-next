@@ -4,6 +4,8 @@ import Head from 'next/head'
 import { getMusic } from '@/services'
 import { useState, useEffect } from 'react'
 import ScrollToTop from '@/components/ScrollToTop'
+import { NextSeo } from 'next-seo'
+import { SocialProfileJsonLd } from 'next-seo';
 
 const music = ({musics}) => {
   const [music, setMusic]=useState([])
@@ -112,6 +114,39 @@ const music = ({musics}) => {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="google-site-verification" content="G0RCCzrZjR-vnGkjwF_GyzYQ2HFpTZismgmO82CEC1E" />
       </Head>
+      <NextSeo 
+        title='Music & Podcasts' 
+         openGraph={{
+        type: 'website',
+        url: 'https://bitsmhsg.vercel.app/music',
+        title: 'Music & Podcasts',
+        description: 'Unlock a cascade of positivity with our handpicked playlist, elevating your mood one beat at a time!',
+        images: [
+          {
+            url: '/official/MHSG_Short.png',
+            width: 1200,
+            height: 630,
+            alt: 'BITS MHSG',
+          },
+          {
+            url: '/official/MHSG_Long.png',
+            width: 1024,
+            height: 512,
+            alt: 'BITS MHSG',
+          },
+        ],
+      }}
+      />
+      <SocialProfileJsonLd
+      type="Organization"
+      name="BITS MHSG"
+      url="https://bitsmhsg.vercel.app/music"
+      sameAs={[
+        'https://www.facebook.com/groups/BITS.MHSG/',
+        'https://www.instagram.com/bits.mhsg/',
+        'https://www.linkedin.com/company/bits-mental-health-support-group/',
+      ]}
+    />
         <div className='mainCont'>
             <div className='Head text-4xl pt-2'>Music & Podcasts</div>
             <div className='content'>
@@ -162,9 +197,16 @@ const music = ({musics}) => {
               background-color:#d8d7fd
             }
 
-            @media screen and (max-width:1480px){
+            @media screen and (max-width:1440px){
                .content{
                   grid-template-columns: 1fr 1fr 1fr;
+                  gap:85px 10vw;
+               } 
+            }
+            @media screen and (max-width:1245px){
+               .content{
+                  grid-template-columns: 1fr 1fr 1fr;
+                  gap:60px 70px;
                } 
             }
             @media screen and (max-width:1050px){
