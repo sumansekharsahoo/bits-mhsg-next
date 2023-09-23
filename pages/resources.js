@@ -103,9 +103,6 @@ const resources = () => {
             <a href="https://www.mayoclinic.org/diseases-conditions/eating-disorders/symptoms-causes/syc-20353603" target="_blank">
               <div className='mHCondItems'>Eating Disorders</div>
             </a>
-            <a href="https://www.healthline.com/health/schizophrenia/psychosis-vs-schizophrenia#:~:text=Psychosis%20is%20a%20condition%20in,that%20includes%20periods%20of%20psychosis." target="_blank">
-              <div className='mHCondItems'>Psychosis & Schizophrenia</div>
-            </a>
             <a href="https://my.clevelandclinic.org/health/diseases/12201-self-harm" target="_blank">
               <div className='mHCondItems'>Self Harm</div>
             </a>
