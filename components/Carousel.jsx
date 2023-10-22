@@ -5,7 +5,7 @@ import { RxDotFilled } from 'react-icons/rx';
 const Carousel = () => {
     const slides = [
     {
-      img_url: '/official/MHSG_Short.png',
+      img_url: '/official/MHSG_LongNav.png',
       head:'BITS MHSG',
       desc: 'BITS MHSG is a pan-campus initiative striving to create awareness about Mental Health',
       url:'/'
