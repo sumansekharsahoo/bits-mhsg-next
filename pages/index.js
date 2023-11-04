@@ -199,7 +199,8 @@ export default function Home({posts}) {
             border-radius:12px;
           }
           .Head{
-            font-size:35px;
+            font-size:38px;
+            margin-bottom:10px;
           }
           .gridCont{
             margin-top:12px;

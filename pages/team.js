@@ -5,7 +5,7 @@ import Head from 'next/head'
 const profiles=[
   {id:"1", profName:"Abhinav Srivastava", pos:"President", img:"/profile/Abhinav.png", iglink:"https://instagram.com/_abhinavsrivastavaaa?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://in.linkedin.com/in/abhinav-srivastava-496524191"},
   {id:"2", profName:"Tanmay Agarwal", pos:"Secretary", img:"/profile/Tanmay.jpg", iglink:"https://instagram.com/tanmay_ag_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",linkedlink:"https://www.linkedin.com/in/tanmay-ag"},
-  {id:"3", profName:"Shreya Singh", pos:"Treasurer", img:"/profile/Shreya2.png", iglink:"https://instagram.com/shreya.singh31?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",linkedlink:"www.linkedin.com/in/ shreya-singh-ss"},
+  {id:"3", profName:"Shreya Singh", pos:"Treasurer", img:"/profile/Shreya2.png", iglink:"https://instagram.com/shreya.singh31?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",linkedlink:"https://www.linkedin.com/in/shreya-singh-ss"},
   {id:"4", profName:"Sruthi Manikonda", pos:"Design Lead", img:"/profile/Sruthi.jpg", iglink:"https://instagram.com/taking.the.hobbits.to.isengard?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://in.linkedin.com/in/bala-gayatri-sruthi-manikonda-5a2819259"},
   {id:"5", profName:"Akhil Mohammad", pos:"Event Lead", img:"/profile/Akhil.png", iglink:"https://instagram.com/akhil_.125?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",linkedlink:"https://www.linkedin.com/company/bits-mental-health-support-group/"},
   {id:"6", profName:"Simran Singh", pos:"Content Lead", img:"/profile/Simran.jpg", iglink:"https://instagram.com/simran_singh7047_?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://www.linkedin.com/in/simran-singh-2b8b93288/"},
@@ -23,9 +23,9 @@ const cols=[
   {bcol:"#fa8a7f", tcol:"#594df6"},
   {bcol:"#fce881", tcol:"#594df6"},
   {bcol:"#d1c5fa", tcol:"#594df6"},
-  {bcol:"#99fc92", tcol:"#594df6"},
+  {bcol:"#dcf18c", tcol:"#594df6"},
   {bcol:"#a7d7fb", tcol:"#594df6"},
-  {bcol:"#c1e63e", tcol:"#594df6"},
+  {bcol:"#b9f2aa", tcol:"#594df6"},
 ]
 
 const team = () => {
