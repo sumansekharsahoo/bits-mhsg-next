@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import { Layout } from '../components/index'
 import '@/styles/globals.css'
-// import { useRouter } from 'next/router'
 
 export default function App({ Component, pageProps }) {
   // function Loading(){

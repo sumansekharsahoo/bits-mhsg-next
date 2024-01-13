@@ -6,6 +6,8 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Loader from '@/components/Loader'
 import ScrollToTop from '@/components/ScrollToTop'
+import Sharebuttons from '@/components/Sharebuttons'
+import Comment from '@/components/Comment'
 
 const PostDetails = ({post}) => {
   const router = useRouter();
@@ -15,13 +17,22 @@ const PostDetails = ({post}) => {
   }
 
   return (
-    <div className='container mx-auto px-1.5 md:px-4 lg:px-16 my-2 md:my-6'>
+    <div className='container mx-auto px-1.5 md:px-4 lg:px-16 my-2 md:my-6 alignclass'>
         <Head>
           <title>Post</title>
         </Head>
         <PostContent post={post}/>
+        <Sharebuttons title={post.title} slug={post.slug}/>
+        <Comment slug={post.slug}/>
         <Author author={post.author}/>
         <ScrollToTop/>
+        <style jsx>{`
+          .alignclass{
+            display:flex;
+            flex-direction: column;
+            align-items:center;
+          }
+        `}</style>
     </div>
   )
 }

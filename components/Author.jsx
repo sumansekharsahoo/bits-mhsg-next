@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Author = ({ author }) => {
+const  Author = ({ author }) => {
   return (
-    <div className=" flex flex-col items-center text-center mt-4 mb-4 md:mt-5 md:mb-8 p-6 md:p-12 rounded-lg bg-[#141414] border-2 border-solid border-[#cccdce]">
+    <div className=" flex flex-col items-center text-center mt-4 mb-3 md:mt-5 md:mb-8 p-6 md:p-12 rounded-lg bg-[#141414] border-2 border-solid border-[#cccdce] w-[100%]">
       <img
         alt={author.name}
         height="100px"

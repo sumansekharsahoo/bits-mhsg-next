@@ -28,6 +28,11 @@
     rgb(var(--background-start-rgb));
 }  */
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 body{
   /* font-family: 'Barlow', sans-serif; */
   /* background-color: rgb(235, 235, 235); */
@@ -64,3 +69,25 @@ body{
   margin: 0px auto;
   -webkit-animation: rotation .5s infinite linear;
 } */
+
+/*heading*/
+.stylefont1{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stylefont1m{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+
+.stylefont2{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.stylefont3{
+  font-family: 'Merriweather', serif;
+}
+
+.stylefont-p{
+  color:rgb(45, 55, 72)
+}
