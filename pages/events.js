@@ -56,7 +56,7 @@ const events = ({events}) => {
         'https://www.linkedin.com/company/bits-mental-health-support-group/',
       ]}
     />
-      <span className='text-5xl mt-2 Header'>Events</span>
+      <span className='text-5xl mt-2 mb-[18px] Header'>Events</span>
       <div className={styles.eventCards}>
         {event.map((event)=><Event event={event} key={event.eventName}/>)}
       </div>

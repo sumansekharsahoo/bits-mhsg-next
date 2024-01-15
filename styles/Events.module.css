@@ -48,6 +48,9 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 70px 420px;
     }
+    .events {
+        margin: 10px 24px 60px 24px;
+    }
 }
 @media screen and (max-width:1270px) {
     .eventCards {
