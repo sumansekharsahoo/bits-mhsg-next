@@ -8,6 +8,8 @@ import Loader from '@/components/Loader'
 import ScrollToTop from '@/components/ScrollToTop'
 import Sharebuttons from '@/components/Sharebuttons'
 import Comment from '@/components/Comment'
+import { NextSeo } from 'next-seo'
+import { SocialProfileJsonLd } from 'next-seo';
 
 const PostDetails = ({post}) => {
   const router = useRouter();
@@ -15,12 +17,45 @@ const PostDetails = ({post}) => {
   if (router.isFallback) {
     return <Loader />;
   }
-
+  const posturl= 'https://bitsmhsg.vercel.app/'+post.slug;
   return (
     <div className='container mx-auto px-1.5 md:px-4 lg:px-16 my-2 md:my-6 alignclass'>
         <Head>
           <title>Post</title>
         </Head>
+        <NextSeo 
+        title={post.title}
+         openGraph={{
+        type: 'website',
+        url: {posturl},
+        title: post.title,
+        description: 'Explore our insightful articles on mental health for a brighter mind and a healthier you!',
+        images: [
+          {
+            url: '/official/MHSG_Short.png',
+            width: 1200,
+            height: 630,
+            alt: 'BITS MHSG',
+          },
+          {
+            url: '/official/MHSG_Long.png',
+            width: 1024,
+            height: 512,
+            alt: 'BITS MHSG',
+          },
+        ],
+      }}
+      />
+      <SocialProfileJsonLd
+      type="Organization"
+      name="BITS MHSG"
+      url={posturl}
+      sameAs={[
+        'https://www.facebook.com/groups/BITS.MHSG/',
+        'https://www.instagram.com/bits.mhsg/',
+        'https://www.linkedin.com/company/bits-mental-health-support-group/',
+      ]}
+    />
         <PostContent post={post}/>
         <Sharebuttons title={post.title} slug={post.slug}/>
         <Comment slug={post.slug}/>
