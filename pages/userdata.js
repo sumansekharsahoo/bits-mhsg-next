@@ -12,14 +12,13 @@ const userdata = () => {
     const [username, setUsername]=useState("");
     const [commentList, setCommentList]= useState([]);
     const [txtVal, setTxtVal]= useState("");
-
+    let filteredData;
     useEffect(()=>{
     auth.onAuthStateChanged(
       async(user)=>{
         if(user){
           let username= user.displayName;
           setUsername(username);
-          getCommentList();
         }
         else{
           setUsername("");
@@ -33,7 +32,7 @@ const userdata = () => {
         const commentCollectionRef= collection(db, "comments");
         const q = query(commentCollectionRef, where("commentor", "==", username));
       const data = await getDocs(q);
-      const filteredData= data.docs.map((doc)=>({
+      filteredData= data.docs.map((doc)=>({
         ...doc.data(),
         id: doc.id,
       }));
@@ -44,15 +43,15 @@ const userdata = () => {
   }
 
   const deleteCommentHandler = async()=>{
-    // for(let i=0;i<commentList.length;i++){
-    //     const commentDoc=doc(db,"comments",commentList[i].id);
-    //     await deleteDoc(commentDoc);
-    // }
-    
+    console.log(filteredData)
+    for(let i=0;i<filteredData.length;i++){
+      const commentDoc=doc(db,"comments",filteredData[i].id);
+      await deleteDoc(commentDoc);
+    }
   }
 
   const clickHandler=()=>{
-    if(username===""){
+    if(username==""){
         toast.error("Sign In to delete account",{
         position: "bottom-center",
         autoClose: 3000,
@@ -77,7 +76,8 @@ const userdata = () => {
             theme: "light",
             })
         }else{
-            deleteCommentHandler();
+            getCommentList();
+            const delDelay= setTimeout(deleteCommentHandler,2000)
         }
     }
   }
@@ -111,8 +111,8 @@ const userdata = () => {
                 <div className='mb-[15px]'>
                     We believe you should have complete control over your personal information. If you ever decide to delete your data, we'll remove it from our database promptly.
                 </div>
-                <label for="delOption">Choose to delete: </label>
-                <select name="delOption" id="delOption">
+                <label htmlFor="delOption">Choose to delete: </label>
+                <select name="delOption" id="delOption" className='bg-white p-[4px]'>
                 <option value="commentsOnly">Only comments</option>
                 <option value="allData">Comments and account data</option>
                 </select>

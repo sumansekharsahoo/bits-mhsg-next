@@ -38,12 +38,6 @@ const music = ({musics}) => {
       title:"Midnight Melodies",
       musicPlayer:'0'
     },
-    {
-      url:"https://open.spotify.com/playlist/40sXWmiGMSrbO8ExACXsoL",
-      img:"/music/cheerful-vibes.jpg",
-      title:"Cheerful Vibes",
-      musicPlayer:'0'
-    },
 //69dc72, 00000 ->spotify
 //#d42626, ffff ->YT Music
 //
@@ -154,7 +148,6 @@ const music = ({musics}) => {
               <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title}  bgcol={mcolors[playlists[1].musicPlayer].bgcol} fcol={mcolors[playlists[1].musicPlayer].fcol} tag={mcolors[playlists[1].musicPlayer].tag}/>
               <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title}  bgcol={mcolors[playlists[2].musicPlayer].bgcol} fcol={mcolors[playlists[2].musicPlayer].fcol} tag={mcolors[playlists[2].musicPlayer].tag}/>
               <MusicCard url={playlists[3].url} img={playlists[3].img} title={playlists[3].title}  bgcol={mcolors[playlists[3].musicPlayer].bgcol} fcol={mcolors[playlists[3].musicPlayer].fcol} tag={mcolors[playlists[3].musicPlayer].tag}/>
-              <MusicCard url={playlists[4].url} img={playlists[4].img} title={playlists[4].title}  bgcol={mcolors[playlists[4].musicPlayer].bgcol} fcol={mcolors[playlists[4].musicPlayer].fcol} tag={mcolors[playlists[4].musicPlayer].tag}/>
               {music.map((music)=><MusicCard url={music.link} key={music.playlistTitle} title={music.playlistTitle} img={music.image.url} bgcol={mcolors[music.musicPlayer].bgcol} fcol={mcolors[music.musicPlayer].fcol} tag={mcolors[music.musicPlayer].tag}/>)}
             </div>
             <a href="https://forms.gle/pu2NrARyP9ocb1577" target="_blank" className='addYours'>Add your playlists</a>
