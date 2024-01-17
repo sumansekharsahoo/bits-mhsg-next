@@ -62,7 +62,7 @@ const Comment = ({slug}) => {
     else{
       toast.error("Sign In to Comment!",{
         position: "bottom-center",
-        autoClose: 2500,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -106,7 +106,7 @@ const Comment = ({slug}) => {
           </div>
           <ToastContainer
           position="bottom-center"
-          autoClose={4000}
+          autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
           closeOnClick
@@ -213,6 +213,7 @@ const Comment = ({slug}) => {
             return <CommentCell commentor={commentObj.commentor} commentText={commentObj.commentText} timeStamp={moment(commentObj.timestamp.seconds*1000).format("lll")} delete="0" cid={commentObj.id}/>
           }
       })}
+      {commentList.length==0?<div className='text-[16px] sm:text-[18px] mb-[6px]'># No comments yet #</div>:<></>}
       </div>
     </div>  
   )

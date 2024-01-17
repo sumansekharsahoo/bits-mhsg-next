@@ -1,6 +1,7 @@
 import React from 'react'
 import {NavBar} from './index'
 import {Footer} from './index'
+import FooterPrimary from './FooterPrimary';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -33,7 +34,7 @@ const Layout = ({children}) => {
       draggable
       pauseOnHover
       theme="light"/>
-    <Footer/>
+    <FooterPrimary/>
     <style jsx>
       {`
         .navMargin{
