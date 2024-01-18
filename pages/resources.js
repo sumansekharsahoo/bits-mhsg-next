@@ -69,6 +69,15 @@ const resources = () => {
     setNewConfess('');
   }
 
+  const signIn = async () => {
+      try {
+      await signInWithPopup(auth, googleProvider);
+      setLoginStatus(true);
+      } catch (err) {
+      console.error(err);
+      }
+  };
+
    const helpline=[
     {
       Desc:"TeleMANAS Govt(24x7)",
@@ -148,7 +157,7 @@ const resources = () => {
           <div className='seekHelpDesc'>Write your troubles / worries, we will forward it to mental health experts and get back to you via mail. We give you space to be yourself, don't be hesitant and state your problems/worries openly. Your queries stays private between you and us. Please use BITS Mail. Check your query status at account page.</div>
           <textarea  onChange={(e)=>setNewConfess(e.target.value)} value={newConfess} rows={7}  wrap="hard" placeholder='Write your concern' className='txtAr text-[16px] text-[#474747] sm:text-[18px] rounded-lg mt-[10px] sm:mt-[15px]'></textarea>
           <div className='flex subButtons'>
-            {userid===""?<button className='signIn cmn'>Sign in</button>:<></>}
+            {userid===""?<button className='signIn cmn' onClick={signIn}>Sign in</button>:<></>}
             <div>
               <button onClick={submitConfess} className='sub cmn'>Submit</button>
               <button onClick={clearTextArea} className='clr cmn'>Clear</button>
