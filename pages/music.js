@@ -20,6 +20,7 @@ const music = ({musics}) => {
   const [title, setTitle]= useState("");
   const [link, setLink]= useState("");
   const [selectedOp, setSelectedOp]= useState("8");
+  const [userid, setUserId]=useState("");
 
   const musicCollectionRef= collection(db, "music")
   const q = query(musicCollectionRef);
@@ -32,6 +33,8 @@ const music = ({musics}) => {
         if(user){
           let username= user.displayName;
           setUsername(username);
+          const uid = user.uid;
+          setUserId(uid);
         }
         else{
           setUsername("");
@@ -70,7 +73,7 @@ const music = ({musics}) => {
     }
     else{
       try{
-        await addDoc(musicCollectionRef, {link: link, creator: username, title:title, player:Number(selectedOp)})
+        await addDoc(musicCollectionRef, {link: link, creator: username, title:title, player:Number(selectedOp), uid:userid})
       }catch(err){
         console.error(err);
       }

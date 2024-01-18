@@ -3,8 +3,72 @@ import Head from 'next/head'
 import HelplineCard from '@/components/HelplineCard'
 import { NextSeo } from 'next-seo'
 import { SocialProfileJsonLd } from 'next-seo';
+import { useState, useEffect } from 'react';
+import {db} from "../config/firebase"
+import {signInWithPopup} from "firebase/auth"
+import {getAuth, onAuthStateChanged} from "firebase/auth";
+import {getDocs, collection, query, where, addDoc,Timestamp, orderBy} from "firebase/firestore"
+import {auth,googleProvider} from "../config/firebase"
+import moment from 'moment'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const resources = () => {
+  const [newConfess, setNewConfess]= useState("")
+  const [username, setUsername]=useState("");
+  const [userid, setUserId]=useState("");
+
+  const commentConfess= collection(db, "confess")
+
+  useEffect(()=>{
+    auth.onAuthStateChanged(
+      async(user)=>{
+        if(user){
+          let username= user.displayName;
+          const uid = user.uid;
+          setUsername(username);
+          setUserId(uid);
+        }
+        else{
+          setUsername("");
+        }
+      }
+    )
+  },[]);
+
+    const submitConfess= async()=>{
+    const auth= getAuth();
+    const user= auth.currentUser;
+    if(user!==null){
+      const displayName= user.displayName;
+      const email = user.email;
+      const cur_timestamp=Timestamp.fromDate(new Date())
+      try{
+        await addDoc(commentConfess, {txt: newConfess, name: displayName, timestamp:cur_timestamp, uid: userid, mail:email, resolved:false})
+      }catch(err){
+        console.error(err);
+      }
+      setNewConfess('');
+    }
+    else{
+      toast.error("Sign In to write!",{
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+    
+  }
+
+  const clearTextArea=()=>{
+    setNewConfess('');
+  }
+
    const helpline=[
     {
       Desc:"TeleMANAS Govt(24x7)",
@@ -79,6 +143,18 @@ const resources = () => {
             <HelplineCard helpObj={helpline[3]} imgObj="/helpline/YourDost.png"/>
           </div>
         </div>
+        <div className='seekHelp flex flex-col'>
+          <div className='seekHelpHead Head'>Seek professional help</div>
+          <div className='seekHelpDesc'>Write your troubles / worries, we will forward it to mental health experts and get back to you via mail. We give you space to be yourself, don't be hesitant and state your problems/worries openly. Your queries stays private between you and us. Please use BITS Mail. Check your query status at account page.</div>
+          <textarea  onChange={(e)=>setNewConfess(e.target.value)} value={newConfess} rows={7}  wrap="hard" placeholder='Write your concern' className='txtAr text-[16px] text-[#474747] sm:text-[18px] rounded-lg mt-[10px] sm:mt-[15px]'></textarea>
+          <div className='flex subButtons'>
+            {userid===""?<button className='signIn cmn'>Sign in</button>:<></>}
+            <div>
+              <button onClick={submitConfess} className='sub cmn'>Submit</button>
+              <button onClick={clearTextArea} className='clr cmn'>Clear</button>
+            </div>
+          </div>
+        </div>
         <div className='mentalHealthConditions'>
           <div className='mHCondHead Head'>Learn about mental health conditions</div>
           <div className='mHCondGrid'>
@@ -128,7 +204,17 @@ const resources = () => {
             </div>
           </a>
         </div>
-        
+        <ToastContainer
+          position="bottom-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"/>
       </div>
       <style jsx>
         {`
@@ -243,6 +329,60 @@ const resources = () => {
             font-size:36px;
             font-weight:700;
           }
+          .seekHelp{
+            align-items:center;
+            background-color:#effaeb;
+            border-radius:18px;
+            padding:20px 45px 25px 45px;
+            border:2px solid #b0b0b0;
+            margin:10px 7vw 20px 7vw;
+            width:auto;
+
+          }
+          .seekHelpHead{
+            color:#029e36;
+            align-self:start
+          }
+          .seekHelpDesc{
+            font-size:18px;
+          }
+          .txtAr{
+            width:80%;
+            padding:8px 14px;
+            border:2px solid  #b0b0b0
+          }
+          .subButtons{
+            width:80%;
+            justify-content:space-between;
+          }
+          .cmn{
+            padding: 6px 14px;
+            margin:10px 0px;
+            font-size:20px;
+            border-radius:6px;
+            transition: .2s ease;
+          }
+          .sub{
+            background-color:#4e54cb;
+            color:white;
+          }
+          .sub:hover{
+            background-color:#3239c7;
+          }
+          
+          .signIn{
+            background-color:#099476;
+            color:white
+          }
+          
+          .clr{
+            background-color:#b0b0b0;
+            color:white;
+            margin-left:10px;
+          }
+          .clr:hover{
+            background-color:#828282;
+          }
            @media screen and (max-width:1220px){
             .mHCondGrid{
               grid-template-columns:1fr 1fr 1fr;
@@ -256,7 +396,10 @@ const resources = () => {
             .contactsCont{
               margin-top:5px;
             }
-
+            .seekHelp{
+              margin-left:20px;
+              margin-right:20px
+            }
             .Head{
             font-size:32px;
             font-weight:700;
@@ -318,6 +461,15 @@ const resources = () => {
                 line-height: 1.2;
                 font-size:25px;
               }
+              .txtAr{
+                width:90%;
+              }
+              .subButtons{
+                width:90%;
+              }
+              .seekHelp{
+                padding:10px 20px 25px 20px;
+              }
               .mHCondItems{
                 padding:10px 8px;
                 font-size:12px;
@@ -370,6 +522,18 @@ const resources = () => {
               }
               .Music{
                 width:160px;
+              }
+              .txtAr{
+                width:100%;
+              }
+              .subButtons{
+                width:100%;
+              }
+              .seekHelp{
+                margin:10px 5px 20px 5px;
+              }
+              .seekHelpDesc{
+                font-size:14px;
               }
             }
             @media screen and (max-width:380px){

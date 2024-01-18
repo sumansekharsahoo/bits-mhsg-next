@@ -14,6 +14,7 @@ const Comment = ({slug}) => {
   const [commentList, setCommentList]= useState([]);
   const [newComment, setNewComment]= useState("");
   const [username, setUsername]=useState("");
+  const [userid, setUserId]=useState("");
 
   const commentCollectionRef= collection(db, "comments")
   const q = query(commentCollectionRef, where("postSlug", "==", slug), orderBy("timestamp"));
@@ -35,7 +36,9 @@ const Comment = ({slug}) => {
       async(user)=>{
         if(user){
           let username= user.displayName;
+          const uid = user.uid;
           setUsername(username);
+          setUserId(uid);
         }
         else{
           setUsername("");
@@ -52,7 +55,7 @@ const Comment = ({slug}) => {
       const displayName= user.displayName;
       const cur_timestamp=Timestamp.fromDate(new Date())
       try{
-        await addDoc(commentCollectionRef, {commentText: newComment, commentor: displayName, timestamp:cur_timestamp, postSlug:slug})
+        await addDoc(commentCollectionRef, {commentText: newComment, commentor: displayName, timestamp:cur_timestamp, postSlug:slug, uid: userid})
       }catch(err){
         console.error(err);
       }
@@ -207,7 +210,7 @@ const Comment = ({slug}) => {
       <div className='commentCellContainer'>
         <div className='sm:text-[35px] my-[10px] text-[28px]'>Comments</div>
         {commentList.map((commentObj)=>{
-          if(commentObj.commentor==username){
+          if(commentObj.uid==userid){
             return <CommentCell commentor={commentObj.commentor} commentText={commentObj.commentText} timeStamp={moment(commentObj.timestamp.seconds*1000).format("lll")} delete="1" cid={commentObj.id}/>
           }else{
             return <CommentCell commentor={commentObj.commentor} commentText={commentObj.commentText} timeStamp={moment(commentObj.timestamp.seconds*1000).format("lll")} delete="0" cid={commentObj.id}/>

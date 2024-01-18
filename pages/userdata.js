@@ -12,6 +12,7 @@ import {db} from "@/config/firebase"
 
 const userdata = () => {
     const [username, setUsername]=useState("");
+    const [userid, setUserId]=useState("");
     const [commentList, setCommentList]= useState([]);
     const [txtVal, setTxtVal]= useState("");
     const [selectedOp, setSelectedOp]= useState("defaultVal");
@@ -22,6 +23,8 @@ const userdata = () => {
         if(user){
           let username= user.displayName;
           setUsername(username);
+          const uid = user.uid;
+          setUserId(uid);
         }
         else{
           setUsername("");
@@ -33,7 +36,7 @@ const userdata = () => {
   const getCommentList = async ()=>{
     try{
         const commentCollectionRef= collection(db, "comments");
-        const q = query(commentCollectionRef, where("commentor", "==", username));
+        const q = query(commentCollectionRef, where("uid", "==", userid));
       const data = await getDocs(q);
       filteredData= data.docs.map((doc)=>({
         ...doc.data(),

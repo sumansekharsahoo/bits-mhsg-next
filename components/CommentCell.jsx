@@ -59,7 +59,7 @@ const CommentCell = (props) => {
             }
             .delIcon{
                 padding:6px 8px;
-                color:#474747;
+                color:#e35752;
                 transition: color 1s ease;
                 transition: background-color .2s ease;
                 border-radius:20px;
