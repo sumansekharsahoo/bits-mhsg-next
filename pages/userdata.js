@@ -1,17 +1,20 @@
 import React from 'react'
 import Head from 'next/head'
 import { useState,useEffect } from 'react'
+import { getAuth, deleteUser } from "firebase/auth";
 import {auth} from "@/config/firebase"
 import {onAuthStateChanged} from "firebase/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {getDocs, collection, query, where, deleteDoc,doc } from "firebase/firestore"
+import {signOut} from "firebase/auth"
 import {db} from "@/config/firebase"
 
 const userdata = () => {
     const [username, setUsername]=useState("");
     const [commentList, setCommentList]= useState([]);
     const [txtVal, setTxtVal]= useState("");
+    const [selectedOp, setSelectedOp]= useState("defaultVal");
     let filteredData;
     useEffect(()=>{
     auth.onAuthStateChanged(
@@ -48,7 +51,48 @@ const userdata = () => {
       const commentDoc=doc(db,"comments",filteredData[i].id);
       await deleteDoc(commentDoc);
     }
+    toast.info("Comments deleted",{
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
   }
+
+  const deleteUserAuth= async()=>{
+    const auth = getAuth();
+    const userObj = auth.currentUser;
+    console.log(userObj);
+    deleteUser(userObj).then(() => {
+      toast.info("Account Deleted",{
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }).catch((error) => {
+      console.error(error);
+    });
+    logOut();
+  }
+
+  const logOut = async () => {
+      try {
+      await signOut(auth);
+      setLoginStatus(false);
+      signoutAlert();
+      } catch (err) {
+      console.error(err);
+      }
+  };
 
   const clickHandler=()=>{
     if(username==""){
@@ -64,7 +108,7 @@ const userdata = () => {
       });
     }
     else{
-        if(txtVal!=="delete"){
+        if(txtVal!=="DELETE"){
             toast.warn("incorrect value",{
             position: "bottom-center",
             autoClose: 3000,
@@ -78,6 +122,9 @@ const userdata = () => {
         }else{
             getCommentList();
             const delDelay= setTimeout(deleteCommentHandler,2000)
+            if(selectedOp==="allData"){
+              const accdelDelay= setTimeout(deleteUserAuth,3000)
+            }
         }
     }
   }
@@ -112,11 +159,12 @@ const userdata = () => {
                     We believe you should have complete control over your personal information. If you ever decide to delete your data, we'll remove it from our database promptly.
                 </div>
                 <label htmlFor="delOption">Choose to delete: </label>
-                <select name="delOption" id="delOption" className='bg-white p-[4px]'>
-                <option value="commentsOnly">Only comments</option>
-                <option value="allData">Comments and account data</option>
+                <select name="delOption" value={selectedOp} onChange={e => setSelectedOp(e.target.value)} className='bg-white p-[4px]'>
+                  <option value="defaultVal">---Select---</option>
+                  <option value="commentsOnly">Only comments</option>
+                  <option value="allData">Comments and account data</option>
                 </select>
-                <span className='sm:ml-[40px] sm:inline block'>Type "delete" to confirm your choice: </span>
+                <span className='sm:ml-[40px] sm:inline block'>Type "DELETE" to confirm your choice: </span>
                 <input type="text" onChange={(e)=>setTxtVal(e.target.value)} value={txtVal}  className='sm:p-[6px] w-[150px] sm:pl-[10px] p-[4px]' />
                 <button onClick={clickHandler} className='rounded-3xl p-[4px] px-[10px] ml-[6px] text-white bg-[#ff5050]'>&gt;</button>
                 <ToastContainer

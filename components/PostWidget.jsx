@@ -4,7 +4,7 @@ const PostWidget = (props) => {
   return (
     <a href={`/post/${props.link}`} className='flex flex-col mainCont'>
       <img src={props.img} alt="imgNotRendered" className='img'/>
-      <div className='ptitle px-[5px]'>
+      <div className='ptitle px-[5px] underline'>
         {props.title}
       </div>
       <div className='det flex justify-between px-[5px]'>

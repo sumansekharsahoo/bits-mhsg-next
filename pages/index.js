@@ -153,7 +153,7 @@ export default function Home({posts}) {
         <Carousel/>
       </div>
 
-      <div className='secondCont flex flex-col'>
+      <div className='secondCont flex flex-col'>      
         <div className='pinArticle pinCards bg-white'>
           <div className='Head'>Latest Posts</div>
           <div className='postCont gridCont'>
@@ -176,9 +176,8 @@ export default function Home({posts}) {
         <div className='pinnedMusic pinCards bg-white mt-[24px]'>
           <div className='Head'>Pinned Playlists</div>
           <div className='musicCont gridCont'>
-            <MusicCard url={playlists[0].url} img={playlists[0].img} title={playlists[0].title}  bgcol={mcolors[playlists[0].musicPlayer].bgcol} fcol={mcolors[playlists[0].musicPlayer].fcol} tag={mcolors[playlists[0].musicPlayer].tag}/>
-              <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title}  bgcol={mcolors[playlists[1].musicPlayer].bgcol} fcol={mcolors[playlists[1].musicPlayer].fcol} tag={mcolors[playlists[1].musicPlayer].tag}/>
-              <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title}  bgcol={mcolors[playlists[2].musicPlayer].bgcol} fcol={mcolors[playlists[2].musicPlayer].fcol} tag={mcolors[playlists[2].musicPlayer].tag}/>
+            <MusicCard url={playlists[0].url} img={playlists[0].img} title={playlists[0].title}  bgcol={mcolors[playlists[0].musicPlayer].bgcol} fcol={mcolors[playlists[0].musicPlayer].fcol} tag={mcolors[playlists[0].musicPlayer].tag} docid="0" own="0"/>
+              <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title}  bgcol={mcolors[playlists[1].musicPlayer].bgcol} fcol={mcolors[playlists[1].musicPlayer].fcol} tag={mcolors[playlists[1].musicPlayer].tag} docid="0" own="0"/>              <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title}  bgcol={mcolors[playlists[2].musicPlayer].bgcol} fcol={mcolors[playlists[2].musicPlayer].fcol} tag={mcolors[playlists[2].musicPlayer].tag} docid="0" own="0"/>
             <a href='/music' className='moreArt'>More Playlists</a>
           </div>
         </div>

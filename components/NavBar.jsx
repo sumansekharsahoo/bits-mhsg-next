@@ -160,6 +160,9 @@ function NavBar({signoutAlert}) {
                 align-items: center;
                 margin:12px 0px;
               }
+              .signin-signout-Button{
+                margin-left:0px;
+              }
             }
 
           `}</style>

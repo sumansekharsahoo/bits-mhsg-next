@@ -117,13 +117,13 @@ const resources = () => {
         <div className='testMusicCont flex'>
           <a href="https://www.clinical-partners.co.uk/online-tests" target="_blank"  className='MHTest commonMT'>
             <img src="/helpline/MHTest.png" alt="MHTest" className='MHTImg' />
-            <div>
+            <div className='mt-[6px] leading-[1]'>
               Mental Health Assessment
             </div>
           </a>
           <a href="/music" className='Music commonMT'>
             <img src="/carousel/music.png" alt="Music" className='MusicImg' />
-            <div>
+            <div className='mt-[6px] leading-[1]'>
               Music & Podcasts
             </div>
           </a>
@@ -211,12 +211,13 @@ const resources = () => {
             flex-direction:column;
             align-items:center;
             justify-content:space-between;
+            width:250px;
           }
           .MHTest:hover{
             background-color:#fceac5;
           }
           .MHTImg{
-            width:300px;
+            width:150px;
             margin-top:10px;
           }
           .Music{
@@ -231,7 +232,7 @@ const resources = () => {
             background-color:#cdfae3;
           }
           .MusicImg{
-            width:320px;
+            width:180px;
           }
           .commonMT{
             padding:13px;
@@ -272,12 +273,12 @@ const resources = () => {
               margin-top:5px;
               gap:15px 15px;
             }
-            .MHTImg{
-              width:280px;
-            }
-            .MusicImg{
-              width:300px;
-            }
+            // .MHTImg{
+            //   width:280px;
+            // }
+            // .MusicImg{
+            //   width:300px;
+            // }
             .testMusicCont{
               font-size:25px;
             }
@@ -327,13 +328,12 @@ const resources = () => {
                 align-items:center;
                 font-size:20px;
               }
-              .MHTest{
-                // margin-bottom:25px;
-                // margin-right:0px;
-                font-size:20px;
-              }
               .commonMT{
-                padding:5px 12px; 
+                padding:5px 8px; 
+              }
+              .MHTest{
+                padding:5px 0px;
+                font-size:20px;
               }
               .mainCont{
                 margin:0px 5px 60px 5px;
@@ -351,10 +351,30 @@ const resources = () => {
                 font-size:40px;
               }
               .MHTImg{
-                width:90px;
+                width:120px;
               }
               .MusicImg{
                 width:170px;
+              }
+            }
+            @media screen and (max-width:600px){
+              .MHTest{
+                width:170px;
+                margin-right:24px;
+              }
+              .MHTImg{
+                width:120px;  
+              }
+              .MusicImg{
+                width:150px;
+              }
+              .Music{
+                width:160px;
+              }
+            }
+            @media screen and (max-width:380px){
+              .MHTest{
+                margin-right:15px;
               }
             }
         `}

@@ -6,13 +6,86 @@ import { useState, useEffect } from 'react'
 import ScrollToTop from '@/components/ScrollToTop'
 import { NextSeo } from 'next-seo'
 import { SocialProfileJsonLd } from 'next-seo';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import {auth} from "../config/firebase"
+import {getDocs, collection, query, where, addDoc,Timestamp, orderBy} from "firebase/firestore"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {db} from "../config/firebase"
+
 
 const music = ({musics}) => {
+  const [username, setUsername]=useState("");
+  const [musicList, setMusicList]= useState([]);
+  const [title, setTitle]= useState("");
+  const [link, setLink]= useState("");
+  const [selectedOp, setSelectedOp]= useState("8");
+
+  const musicCollectionRef= collection(db, "music")
+  const q = query(musicCollectionRef);
+  // const qme = query(musicCollectionRef,  where("creator", "==", username, orderBy("timestamp"));
+
+
+  useEffect(()=>{
+    auth.onAuthStateChanged(
+      async(user)=>{
+        if(user){
+          let username= user.displayName;
+          setUsername(username);
+        }
+        else{
+          setUsername("");
+        }
+      }
+    )
+    getMusicList();
+  },[]);
+
+  const getMusicList = async ()=>{
+    try{
+      const data = await getDocs(q);
+      const filteredData= data.docs.map((doc)=>({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setMusicList(filteredData);
+      console.log(filteredData) 
+    } catch (err){
+      console.error(err)
+    }
+  }
+
+  const addHandler= async()=>{
+    if(username===""){
+      toast.info("Sign in to add playlist",{
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+    else{
+      try{
+        await addDoc(musicCollectionRef, {link: link, creator: username, title:title, player:Number(selectedOp)})
+      }catch(err){
+        console.error(err);
+      }
+      setTitle("");
+      setLink("");
+      getMusicList();
+    }
+  }
+
   const [music, setMusic]=useState([])
   useEffect(()=>{
     getMusic()
       .then((result)=>setMusic(result));
   },[])
+
   const playlists=[
     {
       url:"https://open.spotify.com/show/6qCGowS3fs0qFYMlxczxC5",
@@ -99,6 +172,12 @@ const music = ({musics}) => {
       fcol:"#ffff",
       tag:"/music/others.png"
     },
+    {
+      id:'9',
+      bgcol:"#171717",
+      fcol:"#ffff",
+      tag:"/music/others.png"
+    },
   ]
   return (
     <div className='music'>
@@ -144,13 +223,60 @@ const music = ({musics}) => {
         <div className='mainCont'>
             <div className='Head text-4xl pt-2'>Music & Podcasts</div>
             <div className='content'>
-              <MusicCard url={playlists[0].url} img={playlists[0].img} title={playlists[0].title}  bgcol={mcolors[playlists[0].musicPlayer].bgcol} fcol={mcolors[playlists[0].musicPlayer].fcol} tag={mcolors[playlists[0].musicPlayer].tag}/>
-              <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title}  bgcol={mcolors[playlists[1].musicPlayer].bgcol} fcol={mcolors[playlists[1].musicPlayer].fcol} tag={mcolors[playlists[1].musicPlayer].tag}/>
-              <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title}  bgcol={mcolors[playlists[2].musicPlayer].bgcol} fcol={mcolors[playlists[2].musicPlayer].fcol} tag={mcolors[playlists[2].musicPlayer].tag}/>
-              <MusicCard url={playlists[3].url} img={playlists[3].img} title={playlists[3].title}  bgcol={mcolors[playlists[3].musicPlayer].bgcol} fcol={mcolors[playlists[3].musicPlayer].fcol} tag={mcolors[playlists[3].musicPlayer].tag}/>
-              {music.map((music)=><MusicCard url={music.link} key={music.playlistTitle} title={music.playlistTitle} img={music.image.url} bgcol={mcolors[music.musicPlayer].bgcol} fcol={mcolors[music.musicPlayer].fcol} tag={mcolors[music.musicPlayer].tag}/>)}
+              <MusicCard url={playlists[0].url} img={playlists[0].img} title={playlists[0].title}  bgcol={mcolors[playlists[0].musicPlayer].bgcol} fcol={mcolors[playlists[0].musicPlayer].fcol} tag={mcolors[playlists[0].musicPlayer].tag} own="0" docid="0"/>
+              <MusicCard url={playlists[1].url} img={playlists[1].img} title={playlists[1].title}  bgcol={mcolors[playlists[1].musicPlayer].bgcol} fcol={mcolors[playlists[1].musicPlayer].fcol} tag={mcolors[playlists[1].musicPlayer].tag}  own="0" docid="0"/>
+              <MusicCard url={playlists[2].url} img={playlists[2].img} title={playlists[2].title}  bgcol={mcolors[playlists[2].musicPlayer].bgcol} fcol={mcolors[playlists[2].musicPlayer].fcol} tag={mcolors[playlists[2].musicPlayer].tag}  own="0" docid="0"/>
+              <MusicCard url={playlists[3].url} img={playlists[3].img} title={playlists[3].title}  bgcol={mcolors[playlists[3].musicPlayer].bgcol} fcol={mcolors[playlists[3].musicPlayer].fcol} tag={mcolors[playlists[3].musicPlayer].tag}  own="0" docid="0"/>
+              {music.map((music)=><MusicCard url={music.link} key={music.playlistTitle} title={music.playlistTitle} img={music.image.url} bgcol={mcolors[music.musicPlayer].bgcol} fcol={mcolors[music.musicPlayer].fcol} tag={mcolors[music.musicPlayer].tag}  own="0" docid="0"/>)}
+              {musicList.map((musicObj)=>{
+          if(musicObj.creator==username){
+            return <MusicCard url={musicObj.link} img={playlists[0].img} title={musicObj.title}  bgcol={mcolors[musicObj.player].bgcol} fcol={mcolors[musicObj.player].fcol} tag={mcolors[musicObj.player].tag}  own="1" docid={musicObj.id}/>
+              }else{
+                return<MusicCard url={musicObj.link} img={playlists[0].img} title={musicObj.title}  bgcol={mcolors[musicObj.player].bgcol} fcol={mcolors[musicObj.player].fcol} tag={mcolors[musicObj.player].tag}  own="0" docid={musicObj.id}/>
+              }
+          })}
+          </div>
+            {/* <div><span>Playlist Link: </span><input type="text" className='bg-[yellow] p-[]'  onChange={(e)=>setNewComment(e.target.value)} value={newComment}/></div>
+            <div><span>Playlist Title: </span><input type="text" className='bg-[yellow] p-[]'/></div> */}
+            {/* <button className='addYours' onClick={addHandler}>Add your playlists</button> */}
+            <div className='addContainer'>
+              <div className='sm:text-[30px] text-[25px] font-semibold text-[#4d1eba] sm:mb-[15px] mb-[8px]'>Add your playlists</div>
+              <div className='inp linkf'>
+                <span>Playlist Link: </span>
+                <input type="text" onChange={(e)=>setLink(e.target.value)} value={link} className='sm:w-[380px] w-[55vw]  rounded-md py-[4px] px-[6px]  md:text-[18px] text-[15px]' />
+              </div>
+              <div className='inp titlef'>
+                <span>Playlist Title: </span>
+                <input type="text" onChange={(e)=>setTitle(e.target.value)} value={title}  className='sm:w-[380px] w-[55vw] rounded-md  py-[4px] px-[6px] md:text-[18px] text-[15px]'/>
+              </div>
+              <div className='inp sel'>
+                <span>Select music service: </span>
+                <select name="player" id="player"  value={selectedOp} onChange={e => setSelectedOp(e.target.value)} className='rounded-md  py-[4px] px-[6px] md:text-[18px] text-[15px]' >
+                  <option value="9">---Select---</option>
+                  <option value="0">Spotify</option>
+                  <option value="1">YouTube Music</option>
+                  <option value="2">Jio Saavan</option>
+                  <option value="3">Amazon Music</option>
+                  <option value="4">Gaana</option>
+                  <option value="5">Apple Music</option>
+                  <option value="7">Wink</option>
+                  <option value="8">others</option>
+                </select>
+              </div>
+              <button className='subButton' onClick={addHandler}>Submit</button>
             </div>
-            <a href="https://forms.gle/pu2NrARyP9ocb1577" target="_blank" className='addYours'>Add your playlists</a>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"/>
+            
         </div>
         <style jsx>
           {`
@@ -178,18 +304,29 @@ const music = ({musics}) => {
               gap:60px 80px;
               margin-bottom:60px;
             }
-            .addYours{
-              font-size:23px;
-              color:#594df6;
-              font-weight:500;
-              background-color:#eef0fe;
-              padding:10px 18px;
+            .subButton{
+              font-size:21px;
+              color:#eef0fe;
+              background-color:#594df6;
+              padding:5px 16px;
+              border-radius:8px;
+              margin-top:8px;
+            }
+            .addContainer{
+              display:flex;
+              flex-direction:column;
+              align-items:center;
+              width:600px;
+              background-color:#f1e6fa;
+              border:2px solid #b0b0b0;
               border-radius:12px;
+              padding:10px;
             }
-            .addYours:hover{
-              background-color:#d8d7fd
+            .inp{
+              font-size:20px;
+              margin-bottom:15px;
             }
-
+            
             @media screen and (max-width:1440px){
                .content{
                   grid-template-columns: 1fr 1fr 1fr;
@@ -221,11 +358,22 @@ const music = ({musics}) => {
                   grid-template-columns: 1fr;
                   gap:40px 100px;
                }
+               .inp{
+                font-size:17px;
+                margin-bottom:8px;
+               }
+               .addContainer{
+                width:90vw;
+               }
                .music{
                 padding:10px;
                }
                .Head{
                 font-size:36px;
+               }
+               .subButton{
+                font-size:17px;
+                padding:6px 10px;
                }
             }
           `}
