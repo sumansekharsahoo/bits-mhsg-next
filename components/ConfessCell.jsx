@@ -25,7 +25,7 @@ const ConfessCell = (props) => {
     let done= props.resolved
     let adminedit=edit && !done
     return (
-    <div className='confessContainer px-[12px] py-[8px] rounded-xl border-[2px] border-[#b0b0b0] lg:w-[70%] sm:w-[80%] w-[95%] flex flex-col align-middle text-[#474747]' style={{display}}>
+    <div className='confessContainer px-[12px] py-[8px] my-[10px] rounded-xl border-[2px] border-[#b0b0b0] lg:w-[70%] sm:w-[80%] w-[95%] flex flex-col align-middle text-[#474747]' style={{display}}>
         <div className='md:text-[24px] text-[20px] flex justify-between'><span className=''>{props.name}</span>{done?<span className='text-[#319c3a]'><GoCheckCircle  className='inline pb-[5px]'/> Resolved</span>:<span className='text-[#e1864a]'><GoClock className='inline'/> Pending</span>}</div>
         <div className='text-[14px] md:text-[18px]'><span>{props.mail}</span></div>
         <div className='text-[14px] md:text-[18px] my-[6px]'>{props.txt}</div>

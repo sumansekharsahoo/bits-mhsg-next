@@ -45,6 +45,16 @@ const resources = () => {
       const cur_timestamp=Timestamp.fromDate(new Date())
       try{
         await addDoc(commentConfess, {txt: newConfess, name: displayName, timestamp:cur_timestamp, uid: userid, mail:email, resolved:false})
+        toast.info("Submitted",{
+        position: "bottom-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
       }catch(err){
         console.error(err);
       }
@@ -238,7 +248,7 @@ const resources = () => {
             flex-direction:column;
             align-items:center;
             background-color:white;
-            margin: 0px 0px 20px 0px;
+            margin: 0px 30px 20px 30px;
             padding: 0px 60px 40px 60px;
             border-radius: 12px;
           }
@@ -344,7 +354,7 @@ const resources = () => {
             border-radius:18px;
             padding:20px 45px 25px 45px;
             border:2px solid #b0b0b0;
-            margin:10px 7vw 20px 7vw;
+            margin:20px 7vw 20px 7vw;
             width:auto;
 
           }
@@ -393,6 +403,10 @@ const resources = () => {
             background-color:#828282;
           }
            @media screen and (max-width:1220px){
+            .mainCont{
+              margin-left:25px;
+              margin-right:25px;
+            }
             .mHCondGrid{
               grid-template-columns:1fr 1fr 1fr;
             }
@@ -539,7 +553,7 @@ const resources = () => {
                 width:100%;
               }
               .seekHelp{
-                margin:10px 5px 20px 5px;
+                margin:15px 5px 15px 5px;
               }
               .seekHelpDesc{
                 font-size:14px;
