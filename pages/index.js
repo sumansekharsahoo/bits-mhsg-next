@@ -117,15 +117,15 @@ export default function Home({posts}) {
       <NextSeo 
         title='BITS MHSG' 
         description='BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health'
-        canonical='https://bitsmhsg.vercel.app/'
+        canonical='https://www.bitsmhsg.me/'
          openGraph={{
         type: 'website',
-        url: 'https://bitsmhsg.vercel.app/',
+        url: 'https://www.bitsmhsg.me/',
         title: 'BITS Mental Health Support Group',
         description: 'BITS Mental Health Support Group is a pan-campus initiative striving to create awareness about mental health',
         images: [
           {
-            url: '/official/MHSG_Short.png',
+            url: '/official/MHSG_OG.png',
             width: 1200,
             height: 630,
             alt: 'BITS MHSG',
@@ -142,7 +142,7 @@ export default function Home({posts}) {
       <SocialProfileJsonLd
       type="Organization"
       name="BITS MHSG"
-      url="https://bitsmhsg.vercel.app/"
+      url="https://www.bitsmhsg.me/"
       sameAs={[
         'https://www.facebook.com/groups/BITS.MHSG/',
         'https://www.instagram.com/bits.mhsg/',

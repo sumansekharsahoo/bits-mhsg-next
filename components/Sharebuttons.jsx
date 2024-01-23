@@ -11,7 +11,7 @@ import {
 const Sharebuttons = ({ title, slug }) => {
   const [display,setDisplay]= useState("none");
   const emailsub= `Post by BITS MHSG: ${title}`
-  const url= "https://bitsmhsg.vercel.app/post/"+slug
+  const url= "https://www.bitsmhsg.me/post/"+slug
   function clipbcopy(){
     navigator.clipboard.writeText(url);
     setDisplay("inline");

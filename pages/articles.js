@@ -26,12 +26,12 @@ const articles = ({posts}) => {
         title='Articles' 
          openGraph={{
         type: 'website',
-        url: 'https://bitsmhsg.vercel.app/articles',
+        url: 'https://www.bitsmhsg.me/articles',
         title: 'BITS MHSG Articles',
         description: 'Explore our insightful articles on mental health for a brighter mind and a healthier you!',
         images: [
           {
-            url: '/official/MHSG_Short.png',
+            url: '/official/MHSG_OG.png',
             width: 1200,
             height: 630,
             alt: 'BITS MHSG',
@@ -48,7 +48,7 @@ const articles = ({posts}) => {
       <SocialProfileJsonLd
       type="Organization"
       name="BITS MHSG"
-      url="https://bitsmhsg.vercel.app/articles"
+      url="https://www.bitsmhsg.me/articles"
       sameAs={[
         'https://www.facebook.com/groups/BITS.MHSG/',
         'https://www.instagram.com/bits.mhsg/',

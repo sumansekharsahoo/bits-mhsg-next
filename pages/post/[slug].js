@@ -17,7 +17,7 @@ const PostDetails = ({post}) => {
   if (router.isFallback) {
     return <Loader />;
   }
-  const posturl= 'https://bitsmhsg.vercel.app/'+post.slug;
+  const posturl= 'https://www.bitsmhsg.me/'+post.slug;
   return (
     <div className='container mx-auto px-1.5 md:px-4 lg:px-16 my-2 md:my-6 alignclass'>
         <Head>
@@ -32,7 +32,7 @@ const PostDetails = ({post}) => {
         description: 'Explore our insightful articles on mental health for a brighter mind and a healthier you!',
         images: [
           {
-            url: '/official/MHSG_Short.png',
+            url: '/official/MHSG_OG.png',
             width: 1200,
             height: 630,
             alt: 'BITS MHSG',

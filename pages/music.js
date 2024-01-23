@@ -194,12 +194,12 @@ const music = ({musics}) => {
         title='Music & Podcasts' 
          openGraph={{
         type: 'website',
-        url: 'https://bitsmhsg.vercel.app/music',
+        url: 'https://www.bitsmhsg.me/music',
         title: 'Music & Podcasts',
         description: 'Unlock a cascade of positivity with our handpicked playlist, elevating your mood one beat at a time!',
         images: [
           {
-            url: '/official/MHSG_Short.png',
+            url: '/official/MHSG_OG.png',
             width: 1200,
             height: 630,
             alt: 'BITS MHSG',
@@ -216,7 +216,7 @@ const music = ({musics}) => {
       <SocialProfileJsonLd
       type="Organization"
       name="BITS MHSG"
-      url="https://bitsmhsg.vercel.app/music"
+      url="https://www.bitsmhsg.me/music"
       sameAs={[
         'https://www.facebook.com/groups/BITS.MHSG/',
         'https://www.instagram.com/bits.mhsg/',
