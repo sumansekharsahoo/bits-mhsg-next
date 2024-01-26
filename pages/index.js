@@ -156,7 +156,7 @@ export default function Home({posts}) {
       <div className='secondCont flex flex-col'>      
         <div className='pinAbout pinCards bg-white'>
           <div className='Head text-[#367863]'>About us</div>
-          <p className='text-[17px] sm:text-[20px] abtTxt'>
+          <p className='text-[17px] sm:text-[20px] abtTxt lg:px-[40px]'>
             BITS Mental Health Support Group (BITS MHSG) aims to bring all the BITsians under one umbrella to act as a collective forum that encourages discussion on mental health and mental well-being.
 
             Our goal is to provide a safe place for people to come forward and, speak their minds, increase awareness about the importance of mental health and well-being amongst the general community of the campus.
@@ -211,6 +211,9 @@ export default function Home({posts}) {
             // border-top-right-radius:12px;
             border-radius:12px;
           }
+          .pinAbout{
+            padding:20px 60px 50px 60px;
+          }
           .Head{
             font-size:38px;
             margin-bottom:10px;
@@ -255,6 +258,9 @@ export default function Home({posts}) {
             .pinCards{
               padding:20px 20px 20px;
             }
+            .pinAbout{
+              padding:20px 30px 40px 30px;
+            }
           }
           @media only screen and (max-width: 860px){
             .gridCont{
@@ -278,6 +284,9 @@ export default function Home({posts}) {
             }
             .secondCont{
               padding:20px 18px;
+            }
+            .pinAbout{
+              padding:20px 20px 20px;
             }
             .moreArt{
               // justify-self:center;
