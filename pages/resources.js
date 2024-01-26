@@ -355,7 +355,7 @@ const resources = () => {
             padding:20px 45px 25px 45px;
             border:2px solid #b0b0b0;
             margin:20px 7vw 20px 7vw;
-            width:auto;
+            width:1083px;
 
           }
           .seekHelpHead{
@@ -421,7 +421,11 @@ const resources = () => {
             }
             .seekHelp{
               margin-left:20px;
-              margin-right:20px
+              margin-right:20px;
+              width:860px;
+            }
+            .txtAr{
+              width:90%;
             }
             .Head{
             font-size:32px;
@@ -448,6 +452,11 @@ const resources = () => {
             .testMusicCont{
               font-size:25px;
             }
+            .seekHelp{
+              margin-left:12px;
+              margin-right:12px;
+              width:760px;
+            }
            }
             @media screen and (max-width:810px){
               .contactsCont{
@@ -464,6 +473,12 @@ const resources = () => {
               }
               .MHTest{
                 margin-right:20px;
+              }
+              .seekHelp{
+                width:654px;
+              }
+              .txtAr{
+                width:95%;
               }
             }
             @media screen and (max-width:715px){
@@ -485,13 +500,14 @@ const resources = () => {
                 font-size:25px;
               }
               .txtAr{
-                width:90%;
+                width:95%;
               }
               .subButtons{
                 width:90%;
               }
               .seekHelp{
                 padding:10px 20px 25px 20px;
+                width:auto;
               }
               .mHCondItems{
                 padding:10px 8px;
