@@ -69,7 +69,7 @@ function NavBar({signoutAlert}) {
           <div>
             <div className="flex items-center  py-0.5 md:py-1 md:block justify-between">
               <Link href="/" >
-                <img src="/official/MHSG_Short.png" width={55} height={55} alt="logo" className='' />
+                <img src="/official/MHSG_Short.webp" width={55} height={55} alt="logo" className='' />
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
               <div className="md:hidden">

@@ -5,13 +5,13 @@ import { RxDotFilled } from 'react-icons/rx';
 const Carousel = () => {
     const slides = [
     {
-      img_url: '/official/MHSG_LongNav.png',
+      img_url: '/official/MHSG_LongNav.webp',
       head:'BITS MHSG',
       desc: 'BITS MHSG is a pan-campus initiative striving to create awareness about Mental Health',
       url:'/'
     },
     {
-      img_url: '/carousel/calendar.png',
+      img_url: '/carousel/calendar.webp',
       head:'Our Headliner Events',
       desc: 'Checkout our events page for more details',
       url:'/events'
@@ -24,13 +24,13 @@ const Carousel = () => {
     },
 
     {
-      img_url: '/carousel/music.png',
+      img_url: '/carousel/music.webp',
       head:'Music and Podcasts',
       desc: 'Unlock a cascade of positivity with our handpicked playlist, elevating your mood one beat at a time!',
       url:'/music'
     },
     {
-      img_url: '/carousel/askhelp.png',
+      img_url: '/carousel/askhelp.webp',
       head:'#AskForHelp',
       desc: 'Feeling low or in need of mental health support? Click here for help!',
       url:'/resources'

@@ -133,7 +133,7 @@ const resources = () => {
             alt: 'BITS MHSG',
           },
           {
-            url: '/official/MHSG_Long.png',
+            url: '/official/MHSG_Long.webp',
             width: 1024,
             height: 512,
             alt: 'BITS MHSG',
@@ -156,9 +156,9 @@ const resources = () => {
         <div className='emergencyCont flex flex-col'>
           <div className='emergencyHead Head'>#AskForHelp</div>
           <div className='contactsCont'>
-            <HelplineCard helpObj={helpline[0]} imgObj="/helpline/HealthMinistry.png"/>
+            <HelplineCard helpObj={helpline[0]} imgObj="/helpline/HealthMinistry.webp"/>
             <HelplineCard helpObj={helpline[1]} imgObj="/helpline/Mpower.png"/>
-            <HelplineCard helpObj={helpline[2]} imgObj="/helpline/TISS.png"/>
+            <HelplineCard helpObj={helpline[2]} imgObj="/helpline/TISS.webp"/>
             <HelplineCard helpObj={helpline[3]} imgObj="/helpline/YourDost.png"/>
           </div>
         </div>
@@ -211,13 +211,13 @@ const resources = () => {
         </div>
         <div className='testMusicCont flex'>
           <a href="https://www.clinical-partners.co.uk/online-tests" target="_blank"  className='MHTest commonMT'>
-            <img src="/helpline/MHTest.png" alt="MHTest" className='MHTImg' />
+            <img src="/helpline/MHTest.webp" alt="MHTest" className='MHTImg' />
             <div className='mt-[6px] leading-[1]'>
               Mental Health Assessment
             </div>
           </a>
           <a href="/music" className='Music commonMT'>
-            <img src="/carousel/music.png" alt="Music" className='MusicImg' />
+            <img src="/carousel/music.webp" alt="Music" className='MusicImg' />
             <div className='mt-[6px] leading-[1]'>
               Music & Podcasts
             </div>

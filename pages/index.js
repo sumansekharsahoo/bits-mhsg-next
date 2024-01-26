@@ -27,7 +27,7 @@ const playlists=[
     },
     {
       url:"https://open.spotify.com/playlist/0NuENKeHb4HvGmKkwmVi8N",
-      img:"/music/radiant-bliss.png",
+      img:"/music/radiant-bliss.webp",
       title:"Radiant Bollywood Bliss",
       musicPlayer:'0'
     },
@@ -38,13 +38,13 @@ const playlists=[
       id:'0',
       bgcol:"#69dc72",
       fcol:"#00000",
-      tag:"/music/spotify.png"
+      tag:"/music/spotify.webp"
     },
     {
       id:'1',
       bgcol:"#d42626",
       fcol:"#ffff",
-      tag:"/music/ytmusic.png"
+      tag:"/music/ytmusic.webp"
     },
     {
       id:'2',
@@ -80,7 +80,7 @@ const playlists=[
       id:'7',
       bgcol:"#dc4442",
       fcol:"#f7f4f4",
-      tag:"/music/wink.png"
+      tag:"/music/wink.webp"
     },
     {
       id:'8',
@@ -131,7 +131,7 @@ export default function Home({posts}) {
             alt: 'BITS MHSG',
           },
           {
-            url: '/official/MHSG_Long.png',
+            url: '/official/MHSG_Long.webp',
             width: 1024,
             height: 512,
             alt: 'BITS MHSG',

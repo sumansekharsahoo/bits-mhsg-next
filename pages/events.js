@@ -38,7 +38,7 @@ const events = ({events}) => {
             alt: 'BITS MHSG',
           },
           {
-            url: '/official/MHSG_Long.png',
+            url: '/official/MHSG_Long.webp',
             width: 1024,
             height: 512,
             alt: 'BITS MHSG',

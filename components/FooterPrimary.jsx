@@ -53,7 +53,7 @@ const FooterPrimary = () => {
             </div>
         </div>
         <div className='logoContainer'>
-          <a href="/" target="_blank"><Image src="/official/MHSG_LongNav.png" alt="MHSG_Long" height={110} width={110} loading='lazy'/></a>
+          <a href="/" target="_blank"><Image src="/official/MHSG_LongNav.webp" alt="MHSG_Long" height={110} width={110} loading='lazy'/></a>
           <a href="mailto:mhsg@hyderabad.bits-pilani.ac.in" target="_blank">mhsg@hyderabad.bits-pilani.ac.in</a>
         </div>
       </div>
