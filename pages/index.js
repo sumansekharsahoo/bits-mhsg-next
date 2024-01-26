@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 const playlists=[
     {
-      url:"https://open.spotify.com/show/6qCGowS3fs0qFYMlxczxC5",
+      url:"https://open.spotify.com/show/6qCGowS3fs0qFYMlxczxC5?si=84e4392605e449ad",
       img:"/music/mentally-yours.png",
       title:"Mentally Yours",
       musicPlayer:'0'
@@ -26,7 +26,7 @@ const playlists=[
       musicPlayer:'0'
     },
     {
-      url:"https://open.spotify.com/playlist/0NuENKeHb4HvGmKkwmVi8N",
+      url:"https://spoti.fi/3SBwWRa",
       img:"/music/radiant-bliss.webp",
       title:"Radiant Bollywood Bliss",
       musicPlayer:'0'
@@ -154,7 +154,16 @@ export default function Home({posts}) {
       </div>
 
       <div className='secondCont flex flex-col'>      
-        <div className='pinArticle pinCards bg-white'>
+        <div className='pinAbout pinCards bg-white'>
+          <div className='Head text-[#367863]'>About us</div>
+          <p className='text-[17px] sm:text-[20px] abtTxt'>
+            BITS Mental Health Support Group (BITS MHSG) aims to bring all the BITsians under one umbrella to act as a collective forum that encourages discussion on mental health and mental well-being.
+
+            Our goal is to provide a safe place for people to come forward and, speak their minds, increase awareness about the importance of mental health and well-being amongst the general community of the campus.
+          </p>
+        </div>
+
+        <div className='pinArticle pinCards bg-white mt-[24px]'>
           <div className='Head'>Latest Articles</div>
           <div className='postCont gridCont'>
             {relatedPosts.map((post)=>(
@@ -163,6 +172,7 @@ export default function Home({posts}) {
             <a href='/articles' className='moreArt'>More Articles</a>
           </div>
         </div>
+
         <div className='latestEvent pinCards bg-white mt-[24px]'>
           <div className='Head'>Latest Events</div>
           <div className='eventCont  gridCont'>
@@ -270,6 +280,11 @@ export default function Home({posts}) {
               font-size:19px;
               padding:5px 10px;
               border-radius:7px;
+            }
+            .abtTxt{
+              padding:0px 10px 15px 10px;
+              text-align: justify;
+              // text-justify:inter-character;
             }
           }
           @media only screen and (max-width: 385px){

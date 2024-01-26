@@ -88,11 +88,11 @@ const CategoryPost = ({posts}) => {
             .postcardBox{
               padding:10px 10vw;
             }
+            .artsec{
+              margin:0px 0px;
+            }
           }
           @media only screen and (max-width: 398px){
-            .artSec{
-              margin:0px 3px;
-            }
             .postcardBox{
               padding:0px 0px 10px 0px;
             }

@@ -91,7 +91,7 @@ const music = ({musics}) => {
 
   const playlists=[
     {
-      url:"https://open.spotify.com/show/6qCGowS3fs0qFYMlxczxC5",
+      url:"https://open.spotify.com/show/6qCGowS3fs0qFYMlxczxC5?si=84e4392605e449ad",
       img:"/music/mentally-yours.png",
       title:"Mentally Yours",
       musicPlayer:'0'
@@ -103,13 +103,13 @@ const music = ({musics}) => {
       musicPlayer:'0'
     },
     {
-      url:"https://open.spotify.com/playlist/0NuENKeHb4HvGmKkwmVi8N",
+      url:"https://spoti.fi/3SBwWRa",
       img:"/music/radiant-bliss.webp",
       title:"Radiant Bollywood Bliss",
       musicPlayer:'0'
     },
     {
-      url:"https://open.spotify.com/playlist/514SZcgMQVFSlvFDOXUq3v",
+      url:"https://open.spotify.com/playlist/514SZcgMQVFSlvFDOXUq3v?si=feecbdda760d44b5",
       img:"/music/midnight-melody-spotify.jpg",
       title:"Midnight Melodies",
       musicPlayer:'0'
