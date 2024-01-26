@@ -181,7 +181,17 @@ const resources = () => {
         </div>
         <div className='seekHelp flex flex-col'>
           <div className='seekHelpHead Head'>Reach Out for Support</div>
-          <div className='seekHelpDesc'>Welcome to our Support and Guidance Inquiry Form. We are here to provide a safe space for you to express your thoughts, feelings, and questions about your mental health. If you seek support, have specific queries, or just need someone to talk to, please share your concerns below. Our team of mental health first aiders is committed to offering assistance and guidance to help you on your journey towards mental well-being. Remember, you are not alone, and we are here for you.</div>
+          <div className='seekHelpDesc sm:mb-[15px] mb-[10px]'>Welcome to our Support and Guidance Inquiry Form. We are here to provide a safe space for you to express your thoughts, feelings, and questions about your mental health. If you seek support, have specific queries, or just need someone to talk to, please share your concerns below. Our team of mental health first aiders is committed to offering assistance and guidance to help you on your journey towards mental well-being. Remember, you are not alone, and we are here for you.</div>
+          {/* <div className='wmatch mb-[10px] mt-[5px]'>
+            <h1 className=' text-green-900 text-[16px] sm:text-[23px] mb-[2px]'>Help us solve your queries and problems by answering the following:</h1>
+            <div>
+              <h1 className='txtpts'>1. You are (Student /Alumni)</h1>
+              <h1 className='txtpts'>2. Your Gender (Male / Female / Other)</h1>
+              <h1 className='txtpts'>3. Have you ever opted for professional help? (Yes/No) </h1>
+              <h1 className='txtpts'>4. Are you willing to seek professional help in the future? (Yes/No)</h1>
+              <h1 className='txtpts'>5. Mention your query/problem</h1>
+            </div>
+          </div> */}
         {/* <div className='wmatch mt-[10px]'>
           <h1 className='mt-[5px] text-green-900 text-[16px] sm:text-[23px] mb-[2px]'>Help us solve your queries and problems by answering the following:</h1>
           <div className='queryForm'>
@@ -495,11 +505,14 @@ const resources = () => {
           .radLab{
             margin-right:3px;
           }
+          .txtpts{
+            font-size:20px;
+          }
           .queryForm{
             font-size:20px;
           }
           .subButtons{
-            width:80%;
+            width:88%;
             justify-content:space-between;
           }
           .cmn{
@@ -631,7 +644,7 @@ const resources = () => {
                 width:95%;
               }
               .subButtons{
-                width:90%;
+                width:95%;
               }
               .seekHelp{
                 padding:10px 20px 25px 20px;
@@ -684,6 +697,9 @@ const resources = () => {
               .MHTImg{
                 width:120px;  
               }
+              .txtpts{
+                font-size:16px;
+              }
               .MusicImg{
                 width:150px;
               }
@@ -698,6 +714,7 @@ const resources = () => {
               }
               .seekHelp{
                 margin:15px 5px 15px 5px;
+                padding-bottom:10px;
               }
               .seekHelpHead{
                 margin-bottom:6px;

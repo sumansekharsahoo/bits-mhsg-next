@@ -198,6 +198,10 @@ export default function Home({posts}) {
         .secondCont{
           padding: 20px 40px;
         }
+        .abtTxt{
+          text-align: center;
+          // text-justify:inter-character;
+        }
           .pinCards{
             display:flex;
             flex-direction:column;
