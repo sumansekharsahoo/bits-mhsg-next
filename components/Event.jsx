@@ -75,7 +75,7 @@ const Event = ({event}) => {
             <div className='eventDesc'>{event.eventDesc}</div>
         </div>
         <div className='backbtngrp'>
-            <a href={event.link} target="_blank" className='elink'>{tr?'Event Link':'Event Gallery'}</a>
+            <a href={event.link} target="_blank" className='elink'>{tr?'Event Link':'Event Link'}</a>
             {tr?<span className='catBox catBox2'>Upcoming</span>:<span className='catBox catBox2'>Past</span> }
         </div>
         <div className='smallTxt'>Click to flip</div>
