@@ -4,7 +4,7 @@ import {getFirestore} from "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: "AIzaSyCLLGBuL0SqfeEoa2dDy87JpmxBKenbEiQ",
-  authDomain: "www.bitsmhsg.me",
+  authDomain: "bits-mhsg-161d5.firebaseapp.com",
   projectId: "bits-mhsg-161d5",
   storageBucket: "bits-mhsg-161d5.appspot.com",
   messagingSenderId: "155596352162",

@@ -157,9 +157,9 @@ export default function Home({posts}) {
         <div className='pinAbout pinCards bg-white'>
           <div className='Head text-[#367863]'>About us</div>
           <p className='text-[17px] sm:text-[20px] abtTxt'>
-            BITS Mental Health Support Group (BITS MHSG) aims to bring all the BITsians under one umbrella to act as a collective forum that encourages discussion on mental health and mental well-being.
+            BITS Mental Health Support Group (BITS MHSG) aims to bring all the BITsians under one umbrella to act as a collective forum that encourages discussion on mental health and mental well-being.
 
-            Our goal is to provide a safe place for people to come forward and, speak their minds, increase awareness about the importance of mental health and well-being amongst the general community of the campus.
+            Our goal is to provide a safe place for people to come forward and, speak their minds, increase awareness about the importance of mental health and well-being amongst the general community of the campus.
           </p>
         </div>
 

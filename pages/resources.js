@@ -17,6 +17,10 @@ const resources = () => {
   const [newConfess, setNewConfess]= useState("")
   const [username, setUsername]=useState("");
   const [userid, setUserId]=useState("");
+  const [selectedOption, setSelectedOption] = useState("Male")  
+  const [postOption, setPostOption] = useState("Student")  
+  const [profOption, setProfOption] = useState("profNo")  
+  const [futOption, setFutOption] = useState("futNo")  
 
   const commentConfess= collection(db, "confess")
 
@@ -35,6 +39,19 @@ const resources = () => {
       }
     )
   },[]);
+
+  function onValueChange(event){
+        setSelectedOption(event.target.value)
+    }
+  function onPostChange(event){
+        setPostOption(event.target.value)
+    }
+  function onProfChange(event){
+        setProfOption(event.target.value)
+    }
+  function onFutChange(event){
+        setFutOption(event.target.value)
+    }
 
     const submitConfess= async()=>{
     const auth= getAuth();
@@ -163,9 +180,109 @@ const resources = () => {
           </div>
         </div>
         <div className='seekHelp flex flex-col'>
-          <div className='seekHelpHead Head'>Seek professional help</div>
-          <div className='seekHelpDesc'>Write your troubles / worries, we will forward it to mental health experts and get back to you via mail. We give you space to be yourself, don't be hesitant and state your problems/worries openly. Your queries stays private between you and us. Please use BITS Mail. Check your query status at account page.</div>
-          <textarea  onChange={(e)=>setNewConfess(e.target.value)} value={newConfess} rows={7}  wrap="hard" placeholder='Write your concern' className='txtAr text-[16px] text-[#474747] sm:text-[18px] rounded-lg mt-[10px] sm:mt-[15px]'></textarea>
+          <div className='seekHelpHead Head'>Reach Out for Support</div>
+          <div className='seekHelpDesc'>Welcome to our Support and Guidance Inquiry Form. We are here to provide a safe space for you to express your thoughts, feelings, and questions about your mental health. If you seek support, have specific queries, or just need someone to talk to, please share your concerns below. Our team of mental health first aiders is committed to offering assistance and guidance to help you on your journey towards mental well-being. Remember, you are not alone, and we are here for you.</div>
+        {/* <div className='wmatch mt-[10px]'>
+          <h1 className='mt-[5px] text-green-900 text-[16px] sm:text-[23px] mb-[2px]'>Help us solve your queries and problems by answering the following:</h1>
+          <div className='queryForm'>
+            <h1 className='inline mr-[25px]'>1. You are: </h1>
+            <label className='labLab'>
+            <input
+              type="radio"
+              value="Student"
+              className='radLab'
+              checked={postOption === "Student"}
+              onChange={onPostChange}/>
+              Student
+          </label>
+          <label className='labLab'>
+            <input
+              type="radio"
+              className='radLab'
+              value="Alumni"
+              checked={postOption === "Alumni"}
+              onChange={onPostChange}/>
+            Alumni
+          </label>
+          </div>
+
+          <div className='queryForm'>
+            <h1 className='inline mr-[25px]'>2. Your gender: </h1>
+            <label className='labLab'>
+            <input
+              type="radio"
+              value="Male"
+              className='radLab'
+              checked={selectedOption === "Male"}
+              onChange={onValueChange}/>
+            Male
+          </label>
+          <label className='labLab'>
+            <input
+              type="radio"
+              value="Female"
+              className='radLab'
+              checked={selectedOption === "Female"}
+              onChange={onValueChange}/>
+            Female
+          </label>
+          <label className='labLab'>
+            <input
+              type="radio"
+              value="Other"
+              className='radLab'
+              checked={selectedOption === "Other"}
+              onChange={onValueChange}/>
+            Other
+        </label>
+          </div>
+
+          <div className='queryForm'>
+            <h1 className='inline mr-[25px]'>3. Have you ever opted for professional help? </h1>
+            <label className='labLab'>
+            <input
+              type="radio"
+              value="profYes"
+              className='radLab'
+              checked={profOption === "profYes"}
+              onChange={onProfChange}/>
+            Yes
+          </label>
+          <label className='labLab'>
+            <input
+              type="radio"
+              value="profNo"
+              className='radLab'
+              checked={profOption === "profNo"}
+              onChange={onProfChange}/>
+            No
+          </label>
+          </div>
+
+          <div className='queryForm'>
+            <h1 className='inline mr-[25px]'>4. Are you willing to seek professional help in the future?</h1>
+            <label className='labLab'>
+            <input
+              type="radio"
+              value="futYes"
+              className='radLab'
+              checked={futOption === "futYes"}
+              onChange={onFutChange}/>
+            Yes
+          </label>
+          <label className='labLab'>
+            <input
+              type="radio"
+              value="futNo"
+              className='radLab'
+              checked={futOption === "futNo"}
+              onChange={onFutChange}/>
+            No
+          </label>
+          </div>
+          <div className='queryForm mb-[3px]'>5. Mention your query</div>
+          </div> */}
+          <textarea  onChange={(e)=>setNewConfess(e.target.value)} value={newConfess} rows={7}  wrap="hard" placeholder='Write your concern' className='txtAr wmatch text-[16px] text-[#474747] sm:text-[18px] rounded-lg '></textarea>
           <div className='flex subButtons'>
             {userid===""?<button className='signIn cmn' onClick={signIn}>Sign in</button>:<></>}
             <div>
@@ -363,12 +480,23 @@ const resources = () => {
             align-self:start
           }
           .seekHelpDesc{
-            font-size:18px;
+            font-size:20px;
           }
           .txtAr{
-            width:80%;
             padding:8px 14px;
             border:2px solid  #b0b0b0
+          }
+          .wmatch{
+            width:88%;
+          }
+          .labLab{
+            margin-right:15px;
+          }
+          .radLab{
+            margin-right:3px;
+          }
+          .queryForm{
+            font-size:20px;
           }
           .subButtons{
             width:80%;
@@ -424,8 +552,8 @@ const resources = () => {
               margin-right:20px;
               width:860px;
             }
-            .txtAr{
-              width:90%;
+            .wmatch{
+              width:92%;
             }
             .Head{
             font-size:32px;
@@ -477,7 +605,7 @@ const resources = () => {
               .seekHelp{
                 width:654px;
               }
-              .txtAr{
+              .wmatch{
                 width:95%;
               }
             }
@@ -499,7 +627,7 @@ const resources = () => {
                 line-height: 1.2;
                 font-size:25px;
               }
-              .txtAr{
+              .wmatch{
                 width:95%;
               }
               .subButtons{
@@ -562,7 +690,7 @@ const resources = () => {
               .Music{
                 width:160px;
               }
-              .txtAr{
+              .wmatch{
                 width:100%;
               }
               .subButtons{
@@ -571,7 +699,13 @@ const resources = () => {
               .seekHelp{
                 margin:15px 5px 15px 5px;
               }
+              .seekHelpHead{
+                margin-bottom:6px;
+              }
               .seekHelpDesc{
+                font-size:14px;
+              }
+              .queryForm{
                 font-size:14px;
               }
             }
