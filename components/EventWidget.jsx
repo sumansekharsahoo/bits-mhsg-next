@@ -12,7 +12,15 @@ const tag=[
 ]
 
 const EventWidget = (props) => {
-  const tr= props.isUpcoming?1:0;
+  let tr;
+  const d = new Date(props.enddate);
+  const now= new Date();
+  if(now>d){
+    tr=0;
+  }else{
+    tr=1;
+  }
+  // console.log(props.enddate)
   return (
     <a href={props.link} target="_blank" className='flex flex-col mainCont'>
       <img src={props.img} alt="imgNotRendered" className='img' />

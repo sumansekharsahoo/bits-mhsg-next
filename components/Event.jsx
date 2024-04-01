@@ -39,7 +39,14 @@ const colors=[
 ]
 
 const Event = ({event}) => {
-    const tr=event.upcomingEvent?1:0;
+    const d = new Date(event.endDate);
+    const now= new Date();
+    let tr;
+    if(now>d){
+        tr=0;
+    }else{
+        tr=1;
+    }
     const [flip, setFlip]=useState(false);
   return (
     // <a href={event.link} target="_blank">

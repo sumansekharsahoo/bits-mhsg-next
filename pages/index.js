@@ -157,7 +157,7 @@ export default function Home({posts}) {
         <div className='pinAbout pinCards bg-white'>
           <div className='Head text-[#367863]'>About us</div>
           <p className='text-[17px] sm:text-[20px] abtTxt lg:px-[40px]'>
-            BITS Mental Health Support Group (BITS MHSG) aims to bring all the BITsians under one umbrella to act as a collective forum that encourages discussion on mental health and mental well-being.
+            BITS Mental Health Support Group (BITS MHSG) aims to bring all the BITSians under one umbrella to act as a collective forum that encourages discussion on mental health and mental well-being.
 
             Our goal is to provide a safe place for people to come forward and, speak their minds, increase awareness about the importance of mental health and well-being amongst the general community of the campus.
           </p>
@@ -177,7 +177,7 @@ export default function Home({posts}) {
           <div className='Head'>Latest Events</div>
           <div className='eventCont  gridCont'>
             {recentEvent.map((event)=>(
-              <EventWidget key={event.eventName} title={event.eventName} img={event.eventImg.url} loc={event.venue} link={event.link} date={event.date}  isUpcoming={event.upcomingEvent} />
+              <EventWidget key={event.eventName} title={event.eventName} img={event.eventImg.url} loc={event.venue} link={event.link} date={event.date}  enddate={event.endDate} />
             ))}
             <a href='/events' className='moreArt'>More Events</a>
           </div>

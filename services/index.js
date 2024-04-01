@@ -269,6 +269,7 @@ export const getRecentEvents=async()=>{
                 date
                 venue
                 link
+                endDate
             }
         }
     `
