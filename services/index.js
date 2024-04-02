@@ -265,7 +265,7 @@ export const getRecentEvents=async()=>{
                     url
                 }
                 eventName
-                upcomingEvent
+                eventDesc
                 date
                 venue
                 link

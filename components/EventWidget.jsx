@@ -1,5 +1,4 @@
 import React from 'react'
-
 const tag=[
   {
     tagf:"#ba2416",
@@ -22,14 +21,17 @@ const EventWidget = (props) => {
   }
   // console.log(props.enddate)
   return (
-    <a href={props.link} target="_blank" className='flex flex-col mainCont'>
+    <div onClick={()=>{
+      props.popup(true);
+    }} className='flex flex-col mainCont'>
       <img src={props.img} alt="imgNotRendered" className='img' />
       <div className='ptitle  px-[4px]'>
         {props.title}
       </div>
       <div className='det flex items-center justify-between px-[4px]'>
         <span className='date'>{props.date}</span>
-        {tr?<span className='catBox catBox1'>Upcoming</span>:<span className='catBox catBox1'>Past</span> }
+        <button className='moreInfo'>More Info</button>
+        {/* {tr?<span className='catBox catBox1'>Upcoming</span>:<span className='catBox catBox1'>Past</span> } */}
       </div>
       <style jsx>
         { `
@@ -78,10 +80,16 @@ const EventWidget = (props) => {
               border:1px solid #b0b0b0;
               font-size:15px;
           }
-
+          .moreInfo{
+            background-color:white;
+            padding:1px 6px;
+            border-radius:6px;
+            border:1px solid #b0b0b0;
+          }
         `}
       </style>
-    </a>
+      {/* {isPopup && <Popup key={event.eventName} title={event.eventName} venue={event.venue} link={event.link} date={event.date}  enddate={event.endDate} desc={event.eventDesc}/>} */}
+    </div>
   )
 }
 

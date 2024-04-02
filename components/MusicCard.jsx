@@ -47,6 +47,7 @@ const MusicCard = (props) => {
                 padding:9px 9px 5px 9px;
                 transition: all 0.15s ease-out; 
                 align-items:center; 
+                z-index:0;
             }
             .musicCardCont:hover{
                 box-shadow:0px 1px 10px 2px #c2c2c2; 

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Carousel from '@/components/Carousel'
 import PostWidget from '@/components/PostWidget'
 import MusicCard from '@/components/MusicCard'
-import EventWidget from '@/components/EventWidget'
+import EventWidgetPopup from '@/components/EventWidgetPopup'
 import { useState,useEffect } from 'react'
 import { getRecentPosts, getRecentEvents } from '@/services'
 import moment from 'moment'
@@ -104,6 +104,7 @@ export default function Home({posts}) {
   },[])
 
 
+
   return (
     <div className="Home">
       <Head>
@@ -167,7 +168,7 @@ export default function Home({posts}) {
           <div className='Head'>Latest Articles</div>
           <div className='postCont gridCont'>
             {relatedPosts.map((post)=>(
-              <PostWidget key={post.title} title={post.title} img={post.featuredImage.url} link={post.slug} auth={post.author.name} date={moment(post.date).format('MMM DD, YYYY')}/>
+              <PostWidget key={post.title} title={post.title} img={post.featuredImage.url} link={post.slug} auth={post.author.name} date={moment(post.date).format('MMM DD, YYYY')}/>  
             ))}
             <a href='/articles' className='moreArt'>More Articles</a>
           </div>
@@ -177,7 +178,7 @@ export default function Home({posts}) {
           <div className='Head'>Latest Events</div>
           <div className='eventCont  gridCont'>
             {recentEvent.map((event)=>(
-              <EventWidget key={event.eventName} title={event.eventName} img={event.eventImg.url} loc={event.venue} link={event.link} date={event.date}  enddate={event.endDate} />
+              <EventWidgetPopup  key={event.eventName} title={event.eventName} img={event.eventImg.url} loc={event.venue} link={event.link} date={event.date}  enddate={event.endDate} desc={event.eventDesc}/>
             ))}
             <a href='/events' className='moreArt'>More Events</a>
           </div>
