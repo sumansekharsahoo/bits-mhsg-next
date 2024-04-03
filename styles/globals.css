@@ -91,3 +91,10 @@ body{
 .stylefont-p{
   color:rgb(45, 55, 72)
 }
+
+::selection {
+  /* background: #099476; */
+  background: #acf1d5;
+  /* background: #b143fa; */
+  color: rgb(21, 21, 21);
+}

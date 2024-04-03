@@ -117,9 +117,19 @@ const resources = () => {
       Link: "https://mpowerminds.com/seekhelp"
     },
     {
-      Desc:"iCALL Helpline (Tata Institute of Social Sciences)",
-      Phone:"9152987821 (10AM-8PM,Mon-Sat)",
+      Desc:"iCALL Helpline",
+      Phone:"+91 9152987821 (10AM-8PM,Mon-Sat)",
       Link: "https://icallhelpline.org/"
+    },
+    {
+      Desc:"Vandrevala Foundation",
+      Phone:"Free All-India Emergency Mental Health Helpline: +91 9999666555",
+      Link: "https://www.vandrevalafoundation.com/"
+    },
+    {
+      Desc:"Find a therapist near you",
+      Phone:"List of Mental Health Practitioners for Young Adults at Affordable Fee/Free. Created by Mahima Kukreja.",
+      Link: "https://docs.google.com/document/d/1uEeTDdu58z8nVLbBG8o1qY2xbOhlb9TRVx5COnw2ZiQ/mobilebasic"
     },
     {
       Desc:"YourDOST",
@@ -175,8 +185,10 @@ const resources = () => {
           <div className='contactsCont'>
             <HelplineCard helpObj={helpline[0]} imgObj="/helpline/HealthMinistry.webp"/>
             <HelplineCard helpObj={helpline[1]} imgObj="/helpline/Mpower.png"/>
-            <HelplineCard helpObj={helpline[2]} imgObj="/helpline/TISS.webp"/>
-            <HelplineCard helpObj={helpline[3]} imgObj="/helpline/YourDost.png"/>
+            <HelplineCard helpObj={helpline[2]} imgObj="/helpline/icall.png"/>
+            <HelplineCard helpObj={helpline[3]} imgObj="/helpline/vandrevalaf.jpeg"/>
+            <HelplineCard helpObj={helpline[4]} imgObj="/helpline/docs.webp"/>
+            <HelplineCard helpObj={helpline[5]} imgObj="/helpline/YourDost.png"/>
           </div>
         </div>
         <div className='seekHelp flex flex-col'>
