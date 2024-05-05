@@ -3,7 +3,7 @@ import Profile from '@/components/Profile'
 import Head from 'next/head'
 
 const profiles=[
-  {id:"1", profName:"Abhinav Srivastava", pos:"President", img:"/profile/Abhinav.webp", iglink:"https://instagram.com/_abhinavsrivastavaaa?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://in.linkedin.com/in/abhinav-srivastava-496524191", bcol:"#99fcd8"},
+  {id:"1", profName:"Abhinav Srivastava", pos:"President", img:"/profile/Abhinav2.webp", iglink:"https://instagram.com/_abhinavsrivastavaaa?igshid=MjEwN2IyYWYwYw==",linkedlink:"https://in.linkedin.com/in/abhinav-srivastava-496524191", bcol:"#99fcd8"},
   {id:"2", profName:"Tanmay Agarwal", pos:"Secretary", img:"/profile/Tanmay.webp", iglink:"https://instagram.com/tanmay_ag_?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D",linkedlink:"https://www.linkedin.com/in/tanmay-ag",bcol:"#a6c0fa"},
   {id:"3", profName:"Shreya Singh", pos:"Treasurer", img:"/profile/Shreya2.webp", iglink:"https://instagram.com/shreya.singh31?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D",linkedlink:"https://www.linkedin.com/in/shreya-singh-ss",bcol:"#f6c8e1"},
   {id:"4", profName:"Eshaa Aranggan", pos:"Event Lead", img:"/profile/Eshaa.webp", iglink:"https://www.instagram.com/eshaa_316?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",linkedlink:"https://www.linkedin.com/in/eshaa-a-096686261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app", bcol:"#f9d8b3"},
