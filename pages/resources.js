@@ -128,13 +128,13 @@ const resources = () => {
     },
     {
       Desc:"Find a therapist near you",
-      Phone:"List of Mental Health Practitioners for Young Adults at Affordable Fee/Free. Created by Mahima Kukreja.",
+      Phone:"List of Mental Health Practitioners for Young Adults at Affordable Fee/Free Created by Mahima Kukreja",
       Link: "https://docs.google.com/document/d/1uEeTDdu58z8nVLbBG8o1qY2xbOhlb9TRVx5COnw2ZiQ/mobilebasic"
     },
     {
-      Desc:"YourDOST",
-      Phone:"Chat anonymously with YourDOST Experts (24x7)",
-      Link: "https://yourdost.com/"
+      Desc:"iCALL Crowdsourced list",
+      Phone:"iCALL's crowdsourced list of Mental Health Professionals city wise (Posted: 23 April, 2021)",
+      Link: "https://docs.google.com/spreadsheets/d/1pzckT6ns2H1IlmwYwJa8EnBh_1u3gRA9cEOoA4zfilc/edit#gid=370032083"
     }
   ]
   return (
@@ -188,7 +188,7 @@ const resources = () => {
             <HelplineCard helpObj={helpline[2]} imgObj="/helpline/icall.png"/>
             <HelplineCard helpObj={helpline[3]} imgObj="/helpline/vandrevalaf.jpeg"/>
             <HelplineCard helpObj={helpline[4]} imgObj="/helpline/docs.webp"/>
-            <HelplineCard helpObj={helpline[5]} imgObj="/helpline/YourDost.png"/>
+            <HelplineCard helpObj={helpline[5]} imgObj="/helpline/sheets.png"/>
           </div>
         </div>
         <div className='seekHelp flex flex-col'>
